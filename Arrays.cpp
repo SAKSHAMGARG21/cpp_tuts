@@ -227,23 +227,13 @@
 //     return 0;
 // }
 
->>>>>>> a379839 (new comt 1)
->>>>>>> b021b81 (adding gitignore)
+
 #include <iostream>
 using namespace std;
 int main(int argc, char const *argv[])
 {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> b021b81 (adding gitignore)
     int    
     return 0;
-}
-
-<<<<<<< HEAD
-=======
-=======
     int n, key;
     cin >> n >> key;
     int arr[n];
@@ -276,5 +266,3 @@ int main(int argc, char const *argv[])
     }
     return 0;
 }
->>>>>>> a379839 (new comt 1)
->>>>>>> b021b81 (adding gitignore)
