@@ -171,7 +171,7 @@
 //     return 0;
 // }
 
-// searching in arrays
+// // searching in arrays
 // #include <iostream>
 // using namespace std;
 // int main(int argc, char const *argv[])
@@ -197,6 +197,7 @@
 //     return 0;
 // }
 
+// linear search
 // #include <iostream>
 // using namespace std;
 // int linearsearch(int arr[],int n, int key){
@@ -221,6 +222,7 @@
 //     return 0;
 // }
 
+// Binary search
 // #include <iostream>
 // using namespace std;
 // int bs(int arr[] ,int n ,int key){
@@ -423,9 +425,375 @@
 //         }
 //         arr[j+1]=temp;
 //     }
-
 //     for (int k=0;k<n;k++){
 //         cout<<arr[k]<<" ";
 //     }
 //     return 0;
-// }  
+// }
+
+// #include<iostream>
+// using namespace std;
+// int main(int argc, char const *argv[])
+// {
+//     int n;
+//     cin>>n;
+//     int arr[n];
+//     for (int i=0;i<n;i++){
+//         cin>>arr[i];
+//     }
+//     for (int i=0;i<n;i++){
+//         if (arr[i]>arr[i+1]){
+//             arr[i+1]=arr[i];
+//         }
+//     }
+//     for (int k=0;k<n;k++){
+//         cout<<arr[k]<<" ";
+//     }
+//     return 0;
+// }
+// same question as above
+// #include <iostream>
+// using namespace std;
+// int main(int argc, char const *argv[])
+// {
+//     int n, mx = -19999;
+//     cin >> n;
+//     int arr[n];
+//     for (int i = 0; i < n; i++)
+//     {
+//         cin >> arr[i];
+//     }
+//     for (int k = 0; k < n; k++)
+//     {
+//         mx = max(mx, arr[k]);
+//         cout << mx << endl;
+//     }
+//     return 0;
+// }
+
+// #include<iostream>
+// using namespace std;
+// int main(int argc, char const *argv[])
+// {
+//     int n;
+//     cin>>n;
+//     int arr[n];
+//     for(int i=0;i<n;i++){
+//         cin>>arr[i];
+//     }
+//     for (int i=0;i<n;i++){
+//         int sum=0;
+//         for (int j=i;j<n;j++){
+//             sum+=arr[j];
+//             cout<<sum<<endl;
+//         }
+//     }
+//     return 0;
+// }
+
+// longest arthmatic subarray
+// #include<iostream>
+// using namespace std;
+// int main(int argc, char const *argv[])
+// {
+//     int n;
+//     cin>>n;
+//     int arr[n],arr1[1000];
+//     for(int i=0;i<n;i++){
+//         cin>>arr[i];
+//     }
+//     for (int i=0;i<n;i++){
+//         arr1[i]=arr[i+1]-arr[i];
+//     }
+//     for (int i=0;i<n-1;i++){
+//         cout<<arr1[i];
+//     }
+
+//     return 0;
+// }
+
+// record braking day code by self
+// #include <iostream>
+// using namespace std;
+// int main(int argc, char const *argv[])
+// {
+//     int n;
+//     cin >> n;
+//     int arr[n], arr1[1000];
+//     for (int i = 0; i < n; i++)
+//     {
+//         cin >> arr[i];
+//     }
+//     int c=0;
+//     for (int i = 0; i < n; i++)
+//     {
+//         for (int j = 1; j <= i; j++)
+//         {
+//             if (arr[i] < arr[i - j])
+//             {
+//                 break;
+//             }
+//             else if (arr[i] > arr[i - j] && arr[i] > arr[i + 1])
+//             {
+//                 if (j == i)
+//                 {
+//                     c++;
+//                     // cout << arr[i] << " ";
+//                 }
+//             }
+//         }
+//     }
+//     cout<<c;
+//     return 0;
+// }
+
+// record breaking day by apna college
+// #include <iostream>
+// using namespace std;
+// int main(int argc, char const *argv[])
+// {
+//     int n;
+//     cin >> n;
+//     // int arr[n+1];
+//     // arr[n]=-1;
+//     int arr[n];
+//     for (int i = 0; i < n; i++)
+//     {
+//         cin >> arr[i];
+//     }
+//     if (n == 1)
+//     {
+//         cout << "1" << endl;
+//         return 0;
+//     }
+//     int ans = 0;
+//     ;
+//     int mx = -1;
+//     for (int i = 0; i < n; i++)
+//     {
+//         if (arr[i] > mx && arr[i] > arr[i + 1])
+//         {
+//             ans++;
+//         }
+//         mx = max(mx, arr[i]);
+//     }
+//     cout << ans << endl;
+//     return 0;
+// }
+
+// record breaking day code by self
+// #include <iostream>
+// using namespace std;
+// int main(int argc, char const *argv[])
+// {
+//     int n;
+//     cin >> n;
+//     // int arr[n+1];
+//     // arr[n]=-1;
+//     int arr[n];
+//     for (int i = 0; i < n; i++)
+//     {
+//         cin >> arr[i];
+//     }
+//     if (n == 1)
+//     {
+//         cout << "1" << endl;
+//         return 0;
+//     }
+//     int ans = 0;
+//     ;
+//     int mx = -1;
+//     for (int i = 0; i < n; i++)
+//     {
+//         if (arr[i] > mx && arr[i] > arr[i + 1])
+//         {
+//             ans++;
+//         }
+//         mx = max(mx, arr[i]);
+//     }
+//     cout << ans << endl;
+//     return 0;
+// }
+
+// #include <iostream>
+// #include "bits/stdc++.h"
+// using namespace std;
+// int main(int argc, char const *argv[])
+// {
+//     int n;
+//     cin >> n;
+//     int arr[n];
+//     for (int i = 0; i < n; i++)
+//     {
+//         cin >> arr[i];
+//     }
+//     const int N = 1e6 + 2;
+//     int idx[N];
+//     for (int j = 0; j < N; j++)
+//     {
+//         idx[j] = -1;
+//     }
+//     int minidx = INT_MAX;
+//     for (int l = 0; l < n; l++)
+//     {
+//         if (idx[arr[l]] != -1)
+//         {
+//             minidx = min(minidx, idx[arr[l]]);
+//         }
+//         else
+//         {
+//             idx[arr[l]] = l;
+//         }
+//     }
+//     if (minidx == INT_MAX)
+//     {
+//         cout << "-1" << endl;
+//     }
+//     else
+//     {
+//         cout << minidx + 1 << endl;
+//     }
+//     return 0;
+// }
+
+// #include <iostream>
+// #include <vector>
+// #include <climits>
+
+// int main() {
+//     int n;
+//     // std::cout << "Enter the size of the array: ";
+//     std::cin >> n;
+
+//     std::vector<int> arr(n);
+//     // std::cout << "Enter the elements of the array: ";
+//     for (int i = 0; i < n; i++) {
+//         std::cin >> arr[i];
+//     }
+
+//     const int N = 1e6 + 2;
+//     std::vector<int> idx(N, -1);
+
+//     int minidx = INT_MAX;
+//     for (int l = 0; l < n; l++) {
+//         if (idx[arr[l]] != -1) {
+//             minidx = std::min(minidx, idx[arr[l]]);
+//         }
+//         else {
+//             idx[arr[l]] = l;
+//         }
+//     }
+
+//     if (minidx == INT_MAX) {
+//         std::cout << "-1" << std::endl;
+//     }
+//     else {
+//         std::cout << minidx + 1 << std::endl;
+//     }
+
+//     return 0;
+// }
+
+// #include<iostream>
+// using namespace std;
+// int main(int argc, char const *argv[])
+// {
+//     int n;
+//     cin>>n;
+//     int arr[n];
+//     for (int i=0;i<n;i++){
+//         cin>>arr[i];
+//     }
+//     for (int j=0;j<n;j++){
+//         int c=0;
+//         for (int l=0;l<n;l++){
+//             if (arr[j]==arr[l]){
+//                 c++;
+//             }
+//         }
+//         if (c>1){
+//             cout<<j+1;
+//             break;
+//         }
+//     }
+//     return 0;
+// }
+
+// frequency of an array
+// #include <iostream>
+// using namespace std;
+// int main(int argc, char const *argv[])
+// {
+//     int n;
+//     cin >> n;
+//     int narr[1000] = {0};
+//     int arr[n];
+//     for (int i = 0; i < n; i++)
+//     {
+//         cin >> arr[i];
+//     }
+//     int k, j;
+//     for (int i = 0; i < n; i++)
+//     {
+//         if (arr[i] != -1)
+//         {
+//             int c = 1;
+//             for (j = i+1; j < n; j++)
+//             {
+//                 if (arr[i] == arr[j])
+//                 {
+//                     c++;
+//                     arr[j] = -1;
+//                 }
+//             }
+//             narr[i] = c;
+//         }
+//     }
+//     for (int k = 0; k < n; k++)
+//     {
+//         if (arr[k] != -1)
+//         {
+//             cout << arr[k] <<" "<< narr[k] << endl;
+//         }
+//     }
+//     return 0;
+// }
+
+// #include <iostream>
+// using namespace std;
+// int main()
+// {
+//     int n;
+//     cin >> n;
+//     int arr[n];
+//     for (int i = 0; i < n; i++)
+//     {
+//         cin >> arr[i];
+//     }
+//     int narr[1000] = {0}; // Initialize all elements to 0
+//     for (int i = 0; i < n; i++)
+//     {
+//         if (arr[i] != -1)
+//         {
+//             int c = 1;
+//             for (int j = i + 1; j < n; j++)
+//             {
+//                 if (arr[i] == arr[j])
+//                 {
+//                     c++;
+//                     arr[j] = -1;
+//                 }
+//             }
+//             narr[arr[i]] = c;
+//         }
+//     }
+//     for (int k = 0; k < n; k++)
+//     {
+//         if (arr[k] != -1)
+//         {
+//             cout << arr[k] << " " << narr[arr[k]] << endl;
+//         }
+//     }
+//     return 0;
+// }
+
