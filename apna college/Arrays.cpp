@@ -797,3 +797,22 @@
 //     return 0;
 // }
 
+// #include <iostream>
+// using namespace std;
+
+// int main(int argc, char const *argv[])
+// {
+//     int n;
+//     cin >> n;
+
+//     int denominations[] = {100, 50, 20, 10};
+//     int numDenominations = sizeof(denominations) / sizeof(denominations[0]);
+
+//     for (int i = 0; i < numDenominations; i++)
+//     {
+//         int count = n / denominations[i];
+//         cout << denominations[i] << ":" << count << endl;
+//         n = n % denominations[i];
+//     }
+//     return 0;
+// }

@@ -122,7 +122,61 @@
 //     cout<<ans<<endl;
 //     return 0;
 // }
- 
+
+// decimal to binary conversion
+// #include<iostream>
+// #include<cmath>
+// using namespace std;
+// int dtb(int n){
+//     int ten=1,fval=0;
+//     while (n!=0)
+//     {
+//         /* code */
+//         int rem = n%2;
+//         int val= rem *ten;
+//         fval=fval+val;
+//         ten*=10;
+//         n/=2;
+//     }
+//     cout<<fval<<endl;
+// }
+
+// int main(int argc, char const *argv[])
+// {
+//     int n;
+//     cin>>n;
+//     dtb(n);
+//     return 0;
+// }
+
+// binary to decimal
+// #include <iostream>
+// #include <cmath>
+// using namespace std;
+// int btd(int n)
+// {
+//     int ans = 0;
+//     int p = 0;
+//     while (n != 0)
+//     {
+//         int rem = n % 10;
+//         if (rem != 0)
+//         {
+//             ans = ans + pow(2, p);
+//         }
+//         p++;
+//         n /= 10;
+//     }
+//     cout << ans << endl;
+// }
+// int main(int argc, char const *argv[])
+// {
+//     int n;
+//     cin >> n;
+//     btd(n);
+//     return 0;
+// }
+
 // Octal to decimal conversion
 // #include <iostream>
 // #include<cmath>
@@ -217,7 +271,6 @@
 // Decimal to hexadecimal conversion.
 // #include <iostream>
 // #include <string>
-
 // using namespace std;
 
 // string decimalToHexadecimal(int n)
@@ -226,7 +279,6 @@
 //     {
 //         return "0";
 //     }
-
 //     string hex = "";
 //     while (n > 0)
 //     {
@@ -342,7 +394,6 @@
 //     return 0;
 // }
 
-
 // #include <iostream>
 // int addBinaryNumbers(int num1, int num2)
 // {
@@ -377,4 +428,3 @@
 //     std::cout <<sum << std::endl;
 //     return 0;
 // }
-

@@ -187,33 +187,33 @@
 //     return 0;
 // }
 
-#include <iostream>
-using namespace std;
-int main(int argc, char const *argv[])
-{
-    int a, b;
-    cin >> a >> b;
-    for (int i = 1; i <= a; i++)
-    {
-        for (int j = 1; j <= b; j++)
-        {
-            if (i == 1 || i == a)
-            {
-                cout << "* ";
-            }
-            else if (j == 1 || j == b)
-            {
-                cout << "* ";
-            }
-            else
-            {
-                cout << "  ";
-            }
-        }
-        cout<<"\n";
-    }
-    return 0;
-}
+// #include <iostream>
+// using namespace std;
+// int main(int argc, char const *argv[])
+// {
+//     int a, b;
+//     cin >> a >> b;
+//     for (int i = 1; i <= a; i++)
+//     {
+//         for (int j = 1; j <= b; j++)
+//         {
+//             if (i == 1 || i == a)
+//             {
+//                 cout << "* ";
+//             }
+//             else if (j == 1 || j == b)
+//             {
+//                 cout << "* ";
+//             }
+//             else
+//             {
+//                 cout << "  ";
+//             }
+//         }
+//         cout<<"\n";
+//     }
+//     return 0;
+// }
 
 // #include <iostream>
 // using namespace std;
@@ -323,7 +323,7 @@ int main(int argc, char const *argv[])
 //     return 0;
 // }
 
-// Star Pattern.
+// arrow Pattern.
 // #include <iostream>
 // using namespace std;
 // int main(int argc, char const *argv[])
@@ -523,7 +523,6 @@ int main(int argc, char const *argv[])
 //         }
 //         for (j = 1; j <= i; j++)
 //         {
-
 //             cout << j << " ";
 //         }
 //         cout << "\n";
@@ -572,7 +571,7 @@ int main(int argc, char const *argv[])
 //         {
 //             if (((i + j) % 4 == 0) ||( i == 2 && j % 4 == 0))
 //             {
-//                 cout << "*";
+//                 cout << "* ";
 //             }
 //             else
 //             {
@@ -648,9 +647,10 @@ int main(int argc, char const *argv[])
 //     return 0;
 // }
 
-// #include <iostream>
-// #include <cmath>
-// using namespace std;
+// Armstrong no
+//  #include <iostream>
+//  #include <cmath>
+//  using namespace std;
 
 // int main() {
 //     int n,rem,x,sum=0,c=0;
@@ -764,3 +764,620 @@ int main(int argc, char const *argv[])
 //     // && || !
 //     return 0;
 // }
+
+// #include<iostream>
+// #include<string>
+// using namespace std;
+// int main(int argc, char const *argv[])
+// {
+//     char n;
+//     cin>>n;
+//     if (n>='A' && n<='Z'){
+//         cout<<"this is upper case"<<endl;
+
+//     }
+//     else if (n>='a' && n<='z'){
+//         cout<<"this is lower case"<<endl;
+//     }
+//     else if (n>='0' && n<='9'){
+//         cout<<"this is char no"<<(int)n<<endl;
+//     }
+//     return 0;
+// }
+
+// #include<iostream>
+// using namespace std;
+// int main(){
+//     int n;
+//     cin>> n;
+//     int i=2;
+//     while(i<n){
+//         if (n%i==0){
+//             cout<<"not prime no"<<i<<endl;
+//         }
+//         else{
+//             cout<<"prime no"<<i<<endl;
+//         }
+//         i+=1;
+//     }
+//     return 0;
+// }
+
+// #include <iostream>
+// using namespace std;
+// int main(int argc, char const *argv[])
+// {
+//     int n;
+//     cin >> n;
+//     int i = 1, p = 1;
+//     while (i <= n)
+//     {
+//         int j=1;
+//         while (j <= n)
+//         {
+//             cout<< p;
+//             p += 1;
+//             j++;
+//         }
+//         cout<<endl;
+//         i++;
+//     }
+
+//     return 0;
+// }
+
+// #include <iostream>
+// using namespace std;
+// int main(int argc, char const *argv[])
+// {
+//     int n;
+//     cin >> n;
+//     int i = 1, p = 1;
+//     while (i <= n)
+//     {
+//         int j=1;
+//         while (j <= n)
+//         {
+//             cout<< p;
+//             p += 1;
+//             j++;
+//         }
+//         cout<<endl;
+//         i++;
+//     }
+//     return 0;
+// }
+
+// #include <iostream>
+// using namespace std;
+// int main(int argc, char const *argv[])
+// {
+//     int n;
+//     cin >> n;
+//     int i = 1, p = 1;
+//     char a = 'A';
+//     while (i <= n)
+//     {
+//         // char a = 'A';
+//         int j = 1;
+//         while (j <= n)
+//         {
+//             cout << a;
+//             // a++;
+//             j++;
+//         }
+//         a++;
+//         cout << endl;
+//         i++;
+//     }
+//     return 0;
+// }
+
+// #include <iostream>
+// using namespace std;
+// int main(int argc, char const *argv[])
+// {
+//     int n;
+//     cin >> n;
+//     int i = 1;
+//     char a = 'A';
+//     while (i <= n)
+//     {
+//         int j = 1;
+//         while (j <= n)
+//         {
+//             cout << a;
+//             a++;
+//             j++;
+//         }
+//         // a++;
+//         cout << endl;
+//         i++;
+//     }
+//     return 0;
+// }
+
+// #include <iostream>
+// using namespace std;
+// int main(int argc, char const *argv[])
+// {
+//     int n;
+//     cin >> n;
+//     int i = 1;
+//     char a = 'A';
+//     while (i <= n)
+//     {
+//         int j = 1;
+//         while (j <= i)
+//         {
+//             cout << a;
+//             a++;
+//             j++;
+//         }
+//         cout << endl;
+//         i++;
+//     }
+//     return 0;
+// }
+
+// #include <iostream>
+// using namespace std;
+// int main(int argc, char const *argv[])
+// {
+//     int n;
+//     cin >> n;
+//     int i = 1;
+//     while (i <= n)
+//     {
+//         int j = 1;
+//         while (j <= n)
+//         {
+//             char ch='A'+i+j-2;
+//             cout << ch;
+//             ch++;
+//             j++;
+//         }
+//         cout << endl;
+//         i++;
+//     }
+//     return 0;
+// }
+
+// #include <iostream>
+// using namespace std;
+// int main(int argc, char const *argv[])
+// {
+//     int n;
+//     cin >> n;
+//     int i = 1;
+//     char a = 'A';
+//     while (i <= n)
+//     {
+//         int j = 1;
+//         char ch = 'A' + i + j - 2;
+//         while (j <= i)
+//         {
+//             cout << ch;
+//             ch--;
+//             j++;
+//         }
+//         cout << endl;
+//         i++;
+//     }
+//     return 0;
+// }
+
+// #include <iostream>
+// using namespace std;
+// int main(int argc, char const *argv[])
+// {
+//     int n;
+//     cin >> n;
+//     int i = 1;
+//     while (i <= n)
+//     {
+//         int j = 1;
+//         char ch = 'A' + n - i;
+//         while (j <= i)
+//         {
+//             cout << ch;
+//             ch++;
+//             j++;
+//         }
+//         cout << endl;
+//         i++;
+//     }
+//     return 0;
+// }
+
+// #include <iostream>
+// using namespace std;
+// int main(int argc, char const *argv[])
+// {
+//     int n;
+//     cin >> n;
+//     int i = 1,a=1;
+//     while (i <= n)
+//     {
+//         int k = 1;
+//         while (k<=n-i)
+//         {
+//             /* code */
+//             cout<<" ";
+//             k++;
+//         }
+//         int j=1;
+//         while (j <= i)
+//         {
+//             cout <<a;
+//             a++;
+//             j++;
+//         }
+//         cout << endl;
+//         i++;
+//     }
+//     return 0;
+// }
+
+// #include <iostream>
+// using namespace std;
+// int main(int argc, char const *argv[])
+// {
+//     int n;
+//     cin >> n;
+//     int i = 1;
+//     char a = 'A';
+//     while (i <= n)
+//     {
+//         int j = 1;
+//         while (j <= i)
+//         {
+//             cout << a;
+//             a++;
+//             j++;
+//         }
+//         cout << endl;
+//         i++;
+//     }
+//     return 0;
+// }
+
+// #include <iostream>
+// using namespace std;
+// int main(int argc, char const *argv[])
+// {
+//     int n;
+//     cin >> n;
+//     int i = 1, a = 1;
+//     while (i <= n)
+//     {
+//         int j = 1;
+//         while (j <= n - i)
+//         {
+//             cout << " ";
+//             j++;
+//         }
+//         int k = 1;
+//         while (k <= i)
+//         {
+//             cout << k;
+//             k++;
+//         }
+//         a=k-2;
+//         int l=2;
+//         while (l<=i)
+//         {
+//             /* code */
+//             cout<<a;
+//             a--;
+//             l++;
+//         }
+//         cout << endl;
+//         i++;
+//     }
+//     return 0;
+// }
+
+// #include <iostream>
+// using namespace std;
+// int main(int argc, char const *argv[])
+// {
+//     int n=5;
+//     int a =0;
+//     int b=1;
+//     cout<<a<<" "<<b<<" ";
+//     for (int i=3;i<=n;i++){
+//         int nextno=a+b;
+//         cout<<nextno<<" ";
+//         a=b;
+//         b=nextno;
+//     }
+//     return 0;
+// }
+
+// leet code problem
+// #include <iostream>
+// #include <limits>
+// #include <math.h>
+// using namespace std;
+// int main(int argc, char const *argv[])
+// {
+//     int n;
+//     cin >> n;
+//     int add = 0;
+//     while (n != 0)
+//     {
+//         int rem = n % 10;
+//         if ((add > __INT_MAX__ / 10) || (add < __WINT_MIN__ / 10))
+//         {
+//             cout << "0" << endl;
+//             break;
+//         }
+//         add = (add * 10) + rem;
+//         n /= 10;
+//     }
+//     if (n <= 0)
+//     {
+//         cout << add << endl;
+//     }
+//     return 0;
+// }
+
+// leet code problem fst complement by self
+// #include <iostream>
+// #include <limits>
+// #include <math.h>
+// using namespace std;
+// int main(int argc, char const *argv[])
+// {
+//     int n;
+//     cin >> n;
+//     int ten = 1, m, add = 0;
+//     if (n == 0)
+//     {
+//         cout << "1" << endl;
+//     }
+//     else
+//     {
+//         while (n != 0)
+//         {
+//             int rem = n % 2;
+//             m = rem * ten;
+//             add = add + m;
+//             ten *= 10;
+//             n /= 2;
+//         }
+//         // cout << add << endl;
+//         int ans = 0, tem = 1;
+//         while (add != 0)
+//         {
+//             /* code */
+//             int rem1 = add % 10;
+//             int newrem;
+//             if (rem1 == 1)
+//             {
+//                 newrem = 0;
+//             }
+//             else
+//             {
+//                 newrem = 1;
+//             }
+//             int m2 = newrem * tem;
+//             ans = ans + m2;
+//             tem *= 10;
+//             add /= 10;
+//         }
+//         // cout<<ans<<endl;
+//         int p = 0;
+//         int mans = 0;
+//         while (ans != 0)
+//         {
+//             int rem3 = ans % 10;
+//             if (rem3 != 0)
+//             {
+//                 mans = mans + pow(2, p);
+//             }
+//             p++;
+//             ans /= 10;
+//         }
+//         cout << mans << endl;
+//     }
+//     return 0;
+// }
+
+// by code bubber
+// #include <iostream>
+// #include <limits>
+// #include <math.h>
+// using namespace std;
+// int main(int argc, char const *argv[])
+// {
+//     int n;
+//     cin >> n;
+//     int m = n;
+//     int mask = 0;
+//     if (n == 0)
+//     {
+//         cout << "1";
+//     }
+//     else
+//     {
+//         while (m != 0)
+//         {
+//             /* code */
+//             mask = (mask << 1) | 1;
+//             m = m >> 1;
+//         }
+//         int ans = (~n) & mask;
+//         cout << ans << endl;
+//         cout << mask << endl;
+//     }
+//     return 0;
+// }
+
+// #include <iostream>
+// #include <limits>
+// #include <math.h>
+// using namespace std;
+// int main(int argc, char const *argv[])
+// {
+//     int n;
+//     cin >> n;
+//     int mask=7;
+//     int ans=(~n)& mask;
+//     cout<<ans<<endl;
+//     return 0;
+// }
+
+// #include <iostream>
+// #include <limits>
+// #include <math.h>
+// using namespace std;
+// int main(int argc, char const *argv[])
+// {
+//     int n;
+//     cin >> n;
+//     int i;
+//     for (i=0;i<=n;i++){
+//         if (n==pow(2,i)){
+//             cout<<"true"<<n<<endl;
+//             break;
+//         }
+//     }
+//     if (i>=n){
+//         cout<<"false"<<n<<endl;
+//     }
+//     return 0;
+// }
+
+// #include <iostream>
+// #include <limits>
+// #include <math.h>
+// using namespace std;
+// int main(int argc, char const *argv[])
+// {
+//     int n;
+//     cin >> n;
+//     int i;
+//     int ans = 1;
+//     for (i = 0; i <= 30; i++)
+//     {
+//         // cout<<"ans"<<ans<<endl;
+//         if (ans == n)
+//         {
+//             cout << "true" << n << endl;
+//             break;
+//         }
+//         ans = ans * 2;
+//     }
+//     if (i >= 30)
+//     {
+//         cout << "false" << n << endl;
+//     }
+//     return 0;
+// }
+
+// #include <iostream>
+// #include <limits>
+// #include <math.h>
+// using namespace std;
+// int main(int argc, char const *argv[])
+// {
+//     int  n = 1;
+//     char ch='1';
+//     switch (ch)
+//     {
+//     case 1:
+//         cout << "first" << endl;
+//         break;
+//     case '1':
+//         // cout << "second" << endl;
+//         switch (n){
+//             case 1:cout<<"value of num is "<<n<<endl;
+//             break;
+//         }
+//         break;
+//         exit;
+//     case 'a':
+//         cout << "char" << endl;
+//         break;
+//     default:
+//         cout << "it is default case" << endl;
+//         break;
+//     }
+//     return 0;
+// }
+
+// #include <iostream>
+// #include <limits>
+// #include <math.h>
+// using namespace std;
+// int main(int argc, char const *argv[])
+// {
+//     int a, b;
+//     char op;
+//     // cout << "Enter the no a and b :" << endl;
+//     cin >> a >> b;
+//     // cout << "Enter the operator:" << endl;
+//     cin >> op;
+//     switch (op)
+//     {
+//     case '+':
+//         cout << (a + b) << endl;
+//         break;
+//     case '-':
+//         cout << (a - b) << endl;
+//         break;
+//     case '*':
+//         cout << (a * b) << endl;
+//         break;
+//     case '/':
+//         cout << (a / b) << endl;
+//         break;
+//     case '%':
+//         cout << (a % b) << endl;
+//         break;
+//     default:
+//         cout << ("Please enter the valid operator");
+//         break;
+//     }
+//     return 0;
+// }
+
+// #include <iostream>
+// #include <limits>
+// #include <math.h>
+// using namespace std;
+// int main(int argc, char const *argv[])
+// {
+//     int n;
+//     cin >> n;
+//     cout<<"100:"<<(n/100)<<endl;
+//     cout<<"50:"<<((n%100)/50)<<endl;
+
+
+//     cout<<"20:"<<(((n%100)%50)/20)<<endl;
+//     cout<<"10:"<<((((n%100)%50)%20)/10)<<endl;
+//     return 0;
+// }
+
+// #include <iostream>
+// using namespace std;
+
+// int main(int argc, char const *argv[])
+// {
+//     int n;
+//     cin >> n;
+
+//     int denominations[] = {100, 50, 20, 10};
+//     int numDenominations = sizeof(denominations) / sizeof(denominations[0]);
+
+//     for (int i = 0; i < numDenominations; i++)
+//     {
+//         int count = n / denominations[i];
+//         cout << denominations[i] << ":" << count << endl;
+//         n = n % denominations[i];
+//     }
+//     return 0;
+// }
+
