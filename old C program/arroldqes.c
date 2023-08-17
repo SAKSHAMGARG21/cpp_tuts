@@ -528,25 +528,30 @@
 // }
 
 // c
-// #include<stdio.h>
-// int main(int argc, char const *argv[])
-// {
-//     int s,e;
-//     printf("no;");
-//     scanf("%d %d",&s,&e);
-//     for (int i=s;i<=e;i++){
-//         int c=0;
-//         for (int j=1;j<i;j++){
-//             if (i%j==0){
-//                 c++;
-//             }
-//         }
-//         if (c%2==0){
-//             printf("%d ",i);
-//         }
-//     }
-//     return 0;
-// }
+#include <stdio.h>
+int main(int argc, char const *argv[])
+{
+    int s, e, j, k;
+    printf("no;");
+    scanf("%d %d", &s, &e);
+    for (int i = s; i <= e; i++)
+    {
+        int c = 0;
+        for (j = 1; j < i; j++)
+        {
+            if (i % j == 0)
+            {
+                c++;
+            }
+            k = j;
+        }
+        if (c % 2 == 0)
+        {
+            printf("%d ", k);
+        }
+    }
+    return 0;
+}
 
 // c
 //  #include<stdio.h>
