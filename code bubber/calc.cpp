@@ -90,28 +90,35 @@ int main(int argc, char const *argv[])
 //     return 0;
 // }
 
-#include <iostream>
-#include<climits>
-#include "bits/stdc++.h"
-using namespace std;
-int swapalternate(vector<int> &arr){
+// #include <iostream>
+// #include<climits>
+// #include "bits/stdc++.h"
+// using namespace std;
+// int swapalternate(vector<int> &arr){
 
-}
+// }
 
-int main(int argc, char const *argv[])
-{
-    int n;
-    cin >> n;
-    vector<int> arr(n);
-    for (int i=0;i<n;i++){
-        cin>>arr[i];
-    }
+// int main(int argc, char const *argv[])
+// {
+//     int n;
+//     cin >> n;
+//     vector<int> arr(n);
+//     for (int i=0;i<n;i++){
+//         cin>>arr[i];
+//     }
 
-    vector<int> narr=swapalternate(arr,n);
-    cout<<narr<<endl;
+//     vector<int> narr=swapalternate(arr,n);
+//     cout<<narr<<endl;
 
-    return 0;
-}
+//     return 0;
+// }
+
+// c
+// test case:
+// 5
+// 3 4 5 1
+// ans:
+// 2
 
 
 

@@ -685,16 +685,19 @@
 //     int n;
 //     cin >> n;
 //     int arr[n], arr1[1000];
+//     int ans;
 //     for (int i = 0; i < n; i++)
 //     {
 //         cin >> arr[i];
 //     }
 //     int c = 0;
-//     for (int i = 0; i < n; i++){
+//     for (int i = 0; i < n; i++)
+//     {
 //         for (int j = 0; j <= i; j++)
 //         {
-//             if (arr[0] > arr[1]){
-//                 c++;
+//             if (arr[0] > arr[1])
+//             {
+//                 ans=0;
 //             }
 //             else if (arr[i] < arr[i - j])
 //             {
@@ -702,14 +705,15 @@
 //             }
 //             else if (arr[i] > arr[i + 1] && arr[i] > arr[i - j])
 //             {
-//                 if (i ==j){
-//                     // cout << arr[i];
-//                     c++;
+//                 if (i == j)
+//                 {
+//                     ans=i;
+//                     break;
 //                 }
 //             }
 //         }
 //     }
-//     cout<<c;
+//     cout << ans<< endl;
 //     return 0;
 // }
 
@@ -763,7 +767,6 @@
 //     if (n == 1)
 //     {
 //         cout << "1" << endl;
-//         return 0;
 //     }
 //     int ans = 0;
 //     ;
@@ -772,7 +775,7 @@
 //     {
 //         if (arr[i] > mx && arr[i] > arr[i + 1])
 //         {
-//             ans++;
+//             ans=i;
 //         }
 //         mx = max(mx, arr[i]);
 //     }
@@ -1489,6 +1492,13 @@
 //     return 0;
 // }
 
+// c
+// test case:
+// 5 3
+// 1 2 3 4 5
+// 3 1 3
+// ans :
+// 3
 // #include <iostream>
 // #include <climits>
 // #include <unordered_map>
@@ -1591,6 +1601,13 @@
 // }
 
 // leetcode
+// c
+// test case:
+// 5 3
+// 1 2 3 4 3
+// 3 1 3
+// ans :
+// 3
 // #include <iostream>
 // #include <climits>
 // #include <unordered_map>
@@ -1688,6 +1705,13 @@
 // }
 
 // leetcode pairsum
+// c
+// test case:
+// 5 5
+// 1 2 3 4 5
+// ans :
+// 2 3
+// 1 4
 // #include <iostream>
 // #include <climits>
 // #include <unordered_map>
@@ -1734,6 +1758,13 @@
 // }
 
 // same
+// c
+// test case:
+// 5 5
+// 1 2 3 4 5
+// ans :
+// 2 3
+// 1 4
 // #include <iostream>
 // #include <vector>
 // #include <algorithm>
@@ -1769,6 +1800,12 @@
 //     return 0;
 // }
 
+// c
+// test case:
+// 5 12
+// 1 2 3 4 5
+// ans :
+// 3 4 5
 // #include <iostream>
 // #include <vector>
 // #include <algorithm>
@@ -1810,6 +1847,12 @@
 // }
 
 // sort 0 1;
+// c
+// test case:
+// 7
+// 0 0 1 0 1 0 0 1 1
+// ans :
+// 0 0 0 0 0 1 1 1 1
 // #include <iostream>
 // #include <vector>
 // #include <algorithm>
@@ -1850,12 +1893,16 @@
 //     return 0;
 // }
 
-
+// c
+// test case:
+// 7
+// 0 0 1 0 1 0 0 1 1
+// ans :
+// 0 0 0 0 0 1 1 1 1
 // #include <iostream>
 // #include <vector>
 // #include <algorithm>
 // using namespace std;
-
 // void sort01(int arr[],int n) {
 //     int c=0;
 //     for (int i = 0; i < n; i++)
@@ -1892,6 +1939,12 @@
 //     return 0;
 // }
 
+// c
+// test case:
+// 7
+// 0 0 1 0 1 0 0 1 1
+// ans :
+// 0 0 0 0 0 1 1 1 1
 // #include <iostream>
 // #include <vector>
 // #include <algorithm>
@@ -1916,3 +1969,518 @@
 //     }
 //     return 0;
 // }
+
+// c
+// test case:
+// 7
+// 1 2 3 3 3 3 4
+// ans :
+// 2
+// 5
+// #include <iostream>
+// #include <vector>
+// #include <algorithm>
+// using namespace std;
+// #include <iostream>
+// #include <vector>
+// #include <algorithm>
+// using namespace std;
+// int lastocc(int arr[], int n, int key)
+// {
+
+//     int s = 0;
+//     int e = n;
+//     int mid = 0;
+//     int ans = -1;
+//     while (s <= e)
+//     {
+//         /* code */
+//         mid = (s + e) / 2;
+//         if (arr[mid] == key)
+//         {
+//             ans = mid;
+//             s = mid + 1;
+//         }
+//         else if (arr[mid] > key)
+//         {
+//             e = mid - 1;
+//         }
+//         else
+//         {
+//             s = mid + 1;
+//         }
+//     }
+//     return ans;
+// }
+// int firstocc(int arr[], int n, int key)
+// {
+
+//     int s = 0;
+//     int e = n;
+//     int mid = 0;
+//     int ans = -1;
+//     while (s <= e)
+//     {
+//         /* code */
+//         mid = (s + e) / 2;
+//         if (arr[mid] == key)
+//         {
+//             ans = mid;
+//             e = mid - 1;
+//         }
+//         else if (arr[mid] > key)
+//         {
+//             e = mid - 1;
+//         }
+//         else
+//         {
+//             s = mid + 1;
+//         }
+//     }
+//     return ans;
+// }
+// int main()
+// {
+//     int n;
+//     cin >> n;
+//     int arr[n];
+//     for (int i = 0; i < n; i++)
+//     {
+//         cin >> arr[i];
+//     }
+//     int fstocc = firstocc(arr, n, 3);
+//     int lstocc = lastocc(arr, n, 3);
+//     cout << fstocc << endl;
+//     cout << lstocc << endl;
+//     return 0;
+// }
+
+// total no occ in an array by binary search
+// test case :
+// 7
+// 1 2 3 3 3 3 4
+// ans :
+// 4
+// #include <iostream>
+// #include <vector>
+// #include <algorithm>
+// using namespace std;
+// #include <iostream>
+// #include <vector>
+// using namespace std;
+// int lastocc(int arr[], int n, int key)
+// {
+
+//     int s = 0;
+//     int e = n;
+//     int mid = 0;
+//     int ans = -1;
+//     while (s <= e)
+//     {
+//         /* code */
+//         mid = (s + e) / 2;
+//         if (arr[mid] == key)
+//         {
+//             ans = mid;
+//             s = mid + 1;
+//         }
+//         else if (arr[mid] > key)
+//         {
+//             e = mid - 1;
+//         }
+//         else
+//         {
+//             s = mid + 1;
+//         }
+//     }
+//     return ans;
+// }
+// int firstocc(int arr[], int n, int key)
+// {
+
+//     int s = 0;
+//     int e = n;
+//     int mid = 0;
+//     int ans = -1;
+//     while (s <= e)
+//     {
+//         /* code */
+//         mid = (s + e) / 2;
+//         if (arr[mid] == key)
+//         {
+//             ans = mid;
+//             e = mid - 1;
+//         }
+//         else if (arr[mid] > key)
+//         {
+//             e = mid - 1;
+//         }
+//         else
+//         {
+//             s = mid + 1;
+//         }
+//     }
+//     return ans;
+// }
+// int main()
+// {
+//     int n;
+//     cin >> n;
+//     int arr[n];
+//     for (int i = 0; i < n; i++)
+//     {
+//         cin >> arr[i];
+//     }
+//     int fstocc = firstocc(arr, n, 3);
+//     int lstocc = lastocc(arr, n, 3);
+//     int ans=(lstocc-fstocc)+1;
+//     cout<<ans<<endl;
+//     return 0;
+// }
+
+// c
+// test case:
+// 5
+// 3 4 5 1
+// ans:
+// 2
+// leetcode
+// #include <iostream>
+// #include <vector>
+// #include <algorithm>
+// #include <iostream>
+// #include <vector>
+// using namespace std;
+// int peekelement(vector<int> &arr){
+//     int s=0;
+//     int e=arr.size()-1;
+//     while (s<e)
+//     {
+//         /* code */
+//         int mid=(s+e)/2;
+//         if (arr[mid]<arr[mid+1]){
+//             s=mid+1;
+//         }
+//         else{
+//             e=mid;
+//         }
+//     }
+//     return s;
+
+// }
+// int main()
+// {
+//     int n;
+//     cin >> n;
+//     vector<int> arr(n);
+//     for (int i = 0; i < n; i++)
+//     {
+//         cin >> arr[i];
+//     }
+//     int lstocc = peekelement(arr);
+//     cout << lstocc << endl;
+//     return 0;
+// }
+
+// #include <iostream>
+// #include <vector>
+// #include <algorithm>
+// #include "bits/stdc++.h"
+// using namespace std;
+// int peekelement(vector<int> &arr){
+//     int sarr=arr.size();
+//     int max=INT_MIN;
+//     for (int i=0;i<sarr;i++){
+//         if (arr[i]>max){
+//             max=arr[i];
+//         }
+//     }
+//     for (int i=0;i<sarr;i++){
+//         if (arr[i]==max){
+//             return i;
+//         }
+//     }
+// }
+// int main()
+// {
+//     int n;
+//     cin >> n;
+//     vector<int> arr(n);
+//     for (int i = 0; i < n; i++)
+//     {
+//         cin >> arr[i];
+//     }
+//     int lstocc = peekelement(arr);
+//     cout << lstocc << endl;
+//     return 0;
+// }
+
+// #include <iostream>
+// #include <vector>
+
+// using namespace std;
+
+// void setZeros(vector<vector<int>> &arr) {
+//     int numrow = arr.size();
+//     int numcol = arr[0].size();
+
+//     vector<bool> zeroRows(numrow, false);
+//     vector<bool> zeroCols(numcol, false);
+
+//     for (int i = 0; i < numrow; i++) {
+//         for (int j = 0; j < numcol; j++) {
+//             if (arr[i][j] == 0) {
+//                 zeroRows[i] = true;
+//                 zeroCols[j] = true;
+//             }
+//         }
+//     }
+
+//     for (int i = 0; i < numrow; i++) {
+//         for (int j = 0; j < numcol; j++) {
+//             if (zeroRows[i] || zeroCols[j]) {
+//                 arr[i][j] = 0;
+//             }
+//         }
+//     }
+// }
+
+// int main() {
+//     int a;
+//     int n, m;
+//     cin >> a;
+//     for (int l = 0; l < a; l++) {
+//         cin >> n >> m;
+//         vector<vector<int>> arr(n, vector<int>(m));
+//         for (int i = 0; i < n; i++) {
+//             for (int j = 0; j < m; j++) {
+//                 cin >> arr[i][j];
+//             }
+//         }
+//         setZeros(arr);
+
+//         // Print the modified vector
+//         for (int i = 0; i < n; i++) {
+//             for (int j = 0; j < m; j++) {
+//                 cout << arr[i][j] << " ";
+//             }
+//             cout << endl;
+//         }
+//     }
+//     return 0;
+// }
+
+// c
+//  TC:
+//  6
+//  7 9 1 2 3 4;
+//  ANS:
+//  2
+//  #include<iostream>
+//  using namespace std;
+//  int pivotelement(int arr[],int n){
+//      int s=0;
+//      int e=n-1;
+//      int mid;
+//      while (s<e)
+//      {
+//          /* code */
+//          mid=(s+e)/2;
+//          if (arr[mid]>=arr[0]){
+//              s=mid+1;
+//          }
+//          else{
+//              e=mid;
+//          }
+//      }
+//      return s;
+//  }
+
+// int main(int argc, char const *argv[])
+// {
+//     int n;
+//     cin>>n;
+//     int arr[n];
+//     for (int i=0;i<n;i++){
+//         cin>>arr[i];
+//     }
+//     cout<<pivotelement(arr,n)<<endl;
+//     return 0;
+// }
+
+// c
+//  TC:
+//  25
+//  ANS:
+//  5
+// chatgpt square root of a number
+// #include <iostream>
+// #include <cmath>
+// using namespace std;
+
+// int mysqrt(int n) {
+//     int ans = 1;
+//     for (int i = 2; i <= sqrt(n); i++) {
+//         int count = 0;
+//         while (n % i == 0) {
+//             n /= i;
+//             count++;
+//         }
+//         if (count > 0) {
+//             ans *= pow(i, count / 2);
+//         }
+//     }
+//     if (n > 1) {
+//         ans *= n;
+//     }
+//     return ans;
+// }
+
+// int main() {
+//     int n;
+//     cin >> n;
+//     cout << mysqrt(n) << endl;
+//     return 0;
+// }
+
+// c
+// TC:
+// 25
+// ANS:
+// 5
+// square root of a number
+// #include <iostream>
+// #include <cmath>
+// using namespace std;
+
+// int mysqrt(int n)
+// {
+//     int ans = 1;
+//     for (int i = 2; i <= sqrt(n); i++)
+//     {
+//         int c = 0;
+//         while (n % i == 0)
+//         {
+//             n /= i;
+//             c++;
+//         }
+//         // for (int j=0;j<c/2;j++){
+//         //     ans=ans*i;
+//         // }
+//         if (c > 0)
+//         {
+//             ans *= pow(i, c / 2);
+//         }
+//     }
+//     if (n > 1)
+//     {
+//         ans *= n;
+//     }
+//     return ans;
+// }
+
+// int main()
+// {
+//     int n;
+//     cin >> n;
+//     cout << mysqrt(n) << endl;
+//     return 0;
+// }
+
+// #include <iostream>
+// #include <cmath>
+// using namespace std;
+
+// int mysqrt(int n) {
+//     int ans = 1;
+//     for (int i = 2; i <= sqrt(n); i++) {
+//         int c = 0;
+//         while (n % i == 0) {
+//             n /= i;
+//             c++;
+//         }
+//         if (c > 0) {
+//             // Multiply 'i' with itself 'c / 2' times
+//             for (int j = 0; j < c / 2; j++) {
+//                 ans *= i;
+//             }
+//         }
+//     }
+//     if (n > 1) {
+//         ans *= n;
+//     }
+//     return ans;
+// }
+
+// long long int mysqrt(int x)
+// {
+//     int s = 0;
+//     int e = x;
+//     long long int mid = 0;
+//     long long int ans = -1;
+//     while (s <= e)
+//     {
+//         mid = (s + e) / 2;
+//         if (mid * mid == x)
+//         {
+//             return mid;
+//         }
+//         if (mid * mid > x)
+//         {
+//             e = mid - 1;
+//         }
+//         else
+//         {
+//             ans = mid;
+//             s = mid + 1;
+//         }
+//     }
+//     return ans;
+// }
+
+// double decimalval(int n, int decimal, int sqroot)
+// {
+//     double factor = 1;
+//     double ans = sqroot;
+
+//     for (int i = 0; i < decimal; i++)
+//     {
+//         factor = factor / 10;
+//         for (double j=ans;j*j<n;j+=factor){
+//             ans=j;
+//         }
+//     }
+//     return ans;
+// }
+
+// int main()
+// {
+//     int n;
+//     cin >> n;
+//     int sqroot = mysqrt(n);
+//     cout << decimalval(n, 3, sqroot) << endl;
+//     return 0;
+// }
+
+#include <iostream>
+#include<climits>
+#include "bits/stdc++.h"
+using namespace std;
+int swapalternate(vector<int> &arr){
+
+}
+
+int main(int argc, char const *argv[])
+{
+    int n;
+    cin >> n;
+    vector<int> arr(n);
+    for (int i=0;i<n;i++){
+        cin>>arr[i];
+    }
+
+    vector<int> narr=swapalternate(arr,n);
+    cout<<narr<<endl;
+
+    return 0;
+}
