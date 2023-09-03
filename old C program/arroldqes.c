@@ -273,25 +273,25 @@
 
 // c
 //  coding ninja question
-//  #include<stdio.h>
-//  int main(int argc, char const *argv[])
-//  {
-//      int n,arr[]={1,2,3,4,5,6};
-//      printf("enter the nO:");
-//      scanf("%d",&n);
-//      int s=sizeof(arr)/sizeof(arr[0]);
-//      for(int i=0;i<s;i++){
-//          if (arr[i]==n){
-//              for (int j=i+1;j<s;j++){
-//                  printf("%d ",arr[j]);
-//              }
-//              for (int j=0;j<i+1;j++){
-//                  printf("%d ",arr[j]);
-//              }
-//          }
-//      }
-//      return 0;
-//  }
+ #include<stdio.h>
+ int main(int argc, char const *argv[])
+ {
+     int n,arr[]={1,2,3,4,5,6};
+     printf("enter the nO:");
+     scanf("%d",&n);
+     int s=sizeof(arr)/sizeof(arr[0]);
+     for(int i=0;i<s;i++){
+         if (arr[i]==n){
+             for (int j=i+1;j<s;j++){
+                 printf("%d ",arr[j]);
+             }
+             for (int j=0;j<i+1;j++){
+                 printf("%d ",arr[j]);
+             }
+         }
+     }
+     return 0;
+ }
 
 // c
 //  #include<stdio.h>
@@ -528,30 +528,30 @@
 // }
 
 // c
-#include <stdio.h>
-int main(int argc, char const *argv[])
-{
-    int s, e, j, k;
-    printf("no;");
-    scanf("%d %d", &s, &e);
-    for (int i = s; i <= e; i++)
-    {
-        int c = 0;
-        for (j = 1; j < i; j++)
-        {
-            if (i % j == 0)
-            {
-                c++;
-            }
-            k = j;
-        }
-        if (c % 2 == 0)
-        {
-            printf("%d ", k);
-        }
-    }
-    return 0;
-}
+// #include <stdio.h>
+// int main(int argc, char const *argv[])
+// {
+//     int s, e, j, k;
+//     printf("no;");
+//     scanf("%d %d", &s, &e);
+//     for (int i = s; i <= e; i++)
+//     {
+//         int c = 0;
+//         for (j = 1; j < i; j++)
+//         {
+//             if (i % j == 0)
+//             {
+//                 c++;
+//             }
+//             k = j;
+//         }
+//         if (c % 2 == 0)
+//         {
+//             printf("%d ", k);
+//         }
+//     }
+//     return 0;
+// }
 
 // c
 //  #include<stdio.h>

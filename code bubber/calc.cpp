@@ -1,37 +1,39 @@
-// #include <iostream>
-// #include <limits>
-// #include <math.h>
-// using namespace std;
-// int main(int argc, char const *argv[])
-// {
-//     int a, b;
-//     char op;
-//     // cout << "Enter the no a and b :" << endl;
-//     cin >> a >> op >> b;
-//     // cout << "Enter the operator:" << endl;
-//     switch (op)
-//     {
-//     case '+':
-//         cout << (a + b) << endl;
-//         break;
-//     case '-':
-//         cout << (a - b) << endl;
-//         break;
-//     case '*':
-//         cout << (a * b) << endl;
-//         break;
-//     case '/':
-//         cout << (a / b) << endl;
-//         break;
-//     case '%':
-//         cout << (a % b) << endl;
-//         break;
-//     default:
-//         cout << ("Please enter the valid operator");
-//         break;
-//     }
-//     return 0;
-// }
+#include <iostream>
+#include <limits>
+#include <math.h>
+using namespace std;
+int main(int argc, char const *argv[])
+{
+    int a, b;
+    char op;
+    // cout << "Enter the no a and b :" << endl;
+    cin >> a >> op >> b;
+    // cout << "Enter the operator:" << endl;
+    switch (op)
+    {
+    case '+':
+        cout << (a + b) << endl;
+        break;
+    case '-':
+        cout << (a - b) << endl;
+        break;
+    case '*':
+        cout << (a * b) << endl;
+        break;
+    case '/':
+        cout << (a / b) << endl;
+        break;
+    case '%':
+        cout << (a % b) << endl;
+        break;
+    default:
+        cout << ("Please enter the valid operator");
+        break;
+    }
+    return 0;
+}
+
+///////////////////////////////////////////////////////////////////////////////////////
 
 // #include <iostream>
 // #include<climits>
@@ -50,19 +52,19 @@
 //     return 0;
 // }
 
-#include <iostream>
-#include<climits>
-#include "bits/stdc++.h"
-using namespace std;
+// #include <iostream>
+// #include<climits>
+// #include "bits/stdc++.h"
+// using namespace std;
 
-int main(int argc, char const *argv[])
-{
-    int a=6;
-    int b=4;
-    int c=a^b;
-    cout<<c<<endl;
-    return 0;
-}
+// int main(int argc, char const *argv[])
+// {
+//     int a=6;
+//     int b=4;
+//     int c=a^b;
+//     cout<<c<<endl;
+//     return 0;
+// }
 
 // #include <iostream>
 // #include<climits>

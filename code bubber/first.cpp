@@ -702,7 +702,7 @@
 //     return 0;
 // }
 
-// code bubber
+// _______________________________code bubber_____________________________________
 // #include <iostream>
 // using namespace std;
 // int main(int argc, char const *argv[])
@@ -1381,3 +1381,22 @@
 //     return 0;
 // }
 
+// #include <iostream>
+// #include<climits>
+// #include "bits/stdc++.h"
+// using namespace std;
+// int swap2(int *a,int *b){
+//     int c;
+//     c=*a;
+//     *a=*b;
+//     *b=c;
+// }
+
+// int main(int argc, char const *argv[])
+// {
+//     int a,b;
+//     cin >>a>>b;
+//     swap2(&a,&b);
+//     cout<<a<<" "<<b<<endl;
+//     return 0;
+// }

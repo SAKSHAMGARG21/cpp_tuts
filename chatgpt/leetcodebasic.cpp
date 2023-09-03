@@ -2,8 +2,11 @@
 // #include <iostream>
 // #include <climits>
 // #include <unordered_map>
+// #include <string>
 // #include <vector>
+// #include <cctype> // use for type casting
 // #include <algorithm>
+
 // #include <set>
 // #include "bits/stdc++.h"
 // using namespace std;
@@ -53,7 +56,7 @@
 
 // ----------------------------------------------------------------------
 
-// pair question 
+// pair function question 
 // #include <iostream>
 // #include <vector>
 // #include <algorithm>
@@ -122,3 +125,70 @@
 //     return 0;
 // }
 
+// set code
+// #include <iostream>
+// #include <set>
+// using namespace std;
+
+// int main() {
+//     set<int> st;
+
+//     // Insert elements into the set
+//     st.insert(10);  //Note IN case of set insert function will use not push_back
+//     st.insert(5);
+//     st.insert(15);
+//     st.insert(8);
+
+//     // The set will automatically sort and remove duplicates
+//     // So, the set will contain {5, 8, 10, 15}
+
+//     // Access elements in the set
+//     cout << "Set Elements: ";
+//     for (int num : st) {
+//         cout << num << " ";
+//     }
+//     cout << endl;
+
+//     // Check if an element exists in the set
+//     int x = 5;
+//     if (st.count(x)) {
+//         cout << x << " exists in the set." << endl;
+//     } else {
+//         cout << x << " does not exist in the set." << endl;
+//     }
+
+//     // Erase elements from the set
+//     st.erase(8);
+
+//     cout << "Set after erasing 8: ";
+//     for (int num : st) {
+//         cout << num << " ";
+//     }
+//     cout << endl;
+
+//     return 0;
+// }
+
+// #include <iostream>
+// #include <cctype> // Include the cctype header for toupper
+// using namespace std;
+
+// int main() {
+//     char lowercaseChar = 'a';
+//     char uppercaseChar = 'A';
+    
+//     // Use the toupper function to convert to uppercase
+//     char uppercaseChar1 = toupper(lowercaseChar);
+//     char lowercaseChar1 = tolower(uppercaseChar);
+    
+//     cout << "Original character: " << lowercaseChar << endl;
+//     cout << "Uppercase character: " << uppercaseChar1 << endl;
+//     cout << "Original character: " << uppercaseChar << endl;
+//     cout << "Uppercase character: " << lowercaseChar1 << endl;
+
+//     return 0;
+// }
+
+// short from of if else returning true : false
+//     bool b = check(arr1);
+//     cout << (b ? "true" : "false") << endl;
