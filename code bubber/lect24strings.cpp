@@ -815,5 +815,20 @@
 //     return 0;
 // }
 
-
-
+// c
+// test case:
+// 5
+// 3 4 5 1
+// ans:
+// 2
+#include <iostream>
+#include <climits>
+#include <limits>
+#include <math.h>
+using namespace std;
+int main()
+{
+    int n;
+    cin >> n;
+    return 0;
+}

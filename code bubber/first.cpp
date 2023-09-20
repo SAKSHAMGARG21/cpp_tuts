@@ -178,10 +178,8 @@
 //     cin>>a>>b;
 //     for (int i=0;i<a;i++){
 //         for (int j=0;j<b;j++){
-//             // printf("*");
 //             cout<<"*";
 //         }
-//         // printf("\n");
 //         cout<<"\n";
 //     }
 //     return 0;
@@ -584,27 +582,30 @@
 //     return 0;
 // }
 
+// c1
 // Decimal to Binary code
-//  #include <iostream>
-//  using namespace std;
-//  int main(int argc, char const *argv[])
-//  {
-//      int n, i, j, m;
-//      cout << "no:";
-//      cin >> n;
-//      int rem=0,que=0,e=0,add=0,ten=1;
-//      while(n!=0){
-//          rem=n%2;
-//          e=rem*ten;
-//          add=add+e;
-//          ten*=10;
-//          n=n/2;
-//      }
-//      cout<<add;
-//      return 0;
-//  }
+// #include <iostream>
+// using namespace std;
+// int main(int argc, char const *argv[])
+// {
+//     int n, i, j, m;
+//     // cout << "no:";
+//     cin >> n;
+//     int rem = 0, que = 0, e = 0, add = 0, ten = 1;
+//     while (n != 0)
+//     {
+//         rem = n % 2;
+//         e = rem * ten;
+//         add = add + e;
+//         ten *= 10;
+//         n = n / 2;
+//     }
+//     cout << add;
+//     return 0;
+// }
 
 // 101101
+// c2
 // Binary to Decimal code
 // #include <iostream>
 // #include <cmath>
@@ -612,7 +613,7 @@
 // int main(int argc, char const *argv[])
 // {
 //     int n, rem, add = 0, m = 0;
-//     cout << "no:";
+//     // cout << "no:";
 //     cin >> n;
 //     while (n != 0)
 //     {
@@ -630,13 +631,13 @@
 // }
 
 // Reverse of a number.
+// c3
 // #include <iostream>
 // #include <cmath>
 // using namespace std;
-
 // int main() {
 //     int n, rem, add = 0, m = 0;
-//     cout << "Enter a number: ";
+//    // cout << "Enter a number: ";
 //     cin >> n;
 //     while (n!=0){
 //         rem=n%10;
@@ -648,6 +649,7 @@
 // }
 
 // Armstrong no
+// c4
 //  #include <iostream>
 //  #include <cmath>
 //  using namespace std;
@@ -677,12 +679,13 @@
 //     return 0;
 // }
 
+// c4
 // #include <iostream>
 // #include <cmath>
 // using namespace std;
 // int main() {
 //     int n,rem,x,sum=0,c=0;
-//     cout << "Enter a number: ";
+//     // cout << "Enter a number: ";
 //     cin >> n;
 //     x=n;
 //     for (int i=n;i>0;i/=10){
@@ -738,7 +741,7 @@
 //     // cout<<a<<endl;
 //     // cout<<2.5/2<<endl;
 
-//     // relaction operators
+//     // relation operators
 //     // int a=2;
 //     // int b=3;
 
@@ -765,6 +768,7 @@
 //     return 0;
 // }
 
+// c5
 // #include<iostream>
 // #include<string>
 // using namespace std;
@@ -785,6 +789,7 @@
 //     return 0;
 // }
 
+// c6
 // #include<iostream>
 // using namespace std;
 // int main(){
@@ -803,6 +808,7 @@
 //     return 0;
 // }
 
+// c7
 // #include <iostream>
 // using namespace std;
 // int main(int argc, char const *argv[])
@@ -815,30 +821,7 @@
 //         int j=1;
 //         while (j <= n)
 //         {
-//             cout<< p;
-//             p += 1;
-//             j++;
-//         }
-//         cout<<endl;
-//         i++;
-//     }
-
-//     return 0;
-// }
-
-// #include <iostream>
-// using namespace std;
-// int main(int argc, char const *argv[])
-// {
-//     int n;
-//     cin >> n;
-//     int i = 1, p = 1;
-//     while (i <= n)
-//     {
-//         int j=1;
-//         while (j <= n)
-//         {
-//             cout<< p;
+//             cout<< p << " ";
 //             p += 1;
 //             j++;
 //         }
@@ -848,6 +831,7 @@
 //     return 0;
 // }
 
+// c8
 // #include <iostream>
 // using namespace std;
 // int main(int argc, char const *argv[])
@@ -873,6 +857,7 @@
 //     return 0;
 // }
 
+// c9
 // #include <iostream>
 // using namespace std;
 // int main(int argc, char const *argv[])
@@ -897,6 +882,7 @@
 //     return 0;
 // }
 
+// c10
 // #include <iostream>
 // using namespace std;
 // int main(int argc, char const *argv[])
@@ -920,6 +906,7 @@
 //     return 0;
 // }
 
+// c11
 // #include <iostream>
 // using namespace std;
 // int main(int argc, char const *argv[])
@@ -943,6 +930,7 @@
 //     return 0;
 // }
 
+// c12
 // #include <iostream>
 // using namespace std;
 // int main(int argc, char const *argv[])
@@ -967,9 +955,10 @@
 //     return 0;
 // }
 
+// c13
 // #include <iostream>
 // using namespace std;
-// int main(int argc, char const *argv[])
+// int main()
 // {
 //     int n;
 //     cin >> n;
@@ -990,6 +979,7 @@
 //     return 0;
 // }
 
+//c14 
 // #include <iostream>
 // using namespace std;
 // int main(int argc, char const *argv[])
@@ -1000,7 +990,7 @@
 //     while (i <= n)
 //     {
 //         int k = 1;
-//         while (k<=n-i)
+//         while (k<=n-i+1)
 //         {
 //             /* code */
 //             cout<<" ";
@@ -1019,6 +1009,7 @@
 //     return 0;
 // }
 
+// c15
 // #include <iostream>
 // using namespace std;
 // int main(int argc, char const *argv[])
@@ -1032,7 +1023,7 @@
 //         int j = 1;
 //         while (j <= i)
 //         {
-//             cout << a;
+//             cout << a<<" ";
 //             a++;
 //             j++;
 //         }
@@ -1042,6 +1033,7 @@
 //     return 0;
 // }
 
+// c16
 // #include <iostream>
 // using namespace std;
 // int main(int argc, char const *argv[])
@@ -1078,11 +1070,12 @@
 //     return 0;
 // }
 
+// fibonacci series
 // #include <iostream>
 // using namespace std;
 // int main(int argc, char const *argv[])
 // {
-//     int n=5;
+//     int n=10;
 //     int a =0;
 //     int b=1;
 //     cout<<a<<" "<<b<<" ";
@@ -1095,7 +1088,10 @@
 //     return 0;
 // }
 
+// c17
 // leet code problem
+// lect 7 
+// reverse interger
 // #include <iostream>
 // #include <limits>
 // #include <math.h>
@@ -1123,7 +1119,9 @@
 //     return 0;
 // }
 
-// leet code problem fst complement by self
+// c18
+// leet code problem 
+// fst complement code by self
 // #include <iostream>
 // #include <limits>
 // #include <math.h>
@@ -1147,7 +1145,7 @@
 //             ten *= 10;
 //             n /= 2;
 //         }
-//         // cout << add << endl;
+//         cout << add << endl;
 //         int ans = 0, tem = 1;
 //         while (add != 0)
 //         {
@@ -1167,7 +1165,7 @@
 //             tem *= 10;
 //             add /= 10;
 //         }
-//         // cout<<ans<<endl;
+//         cout<<ans<<endl;
 //         int p = 0;
 //         int mans = 0;
 //         while (ans != 0)
@@ -1185,6 +1183,7 @@
 //     return 0;
 // }
 
+// c19
 // by code bubber
 // #include <iostream>
 // #include <limits>
@@ -1208,9 +1207,9 @@
 //             mask = (mask << 1) | 1;
 //             m = m >> 1;
 //         }
-//         int ans = (~n) & mask;
+//         int ans = (~n) & mask; // (~n) it means this is not operator
 //         cout << ans << endl;
-//         cout << mask << endl;
+//         // cout << mask << endl;
 //     }
 //     return 0;
 // }
@@ -1229,6 +1228,7 @@
 //     return 0;
 // }
 
+// c20
 // #include <iostream>
 // #include <limits>
 // #include <math.h>
@@ -1250,6 +1250,7 @@
 //     return 0;
 // }
 
+// c21
 // #include <iostream>
 // #include <limits>
 // #include <math.h>
@@ -1263,6 +1264,7 @@
 //     for (i = 0; i <= 30; i++)
 //     {
 //         // cout<<"ans"<<ans<<endl;
+//         // ans=pow(2,i);
 //         if (ans == n)
 //         {
 //             cout << "true" << n << endl;
@@ -1297,7 +1299,7 @@
 //             break;
 //         }
 //         break;
-//         exit;
+//         // exit;
 //     case 'a':
 //         cout << "char" << endl;
 //         break;
@@ -1344,6 +1346,7 @@
 //     return 0;
 // }
 
+// c22
 // #include <iostream>
 // #include <limits>
 // #include <math.h>
@@ -1355,12 +1358,12 @@
 //     cout<<"100:"<<(n/100)<<endl;
 //     cout<<"50:"<<((n%100)/50)<<endl;
 
-
 //     cout<<"20:"<<(((n%100)%50)/20)<<endl;
 //     cout<<"10:"<<((((n%100)%50)%20)/10)<<endl;
 //     return 0;
 // }
 
+// c23
 // #include <iostream>
 // using namespace std;
 
@@ -1381,6 +1384,7 @@
 //     return 0;
 // }
 
+// c24
 // #include <iostream>
 // #include<climits>
 // #include "bits/stdc++.h"
