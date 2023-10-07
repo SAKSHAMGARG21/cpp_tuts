@@ -328,7 +328,7 @@
 
 //     int top=0, botm= n-1, left = 0 ,right = m-1;
 
-//     while(top < botm && left<= right){
+//     while(top <= botm && left<= right){
 //         for (int i=left;i<=right;i++){
 //             cout<<arr[top][i]<<" ";
 //         }
@@ -499,4 +499,138 @@
 //     }
 //     return 0;
 // }
+
+// c12
+// cylic arrat
+// #include <iostream>
+// #include <climits>
+// #include <limits>
+// #include <math.h>
+// using namespace std;
+// int main()
+// {
+//     int n, m;
+//     cin >> n >> m;
+//     int arr[n][m];
+//     for (int i = 0; i < n; i++)
+//     {
+//         for (int j = 0; j < m; j++)
+//         {
+//             cin >> arr[i][j];
+//         }
+//     }
+
+//     // for (int i=0;i<n;i++){
+//     //     for (int j=0;j<m;j++){
+//     //         cout<<arr[i][j]<<" ";
+//     //     }
+//     //     cout<<endl;
+//     // }
+
+//     int top = 0, botm = n - 1, left = 0, right = m - 1;
+
+//     for (int i = left; i <= right; i++)
+//     {
+//         cout << arr[top][i] << " ";
+//     }
+//     top++;
+
+//     for (int i = top; i <= botm; i++)
+//     {
+//         cout << arr[i][right] << " ";
+//     }
+//     right--;
+
+//     for (int i = right; i >= left; i--)
+//     {
+//         cout << arr[botm][i] << " ";
+//     }
+//     botm--;
+
+//     for (int i = botm; i >= top; i--)
+//     {
+//         cout << arr[i][left] << " ";
+//     }
+//     left++;
+//     return 0;
+// }
+
+// c13
+// #include <iostream>
+// #include <climits>
+// #include <limits>
+// #include <math.h>
+// using namespace std;
+// int main()
+// {
+//     int n, m;
+//     cin >> n >> m;
+//     int arr[n][m];
+//     for (int i = 0; i < n; i++)
+//     {
+//         for (int j = 0; j < m; j++)
+//         {
+//             cin >> arr[i][j];
+//         }
+//     }
+
+//     int top = 0, botm = n - 1, left = 0, right = m - 1;
+//     int curr;
+//     while (top < botm && left < right)
+//     {
+//         int prev = arr[top + 1][left];
+//         for (int i = left; i <= right; i++)
+//         {
+//             curr = arr[top][i];
+//             arr[top][i] = prev;
+//             prev = curr;
+//         }
+//         top++;
+//         for (int i = top; i <= botm; i++)
+//         {
+//             curr = arr[i][right];
+//             arr[i][right] = prev;
+//             prev = curr;
+//         }
+//         right--;
+//         for (int i = right; i >= left; i--)
+//         {
+//             curr = arr[botm][i];
+//             arr[botm][i] = prev;
+//             prev= curr;
+//         }
+//         botm--;
+//         for (int i=botm;i>=top;i--){
+//             curr= arr[i][left];
+//             arr[i][left]=prev;
+//             prev=curr;
+//         }
+//         left++;
+//     }
+//     for (int i = 0; i < n; i++)
+//     {
+//         for (int j = 0; j < m; j++)
+//         {
+//             cout<< arr[i][j]<<" ";
+//         }
+//         cout<<endl;
+//     }
+//     return 0;
+// }
+
+// c
+#include <iostream>
+using namespace std;
+int main()
+{
+    int n;
+    cin >> n;
+    int arr[n];
+    for (int i = 0; i < n; i++)
+    {
+        cin >> arr[i];
+    }
+    
+    return 0;
+}
 

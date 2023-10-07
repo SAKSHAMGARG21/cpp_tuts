@@ -1,0 +1,1 @@
+union,intersection,subset,Binarytodecimal,decimal to binary, second max and second min , strong no , prefect no, pow of 2 ,calc using switch case, insertion, delection, update,bubble,selection and insertion sort,missing element in array,leap year or not,no of notes , transpose and multiplication of matrix.

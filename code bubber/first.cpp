@@ -556,6 +556,7 @@
 //     return 0;
 // }
 
+// wave pattern 
 // #include <iostream>
 // using namespace std;
 // int main(int argc, char const *argv[])
@@ -574,7 +575,6 @@
 //             else
 //             {
 //                 cout << "  ";
-
 //             }
 //         }
 //         cout << endl;
@@ -620,7 +620,7 @@
 //         rem = n % 10;
 //         if (rem != 0)
 //         {
-//             int j = rem * pow(2, m);
+//             int j = pow(2, m);
 //             add = add + j;
 //         }
 //         m++;

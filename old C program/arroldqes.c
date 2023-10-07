@@ -1,20 +1,22 @@
-// c
-//  #include<stdio.h>
-//  int main(int argc, char const *argv[])
-//  {
+// c1
+// #include <stdio.h>
+// int main(int argc, char const *argv[])
+// {
 //     int adhar[10];
-//     int *ptr= &adhar[0];
-//     for (int i=1;i<=10;i++){
-//         printf("enter your adhar no:");
-//         scanf("%d",(ptr+i));
+//     int *ptr = &adhar[0];
+//     for (int i = 0; i < 10; i++)
+//     {
+//         // printf("enter your adhar no:");
+//         scanf("%d", (ptr + i));
 //     }
-//     for (int i=1;i<=10;i++){
-//         printf("your adhar %d no is:%d\n",i,*(ptr+i));
+//     for (int i = 0; i < 10; i++)
+//     {
+//         printf("your adhar %d no is:%d\n", i, *(ptr + i));
 //     }
 //     return 0;
-//}
+// }
 
-// c
+// c1
 //  #include<stdio.h>
 //  int main(int argc, char const *argv[])
 //  {
@@ -30,92 +32,102 @@
 //     return 0;
 // }
 
-// c
-//  #include<stdio.h>
-//  int parry(int arr[],int n);
-//  int main(int argc, char const *argv[])
-//  {
-//      int arr[]={1,2,3,4,5,6};
-//      parry(arr,6);
-//      return 0;
-//  }
-// int parry(int arr[], int n){
-//     for (int i=0;i<n;i++){
-//         printf("%d \t",arr[i]);
+// c2
+// #include <stdio.h>
+// int parry(int arr[], int n);
+// int main(int argc, char const *argv[])
+// {
+//     int arr[] = {1, 2, 3, 4, 5, 6};
+//     parry(arr, 6);
+//     return 0;
+// }
+// int parry(int arr[], int n)
+// {
+//     for (int i = 0; i < n; i++)
+//     {
+//         printf("%d \t", arr[i]);
 //     }
 //     return 0;
 // }
 
-// c
-//  #include<stdio.h>
-//  int arrfun(int *arr,int n);
-//  int main(int argc, char const *argv[])
-//  {
-//      int arr[]={1,2,3,4,5,6,7};
-//      arrfun(arr,7);
-//      return 0;
-//  }
-//  int arrfun(int *arr,int n){
-//      int i ,c=0;
-//      for (i=0;i<n;i++){
-//          if (arr[i]%2!=0){
-//              c=c+1;
-//          }
-//      }
-//      printf("odd no in ary:%d\n",c);
-//  }
+// c3
+// #include <stdio.h>
+// int arrfun(int *arr, int n);
+// int main(int argc, char const *argv[])
+// {
+//     int arr[] = {1, 2, 3, 4, 5, 6, 7};
+//     arrfun(arr, 7);
+//     return 0;
+// }
+// int arrfun(int *arr, int n)
+// {
+//     int i, c = 0;
+//     for (i = 0; i < n; i++)
+//     {
+//         if (arr[i] % 2 != 0)
+//         {
+//             c = c + 1;
+//         }
+//     }
+//     printf("odd no in ary:%d\n", c);
+// }
 
-// c
-//  #include<stdio.h>
-//  void arrfun(int *arr,int n);
-//  // int parry(int arr[],int n);
-//  int main(int argc, char const *argv[])
-//  {
-//      int arr[]={1,2,3,4,5,6};
-//      arrfun(arr,6);
-//      // parry(arr,5);
-//      return 0;
+// c4
+// reverse of an array
+// #include <stdio.h>
+// void arrfun(int *arr, int n);
+// // int parry(int arr[],int n);
+// int main(int argc, char const *argv[])
+// {
+//     int arr[] = {1, 2, 3, 4, 5, 6};
+//     arrfun(arr, 6);
+//     // parry(arr,5);
+//     return 0;
 // }
 // // int parry(int arr[],int n){
 // //     for (int i=0;i<n;i++){
 // //         printf("%d ",arr[i]);
 // //     }
 // // }
-// void arrfun(int *arr,int n){ //*arr or arr[] can be written like this.
+// void arrfun(int *arr, int n)
+// { //*arr or arr[] can be written like this.
 //     int i;
-//     for (i=0;i<n/2;i++){
-//         int f=arr[i];
-//         int s=arr[n-i-1];
-//         arr[n-i-1]=f;
-//         arr[i]=s;
+//     for (i = 0; i < n / 2; i++)
+//     {
+//         int f = arr[i];
+//         int s = arr[n - i - 1];
+//         arr[n - i - 1] = f;
+//         arr[i] = s;
 //     }
-//     for (int i=0;i<n;i++){
-//         printf("%d ",arr[i]);
+//     for (int i = 0; i < n; i++)
+//     {
+//         printf("%d ", arr[i]);
 //     }
 // }
 
-// c
-//  #include<stdio.h>
-//  int main(int argc, char const *argv[])
-//  {
-//      int n;
-//      printf("enter the no value >2:");
-//      scanf("%d",&n);
+// c5
+// #include <stdio.h>
+// int main(int argc, char const *argv[])
+// {
+//     int n;
+//     // printf("enter the no value >2:");
+//     scanf("%d", &n);
 
 //     int fib[n];
-//     fib[0]=0;
-//     fib[1]=1;
-//     printf("%d %d",fib[0],fib[1]);
+//     fib[0] = 0;
+//     fib[1] = 1;
+//     printf("%d %d ", fib[0], fib[1]);
 
-//     for (int i=2;i<n;i++){
-//         fib[i]=fib[i-1]+fib[i-2];
-//         printf(" %d ",fib[i]);
+//     for (int i = 2; i < n; i++)
+//     {
+//         fib[i] = fib[i - 1] + fib[i - 2];
+//         printf("%d ", fib[i]);
 //     }
 //     return 0;
 // }
 
 // 2D Array
-// c
+// c6
 // #include<stdio.h>
 // int table(int arr[][10],int a ,int b);
 // int main(int argc, char const *argv[])
@@ -142,7 +154,7 @@
 //     }
 // }
 
-// c
+// c7
 // #include <stdio.h>
 // int main()
 // {
@@ -158,337 +170,392 @@
 //     return 0;
 // }
 
-// c
-//  #include<stdio.h>
-//  int main(int argc, char const *argv[])
-//  {
-//      // int n;
-//      // printf("enter the no :n");
-//      // scanf("%d",&n);
-//      int arr[]={1,2,3,4,3,3,6,9,3};
-//      int so=sizeof(arr)/sizeof(arr[0]);
-//      int key=3;
-//      int count=0;
-//      for (int i=0;i<so;i++){
-//          if (arr[i]==key){
-//              count++;
-//          }
-//      }
-//      printf("%d",count);
-//      return 0;
-//  }
+// #include <stdio.h>
+// #include <limits.h>  // Include this for INT_MAX
 
-// c
-// frequency of elemets
-//  #include<stdio.h>
-//  int main(int argc, char const *argv[])
-//  {
-//      int c[1000],arr[]={1,2,6,7,6,1,8};
-//      int s=sizeof(arr)/sizeof(arr[0]);
-//      for (int i=0;i<s;i++){
-//          int count=1;
-//          if (arr[i]!=-1){
-//              for (int j=i+1;j<s;j++){
-//                  if (arr[i]==arr[j]){
-//                      count++;
-//                      arr[j]=-1;
-//                  }
-//             }
-//         }
-//         c[i]=count;
-//     }
-//     for (int i=0;i<s;i++){
-//         if(arr[i]!=-1){
-//             printf("%d=%d\n",arr[i],c[i]);
-//         }
-//     }
-//     return 0;
+// // Function to find the minimum of two integers
+// int min(int a, int b) {
+//     return (a < b) ? a : b;
 // }
-
-// c
-//  #include<stdio.h>
-//  int main(int argc, char const *argv[])
-//  {
-//      int n;
-//      int arr[]={1,2,3,4,5};
-//      int s=sizeof(arr)/sizeof(arr[0]);
-//      printf("enter the no you want to insert:");
-//      scanf("%d",&n);
-//      arr[s]=n;
-//      // printf("%d ",arr);
-//      // int s=sizeof(arr)/sizeof(arr[0]);
-//      for (int i=0;i<s+1;i++){
-//          printf("arr[%d]=%d\n",i,arr[i]);
-//      }
-//      return 0;
-//  }
-
-// c
-//  #include <stdio.h>
-//  #include <string.h>
-//  #include <math.h>
-//  #include <stdlib.h>
 
 // int main() {
-//     int n;
-//     scanf("%d",&n);
-//     int arr[n];
-//     for(int i=0;i<n;i++){
-//         scanf("%d",&arr[i]);
+//     int arr[] = {5, 2, 8, 6, 4};
+//     int ans = INT_MAX;  // Initialize ans with the maximum possible integer
+
+//     for (int i = 0; i < 5; i++) {
+//         ans = min(arr[i], ans);
 //     }
-//     int sum=0;
-//     for (int j=0;j<n;j++){
-//         printf("%d",arr[j]);
-//         sum=sum+arr[j];
-//     }
-//     printf("%d",sum);
+
+//     printf("Minimum value in the array: %d\n", ans);
 //     return 0;
 // }
 
-// c
-//  reverse array
-//  #include <stdio.h>
-//  #include <stdlib.h>
+// c8
+// #include <stdio.h>
+// int main(int argc, char const *argv[])
+// {
+//     // int n;
+//     // printf("enter the no :n");
+//     // scanf("%d",&n);
+//     int arr[] = {1, 2, 3, 4, 3, 3, 6, 9, 3};
+//     int so = sizeof(arr) / sizeof(arr[0]);
+//     int key = 3;
+//     int count = 0;
+//     for (int i = 0; i < so; i++)
+//     {
+//         if (arr[i] == key)
+//         {
+//             count++;
+//         }
+//     }
+//     printf("%d", count);
+//     return 0;
+// }
+
+// c9
+// frequency of elemets
+// #include <stdio.h>
+// int main(int argc, char const *argv[])
+// {
+//     int c[1000], arr[] = {1, 2, 6, 7, 6, 1, 8};
+//     int s = sizeof(arr) / sizeof(arr[0]);
+//     for (int i = 0; i < s; i++)
+//     {
+//         int count = 1;
+//         if (arr[i] != -1)
+//         {
+//             for (int j = i + 1; j < s; j++)
+//             {
+//                 if (arr[i] == arr[j])
+//                 {
+//                     count++;
+//                     arr[j] = -1;
+//                 }
+//             }
+//         }
+//         c[i] = count;
+//     }
+//     for (int i = 0; i < s; i++)
+//     {
+//         if (arr[i] != -1)
+//         {
+//             printf("%d=%d\n", arr[i], c[i]);
+//         }
+//     }
+//     return 0;
+// }
+
+// c10
+// #include <stdio.h>
+// int main(int argc, char const *argv[])
+// {
+//     int n;
+//     int arr[] = {1, 2, 3, 4, 5};
+//     int s = sizeof(arr) / sizeof(arr[0]);
+//     // printf("enter the no you want to insert:");
+//     scanf("%d", &n);
+//     arr[s] = n;
+//     // printf("%d ",arr);
+//     // int s=sizeof(arr)/sizeof(arr[0]);
+//     for (int i = 0; i < s + 1; i++)
+//     {
+//         printf("arr[%d]=%d\n", i, arr[i]);
+//     }
+//     return 0;
+// }
+
+// c11
+// #include <stdio.h>
+// #include <string.h>
+// #include <math.h>
+// #include <stdlib.h>
 
 // int main()
 // {
-//     int num,i;
+//     int n;
+//     scanf("%d", &n);
+//     int arr[n];
+//     for (int i = 0; i < n; i++)
+//     {
+//         scanf("%d", &arr[i]);
+//     }
+//     int sum = 0;
+//     for (int j = 0; j < n; j++)
+//     {
+//         printf("%d ", arr[j]);
+//         sum = sum + arr[j];
+//     }
+//     printf("%d ", sum);
+//     return 0;
+// }
+
+// c12
+//  reverse array
+// #include <stdio.h>
+// #include <stdlib.h>
+
+// int main()
+// {
+//     int num, i;
 //     scanf("%d", &num);
 //     int arr[num];
-//     for(i = 0; i < num; i++) {
+//     for (i = 0; i < num; i++)
+//     {
 //         scanf("%d", &arr[i]);
 //     }
 //     /* Write the logic to reverse the array. */
-//     for (int j=0;j<num/2;j++){
-//         int fst=arr[j];
-//         int sec=arr[num-1-j];
-//         arr[num-1-j]=fst;
-//         arr[j]=sec;
+//     for (int j = 0; j < num / 2; j++)
+//     {
+//         int fst = arr[j];
+//         int sec = arr[num - 1 - j];
+//         arr[num - 1 - j] = fst;
+//         arr[j] = sec;
 //     }
-//     for(i = 0; i < num; i++){
+//     for (i = 0; i < num; i++)
+//     {
 //         printf("%d ", arr[i]);
 //     }
 //     return 0;
 // }
 
-// c
+// c13
 //  coding ninja question
- #include<stdio.h>
- int main(int argc, char const *argv[])
- {
-     int n,arr[]={1,2,3,4,5,6};
-     printf("enter the nO:");
-     scanf("%d",&n);
-     int s=sizeof(arr)/sizeof(arr[0]);
-     for(int i=0;i<s;i++){
-         if (arr[i]==n){
-             for (int j=i+1;j<s;j++){
-                 printf("%d ",arr[j]);
-             }
-             for (int j=0;j<i+1;j++){
-                 printf("%d ",arr[j]);
-             }
-         }
-     }
-     return 0;
- }
-
-// c
-//  #include<stdio.h>
-//  int main(int argc, char const *argv[])
-//  {
-//      int i,n,arr[]={1,0,3,0,0,1,0};
-//      int s=sizeof(arr)/sizeof(arr[0]);
-//      int k=0;
-//      for (i=0;i<s;i++){
-//          if (arr[i]!=0){
-//              int t=arr[i];
-//              arr[i]=arr[k];
-//              arr[k]=t;
-//              k++;
-//          }
-//      }
-//      if (i==s){
-//          for (int j=0;j<s;j++){
-//              printf("%d",arr[j]);
-//          }
-//      }
-//      return 0;
-//  }
-
-// c
-// alternate swap
-//  #include<stdio.h>
-//  int main(int argc, char const *argv[])
-//  {
-//      int i,n,arr[]={1,2,3,4,5,6};
-//      int s=sizeof(arr)/sizeof (arr[0]);
-//      for (i=0;i<s-1;i+=2){
-//          int t=arr[i];
-//          int r=arr[i+1];
-//          arr[i+1]=t;
-//          arr[i]=r;
-//      }
-//      if (i==s){
-//          for (int j=0;j<s;j++){
-//              printf("%d",arr[j]);
-//          }
-//      }
-//      return 0;
-//  }
-
-// c
-//  #include<stdio.h>
-//  int main(int argc, char const *argv[])
-//  {
-//      int i,j,arr[]={3,2,4,5,2,4,5,7};
-//      int s=sizeof(arr)/sizeof (arr[0]);
-//      for (i=0;i<s;i++){
-//          int c=0;
-//          for (j=0;j<s;j++){
-//              if(arr[i]==arr[j]){
-//                  c++;
-//              }
-//          }
-//          if (c==1){
-//              printf("%d",arr[i]);
-//              break;
-//          }
-//      }
-//      return 0;
-//  }
-
-// c
-//  #include<stdio.h>
-//  int main(int argc, char const *argv[])
-//  {
-//      int arr[]={1,2,3,4,5,3,6};
-//      int s=sizeof(arr)/sizeof(arr[0]);
-//      for (int i=0;i<s;i++){
-//          int c=0;
-//          for (int j=0;j<s;j++){
-//              if (arr[i]==arr[j]){
-//                  c++;
-//              }
-//          }
-//          if (c==2){
-//              printf("%d",arr[i]);
-//              break;
-//          }
-//      }
-//      return 0;
-//  }
-
-// c
-//  #include<stdio.h>
-//  int main(int argc, char const *argv[])
-//  {
-//      int n;
-//      printf("enter no of array:");
-//      scanf("%d",&n);
-//      for (int i=0;i<n;i++){
-//          int e,e1;
-//          printf(" No of elements of elements in array 1:");
-//          scanf("%d",&e);
-//          int arr1[e];
-//          for (int j=0;j<e;j++){
-//              scanf("%d",&arr1[j]);
-//          }
-//          printf("No of elements of elemets in array 2:");
-//          scanf("%d",&e1);
-//          int arr2[e1];
-//          for (int j=0;j<e1;j++){
-//              scanf("%d",&arr2[j]);
-//          }
-//          for (int c=0;c<e;c++){
-//              for (int d=0;d<e1;d++){
-//                  if (arr1[c]==arr2[d]){
-//                      printf("%d \n",arr1[c]);
-//                  }
-//              }
-//          }
-//      }
-//      return 0;
-//  }
-
-// c
-//  #include<stdio.h>
-//  int main(int argc, char const *argv[])
-//  {
-//      int n,arr[]={1,3,6,2,5,4,3,2,4};
-//      int s=sizeof (arr)/sizeof(arr[0]);
-//      scanf("%d",&n);
-//      int c=0;
-//      for (int i=0;i<s;i++){
-//          for(int j=i+1;j<s;j++){
-//              int b=arr[i]+arr[j];
-//              if (b==n){
-//                  c++;
-//              }
-//          }
-//      }
-//      printf("%d",c);
-//      return 0;
-//  }
-
-// c
-//  #include<stdio.h>
-//  int main(int argc, char const *argv[])
-//  {
-//      int n ,arr[]={1,2,3,4,5,6,7};
-//      int s=sizeof (arr)/sizeof (arr[0]);
-//      scanf("%d",&n);
-//      int c=0;
-//      for(int i=0;i<s;i++){
-//          for (int j=i+1;j<s;j++){
-//              for (int k=j+1;k<s;k++){
-//                  int b=arr[i]+arr[j]+arr[k];
-//                  if (b==n){
-//                      c++;
-//                      printf("%d %d %d\n",arr[i],arr[j],arr[k]);
-
-//                 }
-
+// #include <stdio.h>
+// int main(int argc, char const *argv[])
+// {
+//     int n, arr[] = {1, 2, 3, 4, 5, 6};
+//     // printf("enter the nO:");
+//     scanf("%d", &n);
+//     int s = sizeof(arr) / sizeof(arr[0]);
+//     for (int i = 0; i < s; i++)
+//     {
+//         if (arr[i] == n)
+//         {
+//             for (int j = i + 1; j < s; j++)
+//             {
+//                 printf("%d ", arr[j]);
+//             }
+//             for (int j = 0; j < i + 1; j++)
+//             {
+//                 printf("%d ", arr[j]);
 //             }
 //         }
 //     }
-//     printf("%d",c);
+//     return 0;
+// }
+
+// c14
+// #include <stdio.h>
+// int main(int argc, char const *argv[])
+// {
+//     int i, n, arr[] = {1, 0, 3, 0, 0, 1, 0};
+//     int s = sizeof(arr) / sizeof(arr[0]);
+//     int k = 0;
+//     for (i = 0; i < s; i++)
+//     {
+//         if (arr[i] != 0)
+//         {
+//             int t = arr[i];
+//             arr[i] = arr[k];
+//             arr[k] = t;
+//             k++;
+//         }
+//     }
+//     if (i == s)
+//     {
+//         for (int j = 0; j < s; j++)
+//         {
+//             printf("%d", arr[j]);
+//         }
+//     }
+//     return 0;
+// }
+
+// c14
+// #include <stdio.h>
+// int main()
+// {
+//     int arr[]={1,0,5,1,0,4,0,1};
+//     int so= sizeof(arr)/sizeof(arr[0]);
+//     int k=0;
+//     for (int i=0;i<so;i++){
+//         if (arr[i]!=0){
+//             int t= arr[i];
+//             arr[i]= arr[k];
+//             arr[k++]=t;
+//         }
+//     }
+//     for (int j=0;j<so;j++){
+//         printf("%d",arr[j]);
+//     }
+//     return 0;
+// }
+
+// c15
+// alternate swap
+// #include <stdio.h>
+// int main(int argc, char const *argv[])
+// {
+//     int i, n, arr[] = {1, 2, 3, 4, 5, 6};
+//     int s = sizeof(arr) / sizeof(arr[0]);
+//     for (i = 0; i < s - 1; i += 2)
+//     {
+//         int t = arr[i];
+//         int r = arr[i + 1];
+//         arr[i + 1] = t;
+//         arr[i] = r;
+//     }
+//     if (i == s)
+//     {
+//         for (int j = 0; j < s; j++)
+//         {
+//             printf("%d ", arr[j]);
+//         }
+//     }
+//     return 0;
+// }
+
+// c16
+// #include <stdio.h>
+// int main(int argc, char const *argv[])
+// {
+//     int i, j, arr[] = {3, 2, 4, 5, 2, 4, 5, 7};
+//     int s = sizeof(arr) / sizeof(arr[0]);
+//     for (i = 0; i < s; i++)
+//     {
+//         int c = 0;
+//         for (j = 0; j < s; j++)
+//         {
+//             if (arr[i] == arr[j])
+//             {
+//                 c++;
+//             }
+//         }
+//         if (c == 1)
+//         {
+//             printf("%d", arr[i]);
+//             break;
+//         }
+//     }
+//     return 0;
+// }
+
+// c17
+// #include <stdio.h>
+// int main(int argc, char const *argv[])
+// {
+//     int arr[] = {1, 2, 3, 4, 5, 3, 6};
+//     int s = sizeof(arr) / sizeof(arr[0]);
+//     for (int i = 0; i < s; i++)
+//     {
+//         int c = 0;
+//         for (int j = 0; j < s; j++)
+//         {
+//             if (arr[i] == arr[j])
+//             {
+//                 c++;
+//             }
+//         }
+//         if (c >= 2)
+//         {
+//             printf("%d", arr[i]);
+//             break;
+//         }
+//     }
+//     return 0;
+// }
+
+// c18
+// intersection of an array
+// #include <stdio.h>
+// int main(int argc, char const *argv[])
+// {
+//     int n;
+//     // printf("enter no of array:");
+//     scanf("%d", &n);
+//     for (int i = 0; i < n; i++)
+//     {
+//         int e, e1;
+//         // printf(" No of elements of elements in array 1:");
+//         scanf("%d", &e);
+//         int arr1[e];
+//         for (int j = 0; j < e; j++)
+//         {
+//             scanf("%d", &arr1[j]);
+//         }
+//         // printf("No of elements of elemets in array 2:");
+//         scanf("%d", &e1);
+//         int arr2[e1];
+//         for (int j = 0; j < e1; j++)
+//         {
+//             scanf("%d", &arr2[j]);
+//         }
+//         for (int c = 0; c < e; c++)
+//         {
+//             for (int d = 0; d < e1; d++)
+//             {
+//                 if (arr1[c] == arr2[d])
+//                 {
+//                     printf("%d \n", arr1[c]);
+//                 }
+//             }
+//         }
+//     }
 //     return 0;
 // }
 
 // c
-//  #include<stdio.h>
-//  int main(int argc, char const *argv[])
-//  {
-//      int n;
-//      printf("enter no of array:");
-//      scanf("%d",&n);
-//      for (int i=0;i<n;i++){
-//          int e,e1;
-//          printf(" No of elements of elements in array 1:");
-//          scanf("%d",&e);
-//          int arr1[e];
-//          for (int j=0;j<e;j++){
-//              scanf("%d",&arr1[j]);
-//          }
-//          printf("No of elements of elemets in array 2:");
-//          scanf("%d",&e1);
-//          int arr2[e1];
-//          for (int j=0;j<e1;j++){
-//              scanf("%d",&arr2[j]);
-//          }
-//          for (int c=0;c<e;c++){
-//              for (int d=0;d<e1;d++){
-//                  if (arr1[c]==arr2[d]){
-//                      printf("%d \n",arr1[c]);
-//                  }
-//              }
-//          }
-//      }
-//      return 0;
-//  }
+// #include <stdio.h>
+// int main(int argc, char const *argv[])
+// {
+//     int n, arr[] = {1, 3, 6, 2, 5, 4, 3, 2, 5};
+//     int s = sizeof(arr) / sizeof(arr[0]);
+//     scanf("%d", &n);
+//     int c = 0;
+//     for (int i = 0; i < s; i++)
+//     {
+//         for (int j = i + 1; j < s; j++)
+//         {
+//             int b = arr[i] + arr[j];
+//             if (b == n)
+//             {
+//                 // c++;
+//                 printf("%d %d\n",arr[i],arr[j]);
+//             }
+//         }
+//     }
+//     // printf("%d", c);
+//     return 0;
+// }
 
-// c
+// c20
+// #include <stdio.h>
+// int main(int argc, char const *argv[])
+// {
+//     int n, arr[] = {1, 2, 3, 4, 5, 6, 7};
+//     int s = sizeof(arr) / sizeof(arr[0]);
+//     scanf("%d", &n);
+//     int c = 0;
+//     for (int i = 0; i < s; i++)
+//     {
+//         for (int j = i + 1; j < s; j++)
+//         {
+//             for (int k = j + 1; k < s; k++)
+//             {
+//                 int b = arr[i] + arr[j] + arr[k];
+//                 if (b == n)
+//                 {
+//                     c++;
+//                     printf("%d %d %d\n", arr[i], arr[j], arr[k]);
+//                 }
+//             }
+//         }
+//     }
+//     printf("%d", c);
+//     return 0;
+// }
+
+// c21
 //  #include<Stdio.h>
 //  int main(int argc, char const *argv[])
 //  {
@@ -507,11 +574,32 @@
 //      return 0;
 //  }
 
+// c21
+// #include <stdio.h>
+// int main()
+// {
+//     int arr[]={1,0,1,0,1,1};
+//     int s= sizeof(arr)/sizeof(arr[0]);
+//     int k=0;
+//     for (int i=0;i<s;i++){
+//         if(arr[i]!=0){
+//             int t= arr[i];
+//             arr[i]=arr[k];
+//             arr[k++]=t;
+//         }
+//     }
+//     for (int i=0;i<s;i++){
+//         printf("%d ",arr[i] );
+//     }
+//     return 0;
+// }
+
+// c22
 // #include<stdio.h>
 // int main(int argc, char const *argv[])
 // {
 //     int s,e;
-//     printf("no:");
+//     // printf("no:");
 //     scanf("%d %d",&s,&e);
 //     for (int i=s;i<=e;i++){
 //         int sum=0;
@@ -521,18 +609,18 @@
 //             }
 //         }
 //         if (sum==i){
-//             printf("%d is a prefect no",i);
+//             printf("%d is a prefect no\n",i);
 //         }
 //     }
 //     return 0;
 // }
 
-// c
+// c23
 // #include <stdio.h>
 // int main(int argc, char const *argv[])
 // {
 //     int s, e, j, k;
-//     printf("no;");
+//     // printf("no;");
 //     scanf("%d %d", &s, &e);
 //     for (int i = s; i <= e; i++)
 //     {
@@ -581,12 +669,12 @@
 //      return 0;
 //  }
 
-// c
+// c24
 // union of array
 // #include <stdio.h>
 // int main(int argc, char const *argv[])
 // {
-//     int arr[5] = {1, 2, 4, 6, n};
+//     int arr[5] = {1, 2, 4, 6, 8};
 //     int arr1[4] = {1, 3, 2, 9};
 //     int i, arr2[9];
 //     for (i = 0; i < 5; i++)
@@ -615,7 +703,7 @@
 //     return 0;
 // }
 
-// c
+// c25
 // #include <stdio.h>
 // int main(int argc, char const *argv[])
 // {
@@ -644,12 +732,13 @@
 //     return 0;
 // }
 
-// c
+// c26
+// find the missing element
 // #include <stdio.h>
 // int main(int argc, char const *argv[])
 // {
 //     int n;
-//     printf("no:");
+//     // printf("no:");
 //     scanf("%d", &n);
 //     int a, arr[n];
 //     for (int i = 0; i < n - 1; i++)
@@ -665,21 +754,25 @@
 //     return 0;
 // }
 
-// c
-//  #include <stdio.h>
-
-// int main(int argc, char const *argv[]) {
+// c27
+// #include <stdio.h>
+// int main(int argc, char const *argv[])
+// {
 //     int n;
-//     printf("no:");
+//     // printf("no:");
 //     scanf("%d", &n);
 //     int arr[n];
-//     for (int i = 0; i < n - 1; i++) {
+//     for (int i = 0; i < n - 1; i++)
+//     {
 //         scanf("%d", &arr[i]);
 //     }
 
-//     for (int t = 0; t < n; t++) {
-//         for (int e = t + 1; e < n; e++) {
-//             if (arr[t] > arr[e]) {
+//     for (int t = 0; t < n; t++)
+//     {
+//         for (int e = t + 1; e < n; e++)
+//         {
+//             if (arr[t] > arr[e])
+//             {
 //                 int temp = arr[t];
 //                 arr[t] = arr[e];
 //                 arr[e] = temp;
@@ -687,79 +780,89 @@
 //         }
 //     }
 
-//     for (int j = 0; j < n-1; j++) {
+//     for (int j = 0; j < n - 1; j++)
+//     {
 //         printf("%d ", arr[j]);
 //     }
 //     printf("\n");
 
 //     int i, d;
-//     for (i = 0; i < n-1; i++) {
+//     for (i = 0; i < n - 1; i++)
+//     {
 //         d = arr[i + 1] - arr[i];
-//         if (d == 2) {
+//         if (d == 2)
+//         {
 //             printf("%d ", arr[i] + 1);
 //             break;
 //         }
 //     }
 //     // Check for missing element at the end of the sequence
-//     if (arr[n-2] == n-1) {
-//         printf("%d ", n);
+//     // if (arr[n-2] == n-1) {
+//     //     printf("%d ", n);
+//     // }
+//     return 0;
+// }
+
+// c28
+// #include <stdio.h>
+// int main(int argc, char const *argv[])
+// {
+//     int arr[5] = {1, 2, 3, 2, 1};
+//     int paln = 1;
+//     for (int i = 0; i < 5 / 2; i++)
+//     {
+//         if (arr[i] != arr[5 - i - 1])
+//         {
+//             paln = 0;
+//             break;
+//         }
 //     }
-//     return 0;
-// }
-
-// c
-//  #include<stdio.h>
-//  int main(int argc, char const *argv[])
-//  {
-//      int arr[5]={1,2,3,2,1};
-//      int paln=1;
-//      for(int i=0;i<5/2;i++){
-//          if (arr[i]!=arr[5-i-1]){
-//              paln=0;
-//              break;
-//          }
-//      }
-//      if (paln==1){
-//          printf("the array is plandrome");
-//      }
-//      else{
-//          printf("not plandrome");
-//      }
+//     if (paln == 1)
+//     {
+//         printf("the array is plandrome");
+//     }
+//     else
+//     {
+//         printf("not plandrome");
+//     }
 
 //     return 0;
 // }
 
 // c
-//  #include<stdio.h>
-//  #include<math.h>
-//  int main(int argc, char const *argv[])
-//  {
-//      int n;
-//      printf("no:");
-//      scanf("%d",&n);
-//      int j=0,sum=0;
-//      for (int i=n;i!=0;i/=10){
-//          int rem=i%10;
-//          if (rem!=0){
-//              int b=pow(2,j);
-//              sum+=b;
-//              j++;
-//          }
-//          else{
-//              j++;
-//          }
-//      }
-//      printf("%d",sum);
-//      return 0;
-//  }
+// #include <stdio.h>
+// #include <math.h>
+// int main(int argc, char const *argv[])
+// {
+//     int n;
+//     // printf("no:");
+//     scanf("%d", &n);
+//     int j = 0, sum = 0;
+//     for (int i = n; i != 0; i /= 10)
+//     {
+//         int rem = i % 10;
+//         if (rem != 0)
+//         {
+//             int b = pow(2, j);
+//             sum += b;
+//             j++;
+//         }
+//         else
+//         {
+//             j++;
+//         }
+//     }
+//     printf("%d", sum);
+//     return 0;
+// }
 
 // c
-// set of patter
+// // set of patter
 // #include <stdio.h>
 // int main(int argc, char const *argv[])
 // {
 //     int n;
-//     printf("no:");
+//     // printf("no:");
 //     scanf("%d", &n);
 //     int arr[n];
 //     for (int p = n - 1; p >= 0; p--)
@@ -799,7 +902,7 @@
 //     return 0;
 // }
 
-// c
+// c30
 // #include <stdio.h>
 // int main(int argc, char const *argv[])
 // {
@@ -824,61 +927,68 @@
 //     return 0;
 // }
 
-// c
-//  #include<stdio.h>
-//  int main(int argc, char const *argv[])
-//  {
-//      int n;
-//      printf("no:");
-//      scanf("%d",&n);
-//      int a=0,b=1;
-//      if (n==0){
-//          printf("%d",a);
-//      }
-//      else if (n==1){
-//          printf("%d %d",a,b);
-//      }
-//      else{
-//          printf("%d %d ",a,b);
-//          for(int i=2;i<n;i++){
-//              int c=a+b;
-//              a=b;
-//              b=c;
-//              printf("%d ",c);
-//          }
-//      }
-//      return 0;
-//  }
-
-// c
-//  #include<stdio.h>
-//  int main(int argc, char const *argv[])
-//  {
-//      int n;
-//      printf("no:");
-//      scanf("%d",&n);
-//      int a=0,b=1,c=0;
-//      while(c<n){
-//          c=a+b;
-//          a=b;
-//          b=c;
-//      }
-//      if (c==n){
-//          printf("fibonacci no");
-//      }
-//      else{
-//          printf("not a fibonacci no");
-//      }
-//      return 0;
-//  }
-
-// c
-// insert;
+// c31
 // #include <stdio.h>
 // int main(int argc, char const *argv[])
 // {
 //     int n;
 //     printf("no:");
+//     scanf("%d", &n);
+//     int a = 0, b = 1;
+//     if (n == 0)
+//     {
+//         printf("%d", a);
+//     }
+//     else if (n == 1)
+//     {
+//         printf("%d %d", a, b);
+//     }
+//     else
+//     {
+//         printf("%d %d ", a, b);
+//         for (int i = 2; i < n; i++)
+//         {
+//             int c = a + b;
+//             a = b;
+//             b = c;
+//             printf("%d ", c);
+//         }
+//     }
+//     return 0;
+// }
+
+// c32
+// #include <stdio.h>
+// int main(int argc, char const *argv[])
+// {
+//     int n;
+//     printf("no:");
+//     scanf("%d", &n);
+//     int a = 0, b = 1, c = 0;
+//     while (c < n)
+//     {
+//         c = a + b;
+//         a = b;
+//         b = c;
+//     }
+//     if (c == n)
+//     {
+//         printf("fibonacci no");
+//     }
+//     else
+//     {
+//         printf("not a fibonacci no");
+//     }
+//     return 0;
+// }
+
+// c33
+// insert;
+// #include <stdio.h>
+// int main(int argc, char const *argv[])
+// {
+//     int n;
+//     // printf("no:");
 //     scanf("%d", &n);
 //     int arr[n];
 //     for (int i = 0; i < n; i++)
@@ -886,9 +996,9 @@
 //         scanf("%d", &arr[i]);
 //     }
 //     int p, e;
-//     printf("enter the element:");
+//     // printf("enter the element:");
 //     scanf("%d", &e);
-//     printf("enter the position:");
+//     // printf("enter the position:");
 //     scanf("%d", &p);
 //     if (p > n - 1)
 //     {
@@ -908,13 +1018,13 @@
 //     return 0;
 // }
 
-// c
+// c34
 // delete
 // #include <stdio.h>
 // int main(int argc, char const *argv[])
 // {
 //     int n;
-//     printf("no:");
+//     // printf("no:");
 //     scanf("%d", &n);
 //     int arr[n];
 //     for (int i = 0; i < n; i++)
@@ -922,7 +1032,7 @@
 //         scanf("%d", &arr[i]);
 //     }
 //     int p;
-//     printf("enter the position:");
+//     // printf("enter the position:");
 //     scanf("%d", &p);
 //     if (p > n - 1)
 //     {
@@ -942,32 +1052,37 @@
 //     return 0;
 // }
 
-// c
-//  subset of a array;
-//  #include<stdio.h>
-//  int main(int argc, char const *argv[])
-//  {
-//      int arr1[5]={1,2,3,4,5};
-//      int arr2[3]={3,5,4};
-//      int count=0;
-//      for (int i=0;i<3;i++){
-//          for (int j=0;j<5;j++){
-//              if (arr2[i]==arr1[j]){
-//                  count++;
-//                  break;
-//              }
-//          }
-//      }
-//      if (count ==3){
-//          printf("true");
-//      }
-//      else{
-//          printf("false");
-//      }
-//      return 0;
-//  }
+// c35
+// subset of a array;
+// #include <stdio.h>
+// int main(int argc, char const *argv[])
+// {
+//     int arr1[5] = {1, 2, 3, 4, 5};
+//     int arr2[3] = {3, 5, 4};
+//     int count = 0;
+//     for (int i = 0; i < 3; i++)
+//     {
+//         for (int j = 0; j < 5; j++)
+//         {
+//             if (arr2[i] == arr1[j])
+//             {
+//                 count++;
+//                 break;
+//             }
+//         }
+//     }
+//     if (count == 3)
+//     {
+//         printf("true");
+//     }
+//     else
+//     {
+//         printf("false");
+//     }
+//     return 0;
+// }
 
-// C
+// C36
 //  //intersection of array
 //  #include<stdio.h>
 //  int main(int argc, char const *argv[])
@@ -1011,7 +1126,7 @@
 // }
 
 // c
-//  unique
+// unique
 // #include <stdio.h>
 // int main(int argc, char const *argv[])
 // {
@@ -1064,52 +1179,14 @@
 //     }
 // }
 
-// c
-//  #include <stdio.h>
-//  int main(int argc, char const *argv[])
-//  {
-//      int n;
-//      int p,arr[7];
-//      for (p = 7 - 1; p >= 0; p--)
-//      {
-//          scanf("%d", &arr[p]);
-//      int j;
-//      int l,d,k,i, arr1[7];
-//      for (i = 7 - 1; i >= 0; i--)
-//      {
-//          d = arr[i] - arr[i - 1];
-//          if (d > 1)
-//          {
-//              for (j = 7 - 1; j >= i - 1; j--)
-//              {
-//                  printf("%d ",i-1);
-//              }
-//              for (k = j; k >= 0; k--)
-//              {
-//                  printf("%d ",k);
-//              }
-//              break;
-//          }
-//          else if  (i == 0)
-//          {
-//              for (l = 7 - 1; l >= 0; l--)
-//              {
-//                  printf("%d ",l);
-//              }
-//          }
-//      }
-//      return 0;
-//  }
-//  }
-
-// c
+// c36
 // #include<stdio.h>
 // int main(int argc, char const *argv[])
 // {
 //     int n,k;
-//     printf("no:");
+//     // printf("no:");
 //     scanf("%d",&n);
-//     printf("key");
+//     // printf("key");
 //     scanf("%d",&k);
 //     int arr[n];
 //     for (int i=0;i<n;i++){
@@ -1128,98 +1205,113 @@
 //     return 0;
 // }
 
-// c
-//  #include<stdio.h>
-//  int main(int argc, char const *argv[])
-//  {
-//      int arr[6]={1,2,3,4,5,6};
-//      int earr[100],oarr[100];
-//          int k=0,j=0;
-//      for(int i=0;i<6;i++){
-//          if (arr[i]%2==0){
-//              earr[k]=arr[i];
-//              k++;
-//          }
-//          else{
-//              oarr[j]=arr[i];
-//              j++;
-//          }
-//      }
-//      for (int t=0;t<k;t++){
-//          printf("%d ",earr[t]);
-//      }
-//      printf("\n");
-//      for (int t=0;t<j;t++){
-//          printf("%d ",oarr[t]);
-//      }
-//      return 0;
-//  }
+// c37
+// #include <stdio.h>
+// int main(int argc, char const *argv[])
+// {
+//     int arr[6] = {1, 2, 3, 4, 5, 6};
+//     int earr[100], oarr[100];
+//     int k = 0, j = 0;
+//     for (int i = 0; i < 6; i++)
+//     {
+//         if (arr[i] % 2 == 0)
+//         {
+//             earr[k] = arr[i];
+//             k++;
+//         }
+//         else
+//         {
+//             oarr[j] = arr[i];
+//             j++;
+//         }
+//     }
+//     for (int t = 0; t < k; t++)
+//     {
+//         printf("%d ", earr[t]);
+//     }
+//     printf("\n");
+//     for (int t = 0; t < j; t++)
+//     {
+//         printf("%d ", oarr[t]);
+//     }
+//     return 0;
+// }
 
-// c
+// c38
 //  swap
-//  #include<stdio.h>
-//  int swap(int *a,int *b,int *c);
-//  int main(int argc, char const *argv[])
-//  {
-//      int a,b,c;
-//      scanf("%d %d %d",&a,&b,&c);
-//      swap(&a,&b,&c);
-//      printf("%d %d %d",a,b,c);
-//      return 0;
-//  }
-//  int swap(int *a,int *b,int *c){
-//      int t=*a;
-//      *a=*b;
-//      *b=*c;
-//      *c=t;
-//      printf("%d %d %d",*a,*b,*c);
-//  }
+// #include <stdio.h>
+// int swap(int *a, int *b, int *c);
+// int main(int argc, char const *argv[])
+// {
+//     int a, b, c;
+//     scanf("%d %d %d", &a, &b, &c);
+//     swap(&a, &b, &c);
+//     printf("%d %d %d", a, b, c);
+//     return 0;
+// }
+// int swap(int *a, int *b, int *c)
+// {
+//     int t = *a;
+//     *a = *b;
+//     *b = *c;
+//     *c = t;
+//     printf("%d %d %d\n", *a, *b, *c);
+// }
 
-// c
+// c39
 // tanspose of a matrix
-//  #include<stdio.h>
-//  int main(int argc, char const *argv[])
-//  {
-//      int arr[3][3]={{1,2,3},{4,5,6},{7,8,9}};
-//      int t[3][3];
-//      for (int i=0;i<3;i++){
-//          for (int j=0;j<3;j++){
-//              t[i][j]=arr[j][i];
-//          }
-//      }
-//      for (int i=0;i<3;i++){
-//          for (int j=0;j<3;j++){
-//              printf("%d ",t[i][j]);
-//          }
-//          printf("\n");
-//      }
-//      return 0;
-//  }
+// #include <stdio.h>
+// int main(int argc, char const *argv[])
+// {
+//     int arr[3][3] = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
+//     int t[3][3];
+//     for (int i = 0; i < 3; i++)
+//     {
+//         for (int j = 0; j < 3; j++)
+//         {
+//             t[i][j] = arr[j][i];
+//         }
+//     }
+//     for (int i = 0; i < 3; i++)
+//     {
+//         for (int j = 0; j < 3; j++)
+//         {
+//             printf("%d ", t[i][j]);
+//         }
+//         printf("\n");
+//     }
+//     return 0;
+// }
 
-// c
+// c40
 // multiply of matrix
-//  #include<stdio.h>
-//  int main(int argc, char const *argv[])
-//  {
-//      int arr1[2][2]={{1,2},{3,4}};
-//      int arr2[2][2]={{5,6},{7,8}};
-//      int mul[2][2],val;
-//      for (int i=0;i<2;i++){
-//          for (int p=0;p<2;p++){
-//              mul[i][p]=0;
-//              for (int j=0;j<2;j++){
-//                  mul[i][p]+=arr1[i][p]*arr2[j][p];
-//              }
-//          }
-//      }
-//      for (int t=0;t<2;t++){
-//          for (int f=0;f<2;f++){
-//              printf("%d ",mul[t][f]);
-//          }
-//          printf("\n");
-//      }
-//      return 0;
-//  }
+// #include <stdio.h>
+// int main(int argc, char const *argv[])
+// {
+//     int arr1[2][2] = {{1, 2}, {3, 4}};
+//     int arr2[2][2] = {{5, 6}, {7, 8}};
+//     int mul[2][2], val;
+//     for (int i = 0; i < 2; i++)
+//     {
+//         for (int p = 0; p < 2; p++)
+//         {
+//             mul[i][p] = 0;
+//             for (int j = 0; j < 2; j++)
+//             {
+//                 mul[i][p] += arr1[i][p] * arr2[j][p];
+//             }
+//         }
+//     }
+//     for (int t = 0; t < 2; t++)
+//     {
+//         for (int f = 0; f < 2; f++)
+//         {
+//             printf("%d ", mul[t][f]);
+//         }
+//         printf("\n");
+//     }
+//     return 0;
+// }
 
 // c
 //  binary to decimal conversion
@@ -1617,8 +1709,8 @@
 //  }
 
 // c
-//  #include <stdio.h>
-//  #include <math.h>
+// #include <stdio.h>
+// #include <math.h>
 // int main() {
 //     int a, e, j, mod, x, sum;
 //     printf("Enter the lower and upper limits of the range: ");
@@ -1643,5 +1735,5 @@
 //             printf("%d ", sum);
 //         }
 //     }
-//     return 0;
-//  }
+//     return 0;
+// }

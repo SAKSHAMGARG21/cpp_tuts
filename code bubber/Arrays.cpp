@@ -266,6 +266,7 @@
 //     return 0;
 // }
 
+// c1
 // Binary search
 // #include <iostream>
 // using namespace std;
@@ -303,6 +304,7 @@
 //     return 0;
 // }
 
+// c2
 // binary search
 // #include <iostream>
 // using namespace std;
@@ -349,6 +351,7 @@
 //     return 0;
 // }
 
+// c3
 // #include <iostream>
 // using namespace std;
 // int main(int argc, char const *argv[])
@@ -468,8 +471,6 @@
 // }
 
 // Bubble sort algo
-
-
 // #include <iostream>
 // using namespace std;
 // int main(int argc, char const *argv[])
@@ -500,8 +501,7 @@
 //     return 0;
 // }
 
-
-
+// c4
 // insertion sort algo
 // #include <iostream>
 // using namespace std;
@@ -605,6 +605,7 @@
 //     return 0;
 // }
 
+// c5
 // #include<iostream>
 // using namespace std;
 // int main(int argc, char const *argv[])
@@ -625,26 +626,7 @@
 //     return 0;
 // }
 
-// longest arthmatic subarray
-// #include<iostream>
-// using namespace std;
-// int main(int argc, char const *argv[])
-// {
-//     int n;
-//     cin>>n;
-//     int arr[n],arr1[1000];
-//     for(int i=0;i<n;i++){
-//         cin>>arr[i];
-//     }
-//     for (int i=0;i<n;i++){
-//         arr1[i]=arr[i+1]-arr[i];
-//     }
-//     for (int i=0;i<n-1;i++){
-//         cout<<arr1[i];
-//     }
-//     return 0;
-// }
-
+// c6
 // longest arthmatic subarray
 // #include <iostream>
 // using namespace std;
@@ -681,6 +663,7 @@
 //     return 0;
 // }
 
+// c7
 // record braking day code by self
 // #include <iostream>
 // using namespace std;
@@ -721,6 +704,7 @@
 //     return 0;
 // }
 
+// c7
 // record breaking day by apna college
 // #include <iostream>
 // using namespace std;
@@ -747,39 +731,6 @@
 //         if (arr[i] > mx && arr[i] > arr[i + 1])
 //         {
 //             ans++;
-//         }
-//         mx = max(mx, arr[i]);
-//     }
-//     cout << ans << endl;
-//     return 0;
-// }
-
-// record breaking day code by self
-// #include <iostream>
-// using namespace std;
-// int main(int argc, char const *argv[])
-// {
-//     int n;
-//     cin >> n;
-//     // int arr[n+1];
-//     // arr[n]=-1;
-//     int arr[n];
-//     for (int i = 0; i < n; i++)
-//     {
-//         cin >> arr[i];
-//     }
-//     if (n == 1)
-//     {
-//         cout << "1" << endl;
-//     }
-//     int ans = 0;
-//     ;
-//     int mx = -1;
-//     for (int i = 0; i < n; i++)
-//     {
-//         if (arr[i] > mx && arr[i] > arr[i + 1])
-//         {
-//             ans=i;
 //         }
 //         mx = max(mx, arr[i]);
 //     }
@@ -1022,35 +973,6 @@
 //         // arr[i]=arr[i+1];
 //         // arr[i+1]=temp;
 //         swap(arr[i],arr[i+1]);
-//     }
-// }
-
-// int main(int argc, char const *argv[])
-// {
-//     int n;
-//     cin >> n;
-//     int arr[n];
-//     for (int i=0;i<n;i++){
-//         cin>>arr[i];
-//     }
-
-//     int var=swapalternate(arr,n);
-//     // cout<<var<<endl;
-
-//     for (int i=0;i<n;i++){
-//         cout<<arr[i]<<" ";
-//     }
-
-//     return 0;
-// }
-
-// #include <iostream>
-// #include<climits>
-// #include "bits/stdc++.h"
-// using namespace std;
-// int swapalternate(int arr[],int n){
-//     for(int i=0;i<n;i++){
-
 //     }
 // }
 
@@ -1399,6 +1321,7 @@
 //     return 0;
 // }
 
+// c9
 // #include <iostream>
 // #include <climits>
 // #include <unordered_map>
@@ -1407,12 +1330,14 @@
 // #include "bits/stdc++.h"
 // using namespace std;
 
-// bool decendingfunction(int a, int b){
-//     return a>b;
+// bool decendingfunction(int a, int b)
+// {
+//     return a > b;
 // }
 
-// bool ascendingfunction(int a, int b){
-//     return a<b;
+// bool ascendingfunction(int a, int b)
+// {
+//     return a < b;
 // }
 
 // int main(int argc, char const *argv[])
@@ -1425,10 +1350,10 @@
 //         cin >> arr[i];
 //     }
 
-//     // sort(arr, arr + n);
-//     // sort(arr.begin()+2,arr.begin()+6);
+//     sort(arr+0, arr + n-1);
+//     // sort(arr.begin()+1,arr.begin()+5);
 //     // sort(arr.begin(), arr.end(), ascendingfunction);
-//     sort(arr.begin(), arr.end(), decendingfunction);
+//     // sort(arr.begin(), arr.end(), decendingfunction);
 //     for (int i = 0; i < n; i++)
 //     {
 //         cout << arr[i] << " ";
@@ -1497,13 +1422,7 @@
 //     return 0;
 // }
 
-// c
-// test case:
-// 5 3
-// 1 2 3 4 5
-// 3 1 3
-// ans :
-// 3
+// c10
 // #include <iostream>
 // #include <climits>
 // #include <unordered_map>
@@ -1531,10 +1450,10 @@
 //         }
 //     }
 //     return narr;
-//     if (flag == 0)
-//     {
-//         return -1;
-//     }
+//     // if (flag == 0)
+//     // {
+//     //     return -1;
+//     // }
 // }
 
 // int main(int argc, char const *argv[])
@@ -1555,7 +1474,7 @@
 //     vector<int> narr = intersection(arr, arr1);
 //     for (int i = 0; i < narr.size(); i++)
 //     {
-//         cout << narr << endl;
+//         cout << narr[i] << endl;
 //     }
 
 //     return 0;
@@ -1570,7 +1489,7 @@
 //     set<int> st;
 
 //     // Insert elements into the set
-//     st.insert(10);  //Note IN case of set insert function will use not push_back
+//     st.insert(10);  //Note IN case of set "insert" function will use not "push_back"
 //     st.insert(5);
 //     st.insert(15);
 //     st.insert(8);
@@ -1606,13 +1525,7 @@
 // }
 
 // leetcode
-// c
-// test case:
-// 5 3
-// 1 2 3 4 3
-// 3 1 3
-// ans :
-// 3
+// c10
 // #include <iostream>
 // #include <climits>
 // #include <unordered_map>
