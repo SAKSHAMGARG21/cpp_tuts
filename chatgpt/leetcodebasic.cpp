@@ -28,6 +28,108 @@
 // sort(container.begin(), container.end(), compare_function);
 
 
+// code based on sort algo
+// #include <iostream>
+// #include <climits>
+// #include <unordered_map>
+// #include <vector>
+// #include <algorithm>
+// #include "bits/stdc++.h"
+// using namespace std;
+
+// bool decendingfunction(int a, int b)
+// {
+//     return a > b;
+// }
+
+// bool ascendingfunction(int a, int b)
+// {
+//     return a < b;
+// }
+
+// int main(int argc, char const *argv[])
+// {
+//     int n;
+//     cin >> n;
+//     vector<int> arr(n);
+//     for (int i = 0; i < n; i++)
+//     {
+//         cin >> arr[i];
+//     }
+
+//     sort(arr+0, arr + n-1);
+//     // sort(arr.begin()+1,arr.begin()+5);
+//     // sort(arr.begin(), arr.end(), ascendingfunction);
+//     // sort(arr.begin(), arr.end(), decendingfunction);
+//     for (int i = 0; i < n; i++)
+//     {
+//         cout << arr[i] << " ";
+//     }
+//     return 0;
+// }
+
+// #include <iostream>
+// #include <vector>
+// #include <algorithm>
+// using namespace std;
+
+// int main() {
+//     vector<int> nums = {5, 1, 9, 3, 7, 2, 8, 4, 6};
+//     int start_index = 2; // Index of the first element in the range
+//     int end_index = 6;   // Index of the last element in the range (exclusive)
+
+//     sort(nums.begin() + start_index, nums.begin() + end_index);
+
+//     cout << "Sorted Range: ";
+//     for (int i = 0; i < nums.size(); i++) {
+//         cout << nums[i] << " ";
+//     }
+//     cout << endl;
+
+//     return 0;
+// }
+
+
+// #include <iostream>
+// #include <vector>
+// #include <algorithm>
+// using namespace std;
+
+// // Custom comparison function for sorting in ascending order
+// bool compareAscending(int a, int b) {
+//     return a < b;
+// }
+
+// // Custom comparison function for sorting in descending order
+// bool compareDescending(int a, int b) {
+//     return a > b;
+// }
+
+// int main() {
+//     int n;
+//     cin >> n;
+//     vector<int> arr(n);
+//     for (int i = 0; i < n; i++)
+//     {
+//         cin >> arr[i];
+//     }
+
+//     // Sorting in ascending order
+//     // sort(arr.begin(), arr.end(), compareAscending);
+
+//     // Sorting in descending order
+//     sort(arr.begin(), arr.end(), compareDescending);
+
+//     cout << "Sorted Array: ";
+//     for (int i = 0; i < n; i++)
+//     {
+//         cout << arr[i] << " ";
+//     }
+//     cout << endl;
+
+//     return 0;
+// }
+
 // ------------------------------------------------------------------------
 
 //frequency of an array
