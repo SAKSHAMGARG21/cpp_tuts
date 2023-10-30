@@ -1,8 +1,6 @@
-// rotate array
-// test case:
-// 0 1 0 3 12 0
-// ans:
-// 1 3 12 0 0 0
+// leet code
+// 189. rotate array
+// c1
 // #include<iostream>
 // #include<vector>
 // #include<algorithm>
@@ -16,14 +14,14 @@
 //     // for (int i=k;i<ns;i++){
 //     //     tarr.push_back(nums[i]);
 //     // }
-//     // for (int j=0;j<k+1;j++){
+//     // for (int j=0;j<k;j++){
 //     //     tarr.push_back(nums[j]);
 //     // }
 //     // for (int i=0;i<ns;i++){
 //     //     nums[i]=tarr[i];
 //     // }
 
-//     // this is correct code
+//     this is correct code
 //     int ns = nums.size();
 //     vector<int> tarr(ns);
 //     for (int i = 0; i < ns; i++)
@@ -48,10 +46,7 @@
 // }
 
 // rotate array
-// test case:
-// 5
-// 3 4 5 1 2
-// ans : ture;
+// 1752. check if the array is rotated and sorted
 // #include <iostream>
 // #include <vector>
 // #include <algorithm>
@@ -88,44 +83,50 @@
 //     return 0;
 // }
 
-// rotate array
-// test case:
-// 4 5 1
-// 3 4 5
-// ans : 7 9 6;
+// code stdio
+// sum of two arrays
+// c3
 // #include <iostream>
 // #include <vector>
 // #include <algorithm>
 // using namespace std;
 
-// // vector<int> findArraySum(vector<int>&a, int n, vector<int>&b, int m) {
-// // 	// Write your code here.
-// // 	int r1=0;
-// // 	vector<int> tans;
-// // 		vector<int> ans;
-// // 	for (int i=0;i<n;i++){
-// // 		r1=(r1*10)+a[i];
-// // 	}
-// // 	int r2=0;
-// // 	for (int i=0;i<m;i++){
-// // 		r2=(r2*10)+b[i];
-// // 	}
-// // 	int sum=r1+r2;
-// // 	int rem;
-// // 	while(sum!=0){
-// // 		rem=sum%10;
-// // 		tans.push_back(rem);
-// // 		sum/=10;
-// // 	}
+// // vector<int> findArraySum(vector<int> &a, int n, vector<int> &b, int m)
+// // {
+// //     // Write your code here.
+// //     int r1 = 0;
+// //     vector<int> tans;
+// //     vector<int> ans;
+// //     for (int i = 0; i < n; i++)
+// //     {
+// //         r1 = (r1 * 10) + a[i];
+// //     }
+// //     int r2 = 0;
+// //     for (int i = 0; i < m; i++)
+// //     {
+// //         r2 = (r2 * 10) + b[i];
+// //     }
+// //     int sum = r1 + r2;
+// //     int rem;
+// //     while (sum != 0)
+// //     {
+// //         rem = sum % 10;
+// //         tans.push_back(rem);
+// //         sum /= 10;
+// //     }
 
-// // 	for (int i=tans.size()-1;i>=0;i--){
-// // 		ans.push_back(tans[i]);
-// // 	}
-// // 	return ans;
+// //     for (int i = tans.size() - 1; i >= 0; i--)
+// //     {
+// //         ans.push_back(tans[i]);
+// //     }
+// //     return ans;
 // // }
-// vector<int> rev(vector<int> &arr){
+
+// vector<int> rev(vector<int> &arr)
+// {
 //     vector<int> ans;
-//     for (int i=arr.size()-1;i>=0;i--){
+//     for (int i = arr.size() - 1; i >= 0; i--)
+//     {
 //         ans.push_back(arr[i]);
 //     }
 //     return ans;
@@ -175,7 +176,7 @@
 //         ans.push_back(sum);
 //     }
 
-//     vector<int> fans=rev(ans);
+//     vector<int> fans = rev(ans);
 //     return fans;
 // }
 // int main(int argc, char const *argv[])

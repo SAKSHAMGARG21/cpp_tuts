@@ -27,7 +27,6 @@
 // // Sort with a custom comparison function
 // sort(container.begin(), container.end(), compare_function);
 
-
 // code based on sort algo
 // #include <iostream>
 // #include <climits>
@@ -89,7 +88,6 @@
 //     return 0;
 // }
 
-
 // #include <iostream>
 // #include <vector>
 // #include <algorithm>
@@ -132,10 +130,10 @@
 
 // ------------------------------------------------------------------------
 
-//frequency of an array
-// #include <iostream>
-// #include <unordered_map>
-// using namespace std;
+// frequency of an array
+//  #include <iostream>
+//  #include <unordered_map>
+//  using namespace std;
 
 // int main() {
 //     int arr[] = {1, -2, 3, 2, 1, 4, 2, 3, 4, 5, 6, 5};
@@ -158,7 +156,7 @@
 
 // ----------------------------------------------------------------------
 
-// pair function question 
+// pair function question
 // #include <iostream>
 // #include <vector>
 // #include <algorithm>
@@ -278,11 +276,11 @@
 // int main() {
 //     char lowercaseChar = 'a';
 //     char uppercaseChar = 'A';
-    
+
 //     // Use the toupper function to convert to uppercase
 //     char uppercaseChar1 = toupper(lowercaseChar);
 //     char lowercaseChar1 = tolower(uppercaseChar);
-    
+
 //     cout << "Original character: " << lowercaseChar << endl;
 //     cout << "Uppercase character: " << uppercaseChar1 << endl;
 //     cout << "Original character: " << uppercaseChar << endl;
@@ -294,3 +292,14 @@
 // short from of if else returning true : false
 //     bool b = check(arr1);
 //     cout << (b ? "true" : "false") << endl;
+
+
+// this is how we find the size of 2D matrix
+// vector<int> spiralOrder(vector<vector<int>> &matrix)
+// {
+//     int rs = matrix.size();
+//     int cs = matrix[0].size();
+//     for (int i = 0; i < rs; i++)
+//     {
+//     }
+// }

@@ -91,10 +91,12 @@ public:
         strcpy(this->name, name);
     }
 
-    ~Hero(){
-        cout<<"Dynamically called Destructor"<<endl;
+    ~Hero()
+    {
+        cout << "Dynamically called Destructor" << endl;
     }
 };
+
 int main(int argc, char const *argv[])
 {
     // statically
@@ -104,18 +106,6 @@ int main(int argc, char const *argv[])
     // Hero *b=new Hero();
     // manually called destructor
     // delete b;
-
-
-
-
-
-
-
-
-
-
-
-
 
     // Hero hero1;
     // hero1.sethealth(79);

@@ -20,15 +20,14 @@
 //     }
 //     return 1;
 // }
+
 // void reverse(char name[], int n)
 // {
 //     // int s=0;
 //     // int e=n-1;
-
 //     // while(s<e){
 //     //     swap(name[s++],name[e--]);
 //     // }
-
 //     for (int i = 0; i < n / 2; i++)
 //     {
 //         int t = name[i];
@@ -36,6 +35,7 @@
 //         name[n - i - 1] = t;
 //     }
 // }
+
 // int getlength(char name[])
 // {
 //     int count = 0;
@@ -45,7 +45,8 @@
 //     }
 //     return count;
 // }
-// int main(int argc, char const *argv[])
+
+// int main()
 // {
 //     char name[20];
 //     cout << "Enter your name:" << endl;
@@ -63,6 +64,8 @@
 //     cout << "Palindrom or not:" << checkplandrome(name, len);
 //     return 0;
 // }
+
+// ---------------------------------------------------------------------------------------------------------------------------
 
 // #include <iostream>
 // #include <string>
@@ -165,7 +168,7 @@
 // using namespace std;
 
 // int main() {
-//     string input = "N2 i&nJA?a& jnI2n";
+//     string input = "N2 i&nJA?a& jnI2n";saksham
 //     string formattedString = "";
 
 //     for (char c : input) {
@@ -179,6 +182,9 @@
 //     return 0;
 // }
 
+// code stdio
+// check if  the string is a plaindrome
+// c1
 // #include <iostream>
 // #include <string>
 // using namespace std;
@@ -233,16 +239,18 @@
 //     // cout << "Enter a string: ";
 //     getline(cin, name);
 
-//     int ans = checkPalindrome(name);
-//     if (ans == 0)
-//     {
-//         printf("false");
-//     }
-//     else
-//     {
-//         printf("true");
-//     }
+//     // int ans = checkPalindrome(name);
+//     // if (ans == 0)
+//     // {
+//     //     printf("false");
+//     // }
+//     // else
+//     // {
+//     //     printf("true");
+//     // }
 
+//     bool ans = checkPalindrome(name);
+//     cout<<(ans ? "true" : "false")<<endl;
 //     // for (int i = 0; i < name.size(); i++) {
 //     //     if (name[i] != -1) { // Only print characters that are not -1
 //     //         cout << name[i];
@@ -252,6 +260,7 @@
 //     return 0;
 // }
 
+// c1
 // #include <iostream>
 // #include <string>
 // #include <vector>
@@ -280,14 +289,6 @@
 //         }
 //         else
 //         {
-//             // if (!((a[s] >= 'a' && a[s] <= 'z') && (a[s] >= 0 && a[s] <= 9)) || a[s] == ' ')
-//             // {
-//             //     s++;
-//             // }
-//             // else if (!((a[s] >= 'a' && a[s] <= 'z') && (a[s] >= 0 && a[s] <= 9)) || a[s] == ' ')
-//             // {
-//             //     e--;
-//             // }
 //             s++;
 //             e--;
 //         }
@@ -314,6 +315,7 @@
 //     return 0;
 // }
 
+// c2
 // #include <iostream>
 // #include <string>
 // #include <vector>
@@ -387,6 +389,7 @@
 //     return 0;
 // }
 
+// c1
 // #include <iostream>
 // #include <string>
 // #include <vector>
@@ -439,37 +442,54 @@
 // #include <string>
 // using namespace std;
 
-// void reversethestring2(string& s)
-// {
-//     int ss = s.size();
-//     int ts = 0;
-//     int k = 0;
-//     string temp = "";
+// // void reversethestring2(string& s)
+// // {
+// //     int ss = s.size();
+// //     int ts = 0;
+// //     int k = 0;
+// //     string temp=s;
 
-//     for (int i = ss - 1; i >= 0; i--)
-//     {
-//         temp.push_back(s[i]);
-//     }
+// //     for (int i = 0; i <= ss; i++)
+// //     {
+// //         if (temp[i] == ' ' || i == ss)
+// //         {
+// //             for (int j = i - 1; j >= ts; j--)
+// //             {
+// //                 s[k++] = temp[j];
+// //             }
+// //             if (i != ss) // Add this condition to avoid adding extra space at the end
+// //             {
+// //                 s[k++] = ' '; // Add space after each word
+// //             }
+// //             ts = i + 1;
+// //         }
+// //     }
 
-//     for (int i = 0; i <= ss; i++)
-//     {
-//         if (temp[i] == ' ' || i == ss)
-//         {
-//             for (int j = i - 1; j >= ts; j--)
-//             {
-//                 s[k++] = temp[j];
-//             }
-//             if (i != ss) // Add this condition to avoid adding extra space at the end
-//             {
-//                 s[k++] = ' '; // Add space after each word
-//             }
-//             ts = i + 1;
-//         }
-//     }
+// //     // Resize the string to remove any extra characters at the end
+// //     s.resize(k);
+// // }
 
-//     // Resize the string to remove any extra characters at the end
-//     // s.resize(k);
-// }
+// // void reversethestring2(string &s)
+// // {
+// //     int ss = s.size();
+// //     string temp = s;
+// //     string ans = "";
+// //     int t = 0;
+// //     int k=0;
+// //     for (int i = 0; i < ss; i++)
+// //     {
+// //         if (temp[i] == ' ')
+// //         {
+// //             for (int j = i; j >= t; j--)
+// //             {
+// //                 s[k++]=temp[j];
+// //             }
+// //             t = i;
+// //         }
+// //     }
+// //     // s=ans;
+// //     // cout<<temp;
+// // }
 
 // int main()
 // {
@@ -509,13 +529,13 @@
 //     }
 
 //     // Reverse the entire string
-//     int i = 0, j = ss - 1;
-//     while (i < j)
-//     {
-//         swap(s[i], s[j]);
-//         i++;
-//         j--;
-//     }
+//     // int i = 0, j = ss - 1;
+//     // while (i < j)
+//     // {
+//     //     swap(s[i], s[j]);
+//     //     i++;
+//     //     j--;
+//     // }
 // }
 
 // int main()
@@ -531,6 +551,7 @@
 // }
 
 // geaks of geaks
+// c3
 // code by love bubber
 // #include <iostream>
 // #include <string>
@@ -578,6 +599,9 @@
 //     return 0;
 // }
 
+// code stdio
+// replace spaces
+// c4
 // #include <iostream>
 // #include <string>
 // using namespace std;
@@ -654,8 +678,31 @@
 //     return 0;
 // }
 
+// -----------------------------------------------------------------------------------------------------------------
 // leet code
-// permutation check
+// 1910. Remove all occurence of a string
+// c5
+// #include <iostream>
+// #include <bits/stdc++.h>
+// using namespace std;
+// string removeOccurences(string s,string part){
+//     while(s.length()!=0 && s.find(part)<s.length()){
+//         s.erase(s.find(part),part.length());
+//     }
+//     return s;
+// }
+// int main()
+// {
+//     string s,part;
+//     cin>>s>>part;
+//     string ans=removeOccurences(s,part);
+//     cout<<ans<<endl;
+//     return 0;
+// }
+
+// leet code
+// 567. permutation in string
+// c6
 // #include <iostream>
 // #include <climits>
 // #include <string>
@@ -671,17 +718,6 @@
 //             return 0;
 //         }
 //     }
-//     // cout << "a" << endl;
-//     // for (int i = 0; i < 26; i++)
-//     // {
-//     //     cout << a[i] << " ";
-//     // }
-//     // cout << endl;
-//     // cout << "b" << endl;
-//     // for (int i = 0; i < 26; i++)
-//     // {
-//     //     cout << b[i] << " ";
-//     // }
 //     return 1;
 // }
 // bool checkInclusion(string s1, string s2)
@@ -703,7 +739,7 @@
 //         i++;
 //     }
 //     // // chackequal(count1, count2);
-//     if (checkequal(count1, count2))
+//     if (chackequal(count1, count2))
 //     {
 //         return 1;
 //     }
@@ -719,7 +755,7 @@
 //         count2[index]--;
 //         i++;
 //         // chackequal(count1, count2);
-//         if (checkequal(count1, count2))
+//         if (chackequal(count1, count2))
 //         {
 //             return 1;
 //         }
@@ -739,50 +775,14 @@
 //     return 0;
 // }
 
+// leetcode
+// Remove all the adjacent duplicate in a string
+// c7
 // #include <iostream>
-// #include <climits>
+// #include <string>
 // #include "bits/stdc++.h"
 // using namespace std;
-// string removeDuplicates(string s)
-// {
-//     // int ss = s.length();
-//     // string temp = "";
-//     // int count[26] = {0};
-//     // string ans = "";
-//     // for (int i = 0; i < ss; i++)
-//     // {
-//     //     int index = s[i] - 'a';
-//     //     count[index]++;
-//     // }
-//     // int c = 0;
-//     // for (int i = 0; i < 26; i++)
-//     // {
-//     //     if (count[i] % 2 != 0)
-//     //     {
-//     //         char ch = 'a' + i;
-//     //         temp.push_back(ch);
-//     //         c++;
-//     //     }
-//     // }
-//     // return s;
-
-//     int ss = s.length();
-//     string temp = "";
-//     int c = 0;
-//     for (int i = 0; i < ss - 1; i++)
-//     {
-//         if (s[i] == s[i + 1])
-//         {
-//             for (int j = 0; j < i; j++)
-//             {
-//                 s[c++] = s[j];
-//             }
-//             s[c++] = s[i + 2];
-//         }
-//     }
-//     return s;
-// }
-// correct code
+// // correct code
 // string removeDuplicates(string s) {
 //     int n = s.length();
 //     int j = -1; // Initialize the write pointer to -1
@@ -815,20 +815,134 @@
 //     return 0;
 // }
 
-// c
-// test case:
-// 5
-// 3 4 5 1
-// ans:
-// 2
-#include <iostream>
-#include <climits>
-#include <limits>
-#include <math.h>
-using namespace std;
-int main()
-{
-    int n;
-    cin >> n;
-    return 0;
-}
+// c7
+// #include <iostream>
+// #include <string>
+// #include <stack>
+// using namespace std;
+
+// string removeDuplicates(string s) {
+//     stack<char> st;
+//     for (char c : s) {
+//         if (!st.empty() && c == st.top()) {
+//             st.pop(); // If current character is a duplicate, pop the previous character
+//         } else {
+//             st.push(c); // Otherwise, push the current character onto the stack
+//         }
+//     }
+
+//     string result = "";
+//     while (!st.empty()) {
+//         result = st.top() + result; // Build the result string by popping characters from the stack
+//         st.pop();
+//     }
+
+//     return result;
+// }
+
+// int main() {
+//     string s1;
+//     cin >> s1;
+
+//     string ans = removeDuplicates(s1);
+//     cout << ans << endl;
+
+//     return 0;
+// }
+
+// -----------------------------------------------------------------------------------------------------------------
+// leetcode
+// 443. string compression
+// c8
+// #include <iostream>
+// #include <bits/stdc++.h>
+// using namespace std;
+// string stringcompression(string s)
+// {
+//     int count1[26] = {0};
+//     for (int i = 0; i < s.length(); i++)
+//     {
+//         int index = s[i] - 'a';
+//         count1[index]++;
+//     }
+//     string ans = "";
+//     for (int i = 0; i < 26; i++)
+//     {
+//         char a;
+//         int b;
+//         if (count1[i] != 0)
+//         {
+//             a = 'a' + i;
+//             b = count1[i];
+//             // cout<<b;
+//             ans.push_back(a);
+//             // ans.push_back('0'+b);
+//             if (b != 1)
+//             {
+//                 ans.push_back('0' + b);
+//             }
+//         }
+//     }
+//     return ans;
+// }
+// int main()
+// {
+//     string s;
+//     cin >> s;
+//     string ans = stringcompression(s);
+//     cout << ans << endl;
+//     return 0;
+// }
+
+// -----------------------------------------------------------------------------------------------------------------
+// code bubber
+// c8
+// #include <iostream>
+// #include <bits/stdc++.h>
+// using namespace std;
+// string stringcompression(string s)
+// {
+//     int i = 0;
+//     int idx = 0;
+//     int n = s.size();
+//     while (i < n)
+//     {
+//         int j = i + 1;
+//         while (j < n && s[i] == s[j])
+//         {
+//             j++;
+//         }
+
+//         s[idx++] = s[i];
+
+//         int count = j - i;
+
+//         if (count > 1)
+//         {
+//             // string cnt = to_string(count);
+//             // for (char ch : cnt)
+//             // {
+//             //     s[idx++] = ch;
+//             // }
+//             char cnt = '0'+count;
+//             s[idx++] = cnt;
+//         }
+//         i=j;
+//     }
+//     string ans=s.substr(0,idx);
+//     return ans;
+// }
+// int main()
+// {
+//     // int n;
+//     // vector<char> s;
+//     // for (int i=0;i<n;i++){
+//     //     cin>>s[i];
+//     // }
+
+//     string s;
+//     cin>>s;
+//     string ans=stringcompression(s);
+//     cout<<ans<<endl;
+//     return 0;
+// }

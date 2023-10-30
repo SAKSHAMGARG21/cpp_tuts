@@ -413,7 +413,7 @@
 //         }
 //     }
 //     int arr2[n][m];
-//      for (int i = 0; i < n; i++)
+//     for (int i = 0; i < n; i++)
 //     {
 //         for (int j = 0; j < m; j++)
 //         {
@@ -428,6 +428,44 @@
 //     }
 //     return 0;
 // }
+
+// same as above but this code without allocate new 2D array
+// #include <iostream>
+// using namespace std;
+
+// int main() {
+//     int n, m;
+//     cin >> n >> m;
+//     int arr[n][m];
+
+//     for (int i = 0; i < n; i++) {
+//         for (int j = 0; j < m; j++) {
+//             cin >> arr[i][j];
+//         }
+//     }
+
+//     // Transpose the matrix in-place
+//     for (int i = 0; i < m; i++) {
+//         for (int j = i + 1; j < n; j++) {
+//             // Swap arr[i][j] and arr[j][i]
+//             int temp = arr[i][j];
+//             arr[i][j] = arr[j][i];
+//             arr[j][i] = temp;
+//         }
+//     }
+
+//     // Print the transposed matrix
+//     for (int i = 0; i < m; i++) {
+//         for (int j = 0; j < n; j++) {
+//             cout << arr[i][j] << " ";
+//         }
+//         cout << endl;
+//     }
+
+//     return 0;
+// }
+
+
 
 // c11
 // #include <iostream>
@@ -448,7 +486,7 @@
 //         }
 //     }
 
-//      for (int i = 0; i < n; i++)
+//     for (int i = 0; i < n; i++)
 //     {
 //         for (int j = m-1; j >=0; j--)
 //         {
@@ -619,18 +657,17 @@
 // }
 
 // c
-#include <iostream>
-using namespace std;
-int main()
-{
-    int n;
-    cin >> n;
-    int arr[n];
-    for (int i = 0; i < n; i++)
-    {
-        cin >> arr[i];
-    }
-    
-    return 0;
-}
+// #include <iostream>
+// using namespace std;
+// int main()
+// {
+//     int n;
+//     cin >> n;
+//     int arr[n];
+//     for (int i = 0; i < n; i++)
+//     {
+//         cin >> arr[i];
+//     }
 
+//     return 0;
+// }

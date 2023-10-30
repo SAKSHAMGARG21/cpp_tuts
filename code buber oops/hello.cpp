@@ -1,5 +1,5 @@
 class Hero {
-    char name[100];
     int health;
+    char name[100];
     char level;
 };

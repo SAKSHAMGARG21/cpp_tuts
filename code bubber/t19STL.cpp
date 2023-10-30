@@ -137,6 +137,10 @@
 //     v.erase(v.begin());
 //     cout<<"after erase size:"<<v.size()<<endl;
 
+//     for(int i:v){
+//         cout<<i<<" ";
+//     }cout<<endl;
+
 //     return 0;
 // }
 
@@ -224,12 +228,12 @@
 //     return 0;
 // }
 
-// set
-// #include<iostream>
-// #include<set>
+// // set
+// #include <iostream>
+// #include <set>
 // using namespace std;
-// int main(int argc, char const *argv[])
-// {
+
+// int main(int argc, char const *argv[]) {
 //     set<int> a;
 
 //     a.insert(1);
@@ -244,27 +248,37 @@
 //     a.insert(0);
 //     a.insert(0);
 
-//     for (int i:a){
-//         cout<<i<<endl;
-//     }cout<<endl;
+//     for (int i : a) {
+//         cout << i << endl;
+//     }
+//     cout << endl;
 
-//     set<int>::iterator it=a.begin();
+//     set<int>::iterator it = a.begin();
 //     it++;
-
+//     cout << *it << endl; // Use *it to print the value, not it itself
 //     a.erase(it);
 
-//     for (auto i:a){
-//         cout<<i<<endl;
-//     }cout<<endl;
+//     for (auto i : a) {
+//         cout << i << endl;
+//     }
+//     cout << endl;
 
-//     cout<<"-5 is not present in set:"<<a.count(-5)<<endl;
+//     cout << "-5 is not present in set: " << a.count(-5) << endl;
 
-//     set<int>::iterator itr=a.find(5);
-//     for (auto it=itr;it!=a.end();it++){
-//         cout<<*it<<" ";
-//     }cout<<endl;
+//     set<int>::iterator itr = a.find(0);
+//     cout<<*itr<<endl;
+//     if (itr != a.end()) {
+//         for (auto it = itr; it != a.end(); it++) {
+//             cout << *it << " ";
+//         }
+//     } else {
+//         cout << "5 is not found in the set.";
+//     }
+//     cout << endl;
+
 //     return 0;
 // }
+
 
 // map
 // #include<iostream>
@@ -287,14 +301,14 @@
 
 //     cout<<"13 find or not"<<m.count(13)<<endl;
     
-//     m.erase(13);
+//     // m.erase(13);
 //     cout<<"after erase:"<<endl;
 //     for (auto i:m){
 //         cout<<i.first<<" "<<i.second<<endl;
 //     }cout<<endl;
 
 //     auto it=m.find(5);
-
+//     cout<<*it<<endl;
 //     for (auto i=it;i!=m.end();i++){
 //         cout<<(*i).first<<endl;
 //     }
