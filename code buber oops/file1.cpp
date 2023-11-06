@@ -24,6 +24,7 @@ private:
 public:
     char *name;
     char level;
+    static int timetocomplete;
 
     // statically
     Hero()
@@ -71,11 +72,11 @@ public:
         cout << "[name:" << this->name << " ,";
         cout << "health:" << this->health << " ,";
         cout << "level:" << this->level << " ]";
-        cout << endl
-             << endl;
+        cout << endl<< endl;
     }
 
     // copy constructor
+    // deep copy
     Hero(Hero &temp)
     {
         char *ch = new char[strlen(temp.name + 1)];
@@ -95,12 +96,44 @@ public:
     {
         cout << "Dynamically called Destructor" << endl;
     }
+
+    static int random(){
+        return timetocomplete;
+    }
 };
 
+int Hero::timetocomplete=5;
 int main(int argc, char const *argv[])
 {
+    // cout<<Hero::timetocomplete<<endl;
+
+    // cout<<random()<<endl;
+
+
+    // // bellow method is not recomended because timetocomplete variable belongs to class not object
+    // Hero a;
+    // cout<<a.timetocomplete<<endl;
+
+    // Hero b;
+
+    // b.timetocomplete=10;
+
+    // cout<<a.timetocomplete<<endl;
+    // cout<<b.timetocomplete<<endl;
+
+
+
+
+
+
+
+
+
+
+
+
     // statically
-    Hero a;
+    // Hero a;
 
     // Dynamically
     // Hero *b=new Hero();
@@ -122,7 +155,7 @@ int main(int argc, char const *argv[])
     // hero1.name[0] = 'G';
     // hero1.print();
 
-    // hero2.print();
+    // hero2.print(); // shallow copy
 
     // hero1 = hero2;
 
@@ -175,3 +208,8 @@ int main(int argc, char const *argv[])
     //  cout<<remash.level<<endl;
     return 0;
 }
+
+
+// homework 
+// const keyword => object creation , function
+// initialisation.

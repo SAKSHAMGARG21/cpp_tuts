@@ -168,7 +168,7 @@
 // using namespace std;
 
 // int main() {
-//     string input = "N2 i&nJA?a& jnI2n";saksham
+//     string input = "N2 i&nJA?a& jnI2n";
 //     string formattedString = "";
 
 //     for (char c : input) {
@@ -188,21 +188,25 @@
 // #include <iostream>
 // #include <string>
 // using namespace std;
+
 // void fun(string &s)
 // { // Pass the string by reference to modify it in-place
 //     int ss = s.size();
 //     for (int i = 0; i < ss; i++)
 //     {
 //         if (islower(s[i]))
-//         {                         // Use islower to check if a character is lowercase
-//             s[i] = toupper(s[i]); // Use toupper to convert to uppercase
+//         {                               // Use islower to check if a character is lowercase
+//             s[i] = toupper(s[i]);    // Use toupper to convert to uppercase
+//             s[i] = 'A' + s[i] -'a';     // Use toupper to convert to uppercase
 //         }
 //         else if (!isalnum(s[i]) || s[i] == ' ')
-//         { // Ignore non-alphabetical characters and spaces
+//         {
+//             // Ignore non-alphabetical characters and spaces
 //             s[i] = -1;
 //         }
 //     }
 // }
+
 // bool checkPalindrome(string s)
 // {
 //     // Write your code here.
@@ -442,32 +446,32 @@
 // #include <string>
 // using namespace std;
 
-// // void reversethestring2(string& s)
-// // {
-// //     int ss = s.size();
-// //     int ts = 0;
-// //     int k = 0;
-// //     string temp=s;
+// void reversethestring2(string& s)
+// {
+//     int ss = s.size();
+//     int ts = 0;
+//     int k = 0;
+//     string temp=s;
 
-// //     for (int i = 0; i <= ss; i++)
-// //     {
-// //         if (temp[i] == ' ' || i == ss)
-// //         {
-// //             for (int j = i - 1; j >= ts; j--)
-// //             {
-// //                 s[k++] = temp[j];
-// //             }
-// //             if (i != ss) // Add this condition to avoid adding extra space at the end
-// //             {
-// //                 s[k++] = ' '; // Add space after each word
-// //             }
-// //             ts = i + 1;
-// //         }
-// //     }
+//     for (int i = 0; i <= ss; i++)
+//     {
+//         if (temp[i] == ' ' || i == ss)
+//         {
+//             for (int j = i - 1; j >= ts; j--)
+//             {
+//                 s[k++] = temp[j];
+//             }
+//             if (i != ss) // Add this condition to avoid adding extra space at the end
+//             {
+//                 s[k++] = ' '; // Add space after each word
+//             }
+//             ts = i + 1;
+//         }
+//     }
 
-// //     // Resize the string to remove any extra characters at the end
-// //     s.resize(k);
-// // }
+//     // Resize the string to remove any extra characters at the end
+//     s.resize(k);
+// }
 
 // // void reversethestring2(string &s)
 // // {
@@ -557,37 +561,37 @@
 // #include <string>
 // using namespace std;
 
-// // char findmaxoccchar(string s)
-// // {
-// //     int arr[26] = {0};
-// //     for (int i = 0; i < s.size(); i++)
-// //     {
-// //         char ch = s[i];
-// //         int num = 0;
-// //         if (ch >= 'a' && ch <= 'z')
-// //         {
-// //             num = ch - 'a';
-// //         }
-// //         arr[num]++;
-// //     }
-// //     int maxi = -1, ans = 0;
-// //     for (int i = 0; i < 26; i++)
-// //     {
-// //         if (maxi < arr[i])
-// //         {
-// //             ans = i;
-// //             maxi = arr[i];
-// //         }
-// //     }
-// //     char final = 'a' + ans;
-// //     return final;
-// // }
-
 // char findmaxoccchar(string s)
 // {
-
+//     int arr[26] = {0};
+//     for (int i = 0; i < s.size(); i++)
+//     {
+//         char ch = s[i];
+//         int num = 0;
+//         // if (ch >= 'a' && ch <= 'z')
+//         // {
+//         //     num = ch - 'a';
+//         // }
+//         num=ch-'a';
+//         arr[num]++;
+//     }
+//     int maxi = -1, ans = 0;
+//     for (int i = 0; i < 26; i++)
+//     {
+//         if (maxi < arr[i])
+//         {
+//             ans = i;
+//             maxi = arr[i];
+//         }
+//     }
+//     char final = 'a' + ans;
 //     return final;
 // }
+
+// // char findmaxoccchar(string s)
+// // {
+// //     return final;
+// // }
 
 // int main()
 // {
@@ -803,7 +807,7 @@
 
 //     return result;
 //     // return s;
-// }
+// }                                                                                
 // int main(int argc, char const *argv[])
 // {
 //     string s1;
@@ -946,3 +950,63 @@
 //     cout<<ans<<endl;
 //     return 0;
 // }
+
+
+// -----------------------------------------------------------------------------------------------------------------
+// #include <iostream>
+// #include <string>
+// #include <algorithm>
+// using namespace std;
+// bool isPalindrome(const string& str) {
+//     string reversed = str;
+//     reverse(reversed.begin(), reversed.end());
+//     return str == reversed;
+// }
+
+// string makePalindrome(const string& str) {
+//     string palindrome = str;
+//     reverse(palindrome.begin(), palindrome.end());
+//     return str + palindrome;
+// }
+
+// int main() {
+//     string input;
+//     cout << "Enter a string: ";
+//     cin >> input;
+
+//     if (isPalindrome(input)) {
+//         cout << "The input string is already a palindrome: " << input << endl;
+//     } else {
+//         string palindrome = makePalindrome(input);
+//         cout << "Rearranged palindrome string: " << palindrome << endl;
+//     }
+
+//     return 0;
+// }
+
+
+#include <iostream>
+#include <bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int n;
+    cin >> n;
+    int arr[n];
+    for(int i=0;i<n;i++){
+        cin>>arr[i];
+    }
+    int mx=-1;
+    int ans=0;
+    for (int i=0;i<n;i++){
+        if (mx<arr[i]){
+            ans=i;
+            mx=arr[i];
+        }
+    }
+    // cout<<ans<<mx;
+    
+
+
+    return 0;
+}

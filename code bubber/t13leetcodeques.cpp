@@ -1,12 +1,6 @@
 // First and last position of an element in sorted array
 // c1
 // #include <iostream>
-// #include <vector>
-// #include <algorithm>
-// using namespace std;
-// #include <iostream>
-// #include <vector>
-// #include <algorithm>
 // using namespace std;
 // int lastocc(int arr[], int n, int key)
 // {
@@ -81,9 +75,6 @@
 // #include <iostream>
 // #include <vector>
 // #include <algorithm>
-// using namespace std;
-// #include <iostream>
-// #include <vector>
 // using namespace std;
 // int lastocc(int arr[], int n, int key)
 // {

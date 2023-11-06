@@ -153,7 +153,7 @@
 // C4
 // #include <iostream>
 // #include <climits>
-// #include<vector>
+// #include <vector>
 // #include "bits/stdc++.h"
 // using namespace std;
 
@@ -380,10 +380,6 @@
 // Intersection of two array
 // c6
 // #include <iostream>
-// #include <climits>
-// #include <unordered_map>
-// #include <vector>
-// #include <algorithm>
 // #include "bits/stdc++.h"
 // using namespace std;
 // vector<int> intersection(vector<int> &arr, vector<int> &arr1)
@@ -439,10 +435,6 @@
 // code stdio
 // c6
 // #include <iostream>
-// #include <climits>
-// #include <unordered_map>
-// #include <vector>
-// #include <algorithm>
 // #include "bits/stdc++.h"
 // using namespace std;
 // // leetcode solution this method is known as 2 point approach which very important
@@ -488,9 +480,9 @@
 //                 arr[j]=-999999;
 //             }
 //         }
-//     }
+//     }  
 //     for (int i = 0; i < sarr; i++)
-//     {
+//     {    
 //         for (int j = 0; j < sarr1; j++)
 //         {
 //             if (arr[i] == arr1[j])
@@ -501,13 +493,13 @@
 //                 break;
 //             }
 //         }
-//     }
+//     }     
 //     // if (flag == 0)
 //     // {
 //     //     narr.push_back(-1); // Add -1 to narr if no intersection found
 //     // }
 //     return narr;
-// }
+// }      
 
 // int main(int argc, char const *argv[])
 // {

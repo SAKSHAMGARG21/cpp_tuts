@@ -429,6 +429,7 @@
 //     return 0;
 // }
 
+// c10
 // same as above but this code without allocate new 2D array
 // #include <iostream>
 // using namespace std;

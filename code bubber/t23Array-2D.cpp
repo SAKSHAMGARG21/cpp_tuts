@@ -161,6 +161,8 @@
 // int rowisesum(int arr[][100], int n, int m)
 // {
 //     int sum;
+
+//     int mx = INT_MIN;
 //     for (int i = 0; i < n; i++)
 //     {
 //         sum = 0;
@@ -169,11 +171,11 @@
 //             sum += arr[i][j];
 //         }
 //         cout << sum << " ";
-//     }
-//     cout<<endl;
-//     int mx=INT_MIN;
-//     if (mx<sum){
-//         mx=sum;
+//         // cout << endl;
+//         if (mx < sum)
+//         {
+//             mx = sum;
+//         }
 //     }
 //     return mx;
 // }
@@ -197,8 +199,10 @@
 //         }
 //         cout << endl;
 //     }
-//     int ans=rowisesum(arr, n, m);
-//     cout<<ans;
+
+//     int ans = rowisesum(arr, n, m);
+//     cout<<endl;
+//     cout << ans;
 //     return 0;
 // }
 
@@ -562,5 +566,50 @@
 //     {
 //         cout << "not found" << endl;
 //     }
+//     return 0;
+// }
+
+// practice question
+// #include <iostream>
+// #include <vector>
+// using namespace std;
+// void rotateArrayKTimes(vector<vector<int>>& arr, int k) {
+//     int nRows = arr.size();
+//     int nCols = arr[0].size();
+//     vector<vector<int>> tempArray(nRows, vector<int>(nCols));
+
+//     // Calculate effective number of rotations (0 to 3)
+//     k = k % 4;
+
+//     for (int r = 0; r < k; r++) {
+//         for (int i = 0; i < nRows; i++) {
+//             for (int j = 0; j < nCols; j++) {
+//                 tempArray[j][nRows - i - 1] = arr[i][j];
+//             }
+//         }
+//         arr = tempArray;
+//     }
+// }
+
+// int main() {
+//     int nRows, nCols, k;
+//     cin >> nRows >> nCols >> k;
+//     vector<vector<int>> arr(nRows, vector<int>(nCols));
+
+//     for (int i = 0; i < nRows; i++) {
+//         for (int j = 0; j < nCols; j++) {
+//             cin >> arr[i][j];
+//         }
+//     }
+
+//     rotateArrayKTimes(arr, k);
+
+//     for (int i = 0; i < nRows; i++) {
+//         for (int j = 0; j < nCols; j++) {
+//             cout << arr[i][j] << " ";
+//         }
+//         cout << endl;
+//     }
+
 //     return 0;
 // }

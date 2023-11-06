@@ -686,7 +686,7 @@
 //                     count++;
 //                     arr[j] = -1;
 //                 }
-//             }
+//             }       
 //         }
 //         c[i] = count;
 //     }
@@ -804,14 +804,15 @@
 //         {
 //             if (arr1[i] == arr2[j])
 //             {
-//                 arr3[k++] = arr1[i];
+//                 cout<<arr1[i]<<" ";
+//                 // arr3[k++] = arr1[i];
 //             }
 //         }
 //     }
-//     for (int i = 0; i < k; i++)
-//     {
-//         cout << arr3[i] << " ";
-//     }
+//     // for (int i = 0; i < k; i++)
+//     // {
+//     //     cout << arr3[i] << " ";
+//     // }
 //     return 0;
 // }
 
@@ -1035,7 +1036,7 @@
 // #include <iostream>
 // using namespace std;
 
-// int isperfect(int n)
+// bool isperfect(int n)
 // {
 //     int sum = 0;
 //     for (int i = 1; i < n; i++)
@@ -1051,7 +1052,7 @@
 // int main()
 // {
 //     int start, end;
-//     cout << "Enter the starting and ending numbers: ";
+//     // cout << "Enter the starting and ending numbers: ";
 //     cin >> start >> end;
 
 //     cout << "Perfect numbers in the range " << start << " to " << end << " are: ";
@@ -1075,7 +1076,7 @@
 // {
 //     int n, p;
 //     cin >> n >> p;
-//     int ans=1;
+//     long long int ans=1;
 //     for (int i = 1; i <= p; i++)
 //     {
 //         ans = ans * n;
@@ -1437,8 +1438,44 @@
 //     return 0;
 // }
 
+// same as above but this code without allocate new 2D array
+// #include <iostream>
+// using namespace std;
 
-// insertion algo by college wallah
+// int main() {
+//     int n, m;
+//     cin >> n >> m;
+//     int arr[n][m];
+
+//     for (int i = 0; i < n; i++) {
+//         for (int j = 0; j < m; j++) {
+//             cin >> arr[i][j];
+//         }
+//     }
+
+//     // Transpose the matrix in-place
+//     for (int i = 0; i < m; i++) {
+//         for (int j = i + 1; j < n; j++) {
+//             // Swap arr[i][j] and arr[j][i]
+//             int temp = arr[i][j];
+//             arr[i][j] = arr[j][i];
+//             arr[j][i] = temp;
+//         }
+//     }
+
+//     // Print the transposed matrix
+//     for (int i = 0; i < m; i++) {
+//         for (int j = 0; j < n; j++) {
+//             cout << arr[i][j] << " ";
+//         }
+//         cout << endl;
+//     }
+
+//     return 0;
+// }
+
+
+// insertion sort algorithm by college wallah
 // #include <iostream>
 // using namespace std;
 // int main()
