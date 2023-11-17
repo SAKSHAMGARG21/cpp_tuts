@@ -295,7 +295,7 @@
 //             start = i + 1;
 //         }
 //     }
-//     arr[l++] = s.length() - start; 
+//     arr[l++] = s.length() - start;
 //     for (int i = 0; i < l; i++)
 //     {
 //         for (int j = 0; j < l - i; j++)
@@ -340,6 +340,7 @@
 //     return 0;
 // }
 
+// c11
 // #include <iostream>
 // #include <bits/stdc++.h>
 // using namespace std;
@@ -363,25 +364,19 @@
 //         }
 //     }
 //     // cout<<ans<<mx;
-//     int flag=0;
+//     int flag=1;
 //     for (int i = 0; i < ans - 1; i++)
 //     {
-//         if (arr[i] < arr[i + 1])
+//         if (arr[i] > arr[i + 1])
 //         {
-//             flag = 1;
-//         }
-//         else{
-//             flag=0;
+//             flag = 0;
 //         }
 //     }
 //     for (int i = ans + 1; i < n; i++)
 //     {
-//         if (arr[i] < arr[i + 1])
+//         if (arr[i] > arr[i + 1])
 //         {
-//             flag = 1;
-//         }
-//         else{
-//             flag=0;
+//             flag = 0;
 //         }
 //     }
 //     if (flag==1){
@@ -391,6 +386,44 @@
 //         cout<<"false"<<endl;
 //     }
 
+//     return 0;
+// }
 
+// -----------------------------------------------------------------------------------------------------------------
+// c12
+// #include <iostream>
+// #include <bits/stdc++.h>
+// using namespace std;
+// int main()
+// {
+//     string s1, s2;
+//     cin >> s1 >> s2;
+//     string temp;
+//     int ss1 = s1.length();
+//     int flag = 0;
+//     for (int j = 0; j < ss1; j++)
+//     {
+//         temp = "";
+//         for (int i = j; i < ss1; i++)
+//         {
+//             temp.push_back(s1[i]);
+//         }
+//         for (int i = 0; i < j; i++)
+//         {
+//             temp.push_back(s1[i]);
+//         }
+//         if (temp == s2)
+//         {
+//             flag = 1;
+//         }
+//     }
+//     if (flag == 1)
+//     {
+//         cout << "true" << endl;
+//     }
+//     else
+//     {
+//         cout << "false" << endl;
+//     }
 //     return 0;
 // }
