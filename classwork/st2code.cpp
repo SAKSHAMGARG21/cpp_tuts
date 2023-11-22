@@ -364,7 +364,7 @@
 //         }
 //     }
 //     // cout<<ans<<mx;
-//     int flag=1;
+//     int flag = 1;
 //     for (int i = 0; i < ans - 1; i++)
 //     {
 //         if (arr[i] > arr[i + 1])
@@ -379,14 +379,74 @@
 //             flag = 0;
 //         }
 //     }
+//     if (flag == 1)
+//     {
+//         cout << "true" << endl;
+//     }
+//     else
+//     {
+//         cout << "false" << endl;
+//     }
+//     return 0;
+// }
+
+// -----------------------------------------------------------------------------------------------------------------
+// c
+// #include <iostream>
+// #include <bits/stdc++.h>
+// using namespace std;
+// int main()
+// {
+//     int n, m;
+//     cin >> n;
+//     int arr[n];
+//     for (int i = 0; i < n; i++)
+//     {
+//         cin >> arr[i];
+//     }
+
+//     int mx = -1;
+//     int ans = 0;
+//     for (int i = 0; i < n; i++)
+//     {
+//         if (mx < arr[i])
+//         {
+//             ans = i;
+//             mx = arr[i];
+//         }
+//     }
+//     // cout<<ans<<mx;
+//     int ar[n-1];
+//     int l=0;
+//     for (int i = 0; i < ans; i++)
+//     {
+//         if (arr[i] < arr[i + 1])
+//         {
+//             ar[l++]=arr[i];
+//         }
+//     }
+//     for (int i = ans + 1; i < n; i++)
+//     {
+//         if (arr[i] < arr[i + 1])
+//         {
+//             ar[l++]=arr[i];
+//         }
+//     }
+
+//     int flag=1;
+//     for (int i=0;i<n-1;i++){
+//         if (ar[i]>ar[i+1]){
+//             flag=0;
+//         }
+//     }
+
 //     if (flag==1){
 //         cout<<"true"<<endl;
 //     }
+
 //     else{
 //         cout<<"false"<<endl;
 //     }
-
-//     return 0;
 // }
 
 // -----------------------------------------------------------------------------------------------------------------

@@ -62,7 +62,7 @@
 
 // int main()
 // {
-//     abc a1; 
+//     abc a1;
 //     a1.x = 2;
 //     cout << a1;
 //     return 0;
@@ -90,7 +90,7 @@
 // }
 // int main()
 // {
-//     abc a1; 
+//     abc a1;
 //     // a1.x = 2;
 //     cin >> a1;
 //     cout << a1;
@@ -125,5 +125,40 @@
 //     abc a1;
 //     cin >> a1;
 //     cout << a1;
+//     return 0;
+// }
+
+// -----------------------------------------------------------------------------------------------------------------
+// c
+// #include <iostream>
+// #include <bits/stdc++.h>
+// using namespace std;
+// class abc
+// {
+// public:
+//     int *x;
+//     abc(int y=0)
+//     {
+//         x = new int(y);
+//     }
+//     void setx(int y){
+//         *x=y;
+//     }
+//     void getx(){
+//         cout<<*x<<endl;
+//     }
+//     abc operator=(abc temp){
+//         *x=*temp.x;
+//         return *this;
+//     }
+// };
+// int main()
+// {
+//     abc a1(2);
+//     abc a2;
+//     a2=a1;
+//     a1.setx(3);
+//     a2.getx();
+//     a1.getx();
 //     return 0;
 // }

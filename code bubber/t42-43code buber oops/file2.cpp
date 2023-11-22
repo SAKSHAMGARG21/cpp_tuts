@@ -462,28 +462,143 @@
 
 // -----------------------------------------------------------------------------------------------------------------
 // run time overloading
+// #include <iostream>
+// #include <bits/stdc++.h>
+// using namespace std;
+// class animal
+// {
+// public:
+//     virtual void speak()
+//     {
+//         cout << "speaking" << endl;
+//     }
+// };
+// class dog : public animal
+// {
+// public:
+//     void speak()
+//     {
+//         cout << "Barking" << endl;
+//     }
+// };
+// int main()
+// {
+//     dog obj1;
+//     obj1.speak();
+//     return 0;
+// }
+
+// -----------------------------------------------------------------------------------------------------------------
+// friend function
+// #include <iostream>
+// #include <bits/stdc++.h>
+// using namespace std;
+// class A{
+//     int x;
+// public:
+//     A (int y){
+//         x=y;
+//     }
+//     friend void print(A &obj);
+// };
+
+// void print(A &obj){
+//     cout<<obj.x<<endl;
+// }
+// int main()
+// {
+//     A obj(5);
+//     print(obj);
+//     return 0;
+// }
+
+// -----------------------------------------------------------------------------------------------------------------
+// c
+// #include <iostream>
+// #include <bits/stdc++.h>
+// using namespace std;
+// class adds{
+//     public:
+//     char s1[25],s2[25];
+//     adds(char st1[],char st2[]){
+//         strcpy(s1,st1);
+//         strcpy(s2,st2);
+//     }
+
+//     void operator+(){
+//         cout<<"the concatenated string is "<<'"'<<strcat(s1,s2)<<'"';
+//     }
+// };
+// int main()
+// {
+//     char sm1[]="Hello";
+//     char sm2[]="world";
+//     adds a(sm1,sm2);
+//     +a;
+
+//     return 0;
+// }
+
+// -----------------------------------------------------------------------------------------------------------------
+// Basic to class type
+// #include <iostream>
+// #include <bits/stdc++.h>
+// using namespace std;
+// class timel
+// {
+//     int hrs;
+//     int min;
+
+// public:
+//     timel(int t)
+//     {
+//         hrs = t / 60;
+//         min = t % 60;
+//     }
+
+//     void display()
+//     {
+//         cout << hrs << " hour and " << min << " min" << endl;
+//     }
+// };
+// int main()
+// {
+//     timel t1(90);
+//     t1.display();
+//     return 0;
+// }
+
+
+// class to Basic type
 #include <iostream>
 #include <bits/stdc++.h>
 using namespace std;
-class animal
+class timel
 {
+    int hrs;
+    int min;
+
 public:
-    void speak()
+    timel(int t)
     {
-        cout << "speaking" << endl;
+        hrs = t / 60;
+        min = t % 60;
     }
-};
-class dog : public animal
-{
-public:
-    void speak()
+
+    int add()
     {
-        cout << "Barking" << endl;
+        cout << hrs << " hour and " << min << " min" << endl;
+        int m;
+        m=min;
+        return m;
     }
 };
 int main()
 {
-    dog obj1;
-    obj1.speak();
+    int x=90;
+    timel t1(x);
+    int j=t1.display();
+    cout<<"The value of j is "<<j<<endl;
     return 0;
 }
+
