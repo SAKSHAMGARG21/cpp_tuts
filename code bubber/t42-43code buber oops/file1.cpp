@@ -121,16 +121,7 @@ int main(int argc, char const *argv[])
     // cout<<a.timetocomplete<<endl;
     // cout<<b.timetocomplete<<endl;
 
-
-
-
-
-
-
-
-
-
-
+// ------------------------------------------------------------
 
     // statically
     // Hero a;

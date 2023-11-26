@@ -134,13 +134,12 @@
 
 
 // -----------------------------------------------------------------------------------------------------------------
-
+// c3
 // code stdio
 // Aggresive cows
-// c3
 // #include <iostream>
 // #include <bits/stdc++.h>
-// using namespace std;
+// using namespace std; 
 // int ispossible(vector<int> &stalls, int k, int mid)
 // {
 //     int ss = stalls.size();

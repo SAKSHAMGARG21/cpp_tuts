@@ -269,9 +269,6 @@
 // }
 
 // #include <iostream>
-// #include <climits>
-// #include <vector>
-// #include <algorithm>
 // #include "bits/stdc++.h"
 // using namespace std;
 // int findduplicate(vector<int> &nums)
@@ -320,10 +317,7 @@
 // }
 
 // #include <iostream>
-// #include <climits>
-// #include <vector>
-// #include <algorithm>
-// #include "bits/stdc++.h"
+// #include <bits/stdc++.h>
 // using namespace std;
 // vector<int> findduplicate(vector<int> &nums)
 // {
@@ -373,9 +367,8 @@
 //     }
 //     return 0;
 // }
-// ------------------------------------------------------------------------------------------------------------------------------------
 
-// _____________________________________________________________________________________________________________________________________________
+// ------------------------------------------------------------------------------------------------------------------------------------
 // code stdio
 // Intersection of two array
 // c6
@@ -437,7 +430,7 @@
 // #include <iostream>
 // #include "bits/stdc++.h"
 // using namespace std;
-// // leetcode solution this method is known as 2 point approach which very important
+// // leetcode solution this method is known as 2 pointer approach which very important
 // // vector<int> intersection(vector<int> &arr, vector<int> &arr1)
 // // {
 // //     sort(nums1.begin(), nums1.end());
@@ -530,10 +523,6 @@
 // pairsum
 // c7
 // #include <iostream>
-// #include <climits>
-// #include <unordered_map>
-// #include <vector>
-// #include <algorithm>
 // using namespace std;
 // vector<vector<int>> pairsum(vector<int> &arr, int s)
 // {

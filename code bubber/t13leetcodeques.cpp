@@ -151,10 +151,7 @@
 // 852. Peak index in mountain array
 // c3
 // #include <iostream>
-// #include <vector>
-// #include <algorithm>
-// #include <iostream>
-// #include <vector>
+// #include <bits/stdc++.h>
 // using namespace std;
 // int peekelement(vector<int> &arr){
 //     int s=0;
@@ -181,8 +178,8 @@
 //     {
 //         cin >> arr[i];
 //     }
-//     int lstocc = peekelement(arr);
-//     cout << lstocc << endl;
+//     int pele = peekelement(arr);
+//     cout << pele << endl;
 //     return 0;
 // }
 
@@ -218,4 +215,5 @@
 //     cout << lstocc << endl;
 //     return 0;
 // }
+
 // ------------------------------------------------------------------------------------------------------------------------------------------------------

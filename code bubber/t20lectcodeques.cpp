@@ -60,7 +60,7 @@
 //     int l1=arr1.size();
 //     int l2=arr2.size();
 //     int i=0,j=0;
-//     while(i<l1 && j<l2){
+//     while(i<l1 || j<l2){
 //         if (arr1[i]<arr2[j]){
 //             arr3.push_back(arr1[i++]);
 //         }
@@ -69,12 +69,12 @@
 //         }
 //     }
 
-//     while(i<l1){
-//         arr3.push_back(arr1[i++]);
-//     }
-//     while(j<l2){
-//         arr3.push_back(arr2[j++]);
-//     }
+//     // while(i<l1){
+//     //     arr3.push_back(arr1[i++]);
+//     // }
+//     // while(j<l2){
+//     //     arr3.push_back(arr2[j++]);
+//     // }
 //     return arr3;
 
 //     // second method
@@ -128,55 +128,55 @@
 // c3
 // leetcode
 // 283. Move Zeroes
-// #include<iostream>
-// #include<vector>
-// #include<algorithm>
-// using namespace std;
-// void moveZeroes(vector<int> &nums)
-// {
-//     // vector<int> tarr;
-//     // int ns = nums.size();
-//     // int t = 0;
-//     // for (int i = 0; i < ns; i++)
-//     // {
-//     //     if (nums[i] != 0)
-//     //     {
-//     //         nums[t] = nums[i];
-//     //         t++;
-//     //     }
-//     // }
-//     // for (int i = t; i < ns; i++)
-//     // {
-//     //     nums[i] = 0;
-//     // }
+#include<iostream>
+#include<vector>
+#include<algorithm>
+using namespace std;
+void moveZeroes(vector<int> &nums)
+{
+    // vector<int> tarr;
+    // int ns = nums.size();
+    // int t = 0;
+    // for (int i = 0; i < ns; i++)
+    // {
+    //     if (nums[i] != 0)
+    //     {
+    //         nums[t] = nums[i];
+    //         t++;
+    //     }
+    // }
+    // for (int i = t; i < ns; i++)
+    // {
+    //     nums[i] = 0;
+    // }
 
-//     int ns=nums.size();
-//     int j=0;
-//     for (int i=0;i<ns;i++){
-//         if (nums[i]!=0){
-//             swap(nums[i],nums[j]);
-//             j++;
-//             // int t=nums[i];
-//             // nums[i]=nums[j];
-//             // nums[j]=t;
-//             // j++;
-//         }
-//     }
-// }
-// int main(int argc, char const *argv[])
-// {
-//     int n;
-//     cin>>n;
-//     vector<int> arr1(n);
-//     for (int i=0;i<n;i++){
-//         cin>>arr1[i];
-//     }
-//     moveZeroes(arr1);
-//     for (int i=0;i<n;i++){
-//         cout<<arr1[i]<<" ";
-//     }
-//     return 0;
-// }
+    int ns=nums.size();
+    int j=0;
+    for (int i=0;i<ns;i++){
+        if (nums[i]!=0){
+            swap(nums[i],nums[j]);
+            j++;
+            // int t=nums[i];
+            // nums[i]=nums[j];
+            // nums[j]=t;
+            // j++;
+        }
+    }
+}
+int main(int argc, char const *argv[])
+{
+    int n;
+    cin>>n;
+    vector<int> arr1(n);
+    for (int i=0;i<n;i++){
+        cin>>arr1[i];
+    }
+    moveZeroes(arr1);
+    for (int i=0;i<n;i++){
+        cout<<arr1[i]<<" ";
+    }
+    return 0;
+}
 
 
 

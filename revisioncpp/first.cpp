@@ -942,46 +942,46 @@
 
 // c30
 // second max and second min
-// #include <iostream>
-// #include<climits>
-// using namespace std;
-// int main()
-// {
-//     int n;
-//     cin >> n;
-//     int arr[n];
-//     for (int i = 0; i < n; i++)
-//     {
-//         cin>> arr[i];
-//     }
-//     int mx=INT_MIN;
-//     int mn=INT_MAX;
-//     for (int i=0;i<n;i++){
-//         if (mx<arr[i]){
-//             mx=arr[i];
-//         }
-//         if (mn>arr[i]){
-//             mn=arr[i];
-//         }
-//     }
+#include <iostream>
+#include<climits>
+using namespace std;
+int main()
+{
+    int n;
+    cin >> n;
+    int arr[n];
+    for (int i = 0; i < n; i++)
+    {
+        cin>> arr[i];
+    }
+    int mx=INT_MIN;
+    int mn=INT_MAX;
+    for (int i=0;i<n;i++){
+        if (mx<arr[i]){
+            mx=arr[i];
+        }
+        if (mn>arr[i]){
+            mn=arr[i];
+        }
+    }
 
-//     // cout<<mx<<mn<<endl;
+    // cout<<mx<<mn<<endl;
 
-//     int smx= INT_MIN;
-//     int smin= INT_MAX;
-//     for (int i=0;i<n;i++){
-//         if (arr[i]>smx && arr[i]!=mx){
-//             smx=arr[i];
-//         }
-//     }
-//     for (int i=0;i<n;i++){
-//         if (arr[i]<smin && arr[i]!=mn){
-//             smin=arr[i];
-//         }
-//     }
-//     cout<<smx<<smin<<endl;
-//     return 0;
-// }
+    int smx= INT_MIN;
+    int smin= INT_MAX;
+    for (int i=0;i<n;i++){
+        if (arr[i]>smx && arr[i]!=mx){
+            smx=arr[i];
+        }
+    }
+    for (int i=0;i<n;i++){
+        if (arr[i]<smin && arr[i]!=mn){
+            smin=arr[i];
+        }
+    }
+    cout<<smx<<smin<<endl;
+    return 0;
+}
 
 // c31
 // strong no

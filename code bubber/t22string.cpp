@@ -66,10 +66,10 @@
 // }
 
 // ---------------------------------------------------------------------------------------------------------------------------
-
 // #include <iostream>
 // #include <string>
 // #include <vector>
+// #include <algorithm>  // Include the algorithm header for the reverse function
 // using namespace std;
 
 // vector<char> reverse(const vector<char>& name) {
@@ -91,13 +91,34 @@
 //     int len = name.size();
 //     cout << "Length of string is: " << len << endl;
 
-//     vector<char> reversedName = reverse(vector<char>(name.begin(), name.end()));
+//     // Convert the string to a vector of characters
+//     vector<char> nameVector(name.begin(), name.end());
+
+//     // Reverse the vector
+//     vector<char> reversedName = reverse(nameVector);
+
 //     cout << "Your name after reverse is: ";
 //     for (int i = 0; i < len; i++) {
 //         cout << reversedName[i];
 //     }
 //     cout << endl;
 
+//     return 0;
+// }
+
+
+// #include <iostream>
+// #include<bits/stdc++.h>
+// using namespace std;
+// int main() {
+//     string name;
+//     cout << "Enter your name: ";
+//     // cin >> name;
+//     getline(cin,name);
+//     cout << "Your name is: " << name << endl;
+//     cout << "Your name after reverse is: ";
+//     reverse(name.begin(),name.end());
+//     cout<<name<<endl;
 //     return 0;
 // }
 
@@ -442,9 +463,9 @@
 // }
 
 // leet code premium que
-// #include <iostream>
-// #include <string>
-// using namespace std;
+#include <iostream>
+#include <string>
+using namespace std;
 
 // void reversethestring2(string& s)
 // {
@@ -472,29 +493,6 @@
 //     // Resize the string to remove any extra characters at the end
 //     s.resize(k);
 // }
-
-// // void reversethestring2(string &s)
-// // {
-// //     int ss = s.size();
-// //     string temp = s;
-// //     string ans = "";
-// //     int t = 0;
-// //     int k=0;
-// //     for (int i = 0; i < ss; i++)
-// //     {
-// //         if (temp[i] == ' ')
-// //         {
-// //             for (int j = i; j >= t; j--)
-// //             {
-// //                 s[k++]=temp[j];
-// //             }
-// //             t = i;
-// //         }
-// //     }
-// //     // s=ans;
-// //     // cout<<temp;
-// // }
-
 // int main()
 // {
 //     string s;
@@ -634,42 +632,42 @@
 // //     }
 // //     return result;
 // // }
-// string replaceSpaces(string& str)
-// {
-//     int ss = str.size();
-//     string temp = "";
-
-//     for (int i = 0; i < ss; i++)
-//     {
-//         if (str[i] == ' ')
-//         {
-//             temp.push_back('@');
-//             temp.push_back('4');
-//             temp.push_back('0');
-//         }
-//         else{
-//             temp.push_back(str[i]);
-//         }
-//     }
-//     return temp;
-// }
-// // string replaceSpaces(string &str)
+// // string replaceSpaces(string& str)
 // // {
 // //     int ss = str.size();
-// //     int ts = 0;
-// //     string temp = "@40";
+// //     string temp = "";
 
-// //     // Iterate through each character in the input string
 // //     for (int i = 0; i < ss; i++)
 // //     {
 // //         if (str[i] == ' ')
 // //         {
-// //             // Replace the space character with the string "@40"
-// //             str.replace(i, 1, temp);
+// //             temp.push_back('@');
+// //             temp.push_back('4');
+// //             temp.push_back('0');
+// //         }
+// //         else{
+// //             temp.push_back(str[i]);
 // //         }
 // //     }
-// //     return str;
+// //     return temp;
 // // }
+// string replaceSpaces(string &str)
+// {
+//     int ss = str.size();
+//     int ts = 0;
+//     string temp = "@40";
+
+//     // Iterate through each character in the input string
+//     for (int i = 0; i < ss; i++)
+//     {
+//         if (str[i] == ' ')
+//         {
+//             // Replace the space character with the string "@40"
+//             str.replace(i, 1, temp);
+//         }
+//     }
+//     return str;
+// }
 // int main()
 // {
 //     string s;
@@ -708,8 +706,6 @@
 // 567. permutation in string
 // c6
 // #include <iostream>
-// #include <climits>
-// #include <string>
 // #include "bits/stdc++.h"
 // using namespace std;
 // bool chackequal(int a[26], int b[26])
@@ -923,13 +919,13 @@
 
 //         if (count > 1)
 //         {
-//             // string cnt = to_string(count);
-//             // for (char ch : cnt)
-//             // {
-//             //     s[idx++] = ch;
-//             // }
-//             char cnt = '0'+count;
-//             s[idx++] = cnt;
+//             string cnt = to_string(count);
+//             for (char ch : cnt)
+//             {
+//                 s[idx++] = ch;
+//             }
+//             // char cnt = '0'+count;
+//             // s[idx++] = cnt;
 //         }
 //         i=j;
 //     }
@@ -985,28 +981,28 @@
 // }
 
 
-#include <iostream>
-#include <bits/stdc++.h>
-using namespace std;
-int main()
-{
-    int n;
-    cin >> n;
-    int arr[n];
-    for(int i=0;i<n;i++){
-        cin>>arr[i];
-    }
-    int mx=-1;
-    int ans=0;
-    for (int i=0;i<n;i++){
-        if (mx<arr[i]){
-            ans=i;
-            mx=arr[i];
-        }
-    }
-    // cout<<ans<<mx;
+// #include <iostream>
+// #include <bits/stdc++.h>
+// using namespace std;
+// int main()
+// {
+//     int n;
+//     cin >> n;
+//     int arr[n];
+//     for(int i=0;i<n;i++){
+//         cin>>arr[i];
+//     }
+//     int mx=-1;
+//     int ans=0;
+//     for (int i=0;i<n;i++){
+//         if (mx<arr[i]){
+//             ans=i;
+//             mx=arr[i];
+//         }
+//     }
+//     // cout<<ans<<mx;
     
 
 
-    return 0;
-}
+//     return 0;
+// }
