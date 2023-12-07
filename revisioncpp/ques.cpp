@@ -1,65 +1,84 @@
 // -----------------------------------------------------------------------------------------------------------------
 // c
-// #include <iostream>
-// #include <bits/stdc++.h>
-// using namespace std;
-// bool ispossible(vector<int> &arr, int n, int b, int mid)
-// {
-//     int e = arr.size();
-//     int pagec = 0;
-//     int stcount = 1;
-//     for (int i = 0; i < e; i++)
-//     {
-//         if (pagec + arr[i] <= mid && b<n){
-//             pagec+=arr[i];
-//         }
-//         else{
-//             stcount++;
-//             if ((stcount > b || arr[i]>mid) || b>n) {
-//                 return false;
-//             }
-//             pagec=arr[i];
-//         }
-//     }
-//     return true;
-// }
-// int binarysch(vector<int> &arr, int n, int b)
-// {
-//     int page = 0;
-//     for (int i = 0; i < arr.size(); i++)
-//     {
-//         page += arr[i];
-//     }
-//     int s = 0;
-//     int e = page;
-//     int ans = -1;
-//     while (s < e)
-//     {
-//         int mid = (s + e) / 2;
-//         if (ispossible(arr, n, b, mid))
-//         {
-//             ans = mid;
-//             e = mid - 1;
-//         }
+#include <iostream>
+#include <vector>
+using namespace std;
 
-//         else
-//         {
-//             s = mid + 1;
-//         }
-//     }
-//     return ans;
-// }
-// int main()
-// {
-//     int n, m;
-//     cin >> n >> m;
-//     vector<int> arr(n);
-//     for (int i = 0; i < n; i++)
-//     {
-//         cin >> arr[i];
-//     }
+class Solution
+{
+    public:
+    //Function to find a continuous sub-array which adds up to a given number.
+    vector<int> subarraySum(vector<int>arr, int n, long long s)
+    {
+        int last=0;
+        int start=0;
+        unsigned long long  currsum=0;
+        bool flag=false;
+        vector<int>res;
+        
+        //iterating over the array.
+        for(int i=0;i<n;i++)
+        {
+            //storing sum upto current element.
+            currsum += arr[i];
+            
+            //checking if current sum is greater than or equal to given number.
+            if(currsum>=s)
+            {
+                last=i;
+                //we start from starting index till current index and do the 
+                //excluding part while s(given number) < currsum.
+                while(s<currsum && start<last)
+                {
+                    //subtracting the element from left i.e., arr[start]
+                    currsum -= arr[start];
+                    ++start;
+                }
+                
+                //now if current sum becomes equal to given number, we store 
+                //the starting and ending index for the subarray.
+                if(currsum==s)
+                {
+                    res.push_back(start + 1);
+                    res.push_back(last + 1);
+                    
+                    //flag is set to true since subarray exists.
+                    flag = true;
+                    break;
+                }
+            }
+        }
+        //if no subarray is found, we store -1 in result.
+        if(flag==false)
+            res.push_back(-1);
+            
+        //returning the result.
+        return res;    
+    }
+};
 
-//     int ans = binarysch(arr,n,m);
-//     cout << ans << endl;
-//     return 0;
-// }
+int main()
+{
+    int t;
+    cin >> t;
+    while (t > 0)
+    {
+        int n;
+        long long s;
+        cin >> n >> s;
+        vector<int> arr(n);
+        for (int i = 0; i < n; i++)
+        {
+            cin >> arr[i];
+        }
+        Solution ob;
+        vector<int> res = ob.subarraySum(arr, n, s);
+        for (int i = 0; i < res.size(); i++)
+        {
+            cout << res[i] << " ";
+        }
+        cout << endl; // Print a newline after each test case
+        t--;
+    }
+    return 0;
+}

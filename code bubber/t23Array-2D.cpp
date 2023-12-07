@@ -109,6 +109,54 @@
 //     return 0;
 // }
 
+// #include<iostream>
+// using namespace std;
+
+// bool f(int n, int m, int matrix[][100],int target) {
+//     int row = n;
+//     int col = m;
+//     int rowindex = 0;
+//     int colindex = col - 1;
+//     while (rowindex < row && colindex >= 0) {
+//         int element = matrix[rowindex][colindex];
+//         if (element == target) {
+//             return 1;
+//         }
+//         if (element < target) {
+//             rowindex++;
+//         } else {
+//             colindex--;
+//         }
+//     }
+//     return 0;
+// }
+
+// int main() {
+//     int n, m;
+//     cin >> n >> m;
+//     int arr[100][100];
+//     for (int i = 0; i < n; i++) {
+//         for (int j = 0; j < m; j++) {
+//             cin >> arr[i][j];
+//         }
+//     }
+//     for (int i = 0; i < n; i++) {
+//         for (int j = 0; j < m; j++) {
+//             cout << arr[i][j] << " ";
+//         }
+//         cout << endl;
+//     }
+//     int target;
+//     cin >> target;
+//     bool found = f(n, m,arr, target);
+//     if (found) {
+//         cout << "Target found" << endl;
+//     } else {
+//         cout << "Target not found" << endl;
+//     }
+//     return 0;
+// }
+
 // -----------------------------------------------------------------------------------------------------------------
 // c4
 // row wise sum

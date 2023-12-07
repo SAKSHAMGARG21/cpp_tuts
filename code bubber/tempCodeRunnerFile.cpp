@@ -1,35 +1,40 @@
 
 using namespace std;
-int main(int argc, char const *argv[])
-{
+
+int getSum(int *arr, int n) {
+    int sum = 0;
+    for(int i=0; i<n; i++) {
+        sum += arr[i];
+    } 
+    return sum;
+}
+
+int main() {
+
     int n;
     cin >> n;
-    int i = 1, a = 1;
-    while (i <= n)
-    {
-        int j = 1;
-        while (j <= n - i)
-        {
-            cout << " ";
-            j++;
-        }
-        int k = 1;
-        while (k <= i)
-        {
-            cout << k;
-            k++;
-        }
-        a=k-2;
-        int l=2;
-        while (l<=i)
-        {
-            /* code */
-            cout<<a;
-            a--;
-            l++;
-        }
-        cout << endl;
-        i++;
+    
+    //variable size array
+    int* arr = new int[n];
+
+    //takign inputn in aray
+    for(int i=0; i<n; i++) {
+        cin >> arr[i];
     }
+
+    int ans = getSum(arr, n);
+
+    cout << "answer is "<< ans << endl;
+
+//case 1
+    // while(true) {
+    //     int i = 5;
+    // }
+    
+//case 2
+    while(true) {
+        int* ptr = new int;
+    }
+
     return 0;
 }

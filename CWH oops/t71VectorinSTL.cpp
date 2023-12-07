@@ -12,6 +12,7 @@ void display(vector<T> &v)
         /* code */
         cout << v[i] << " ";
     }
+    cout<<endl;
 }
 int main()
 {
@@ -36,18 +37,15 @@ int main()
 
     // display(vec);
 
-    // vector<char> vec1(4); //
-    // vec1.push_back('2');
-    // display(vec1);
+    vector<char> vec1(4);
+    vec1.push_back('2');
+    display(vec1);
 
-    // vector<char> vec2(vec1);
+    vector<char> vec2(vec1);
 
-    // display(vec2);
+    display(vec2);
 
     vector<int> vec4(4,13);
     display(vec4);
-
-
-
     return 0;
 }

@@ -355,9 +355,7 @@
 // c9
 // diaganolly print the array
 // #include <iostream>
-// #include <climits>
-// #include <limits>
-// #include <math.h>
+// #include<bits/stdc++.h>
 // using namespace std;
 // int main()
 // {
@@ -396,9 +394,7 @@
 // c10
 // transpose of a matrix
 // #include <iostream>
-// #include <climits>
-// #include <limits>
-// #include <math.h>
+// #include <bits/stdc++.h>
 // using namespace std;
 // int main()
 // {
@@ -596,9 +592,7 @@
 
 // c13
 // #include <iostream>
-// #include <climits>
-// #include <limits>
-// #include <math.h>
+// #include <bits/stdc++.h>
 // using namespace std;
 // int main()
 // {

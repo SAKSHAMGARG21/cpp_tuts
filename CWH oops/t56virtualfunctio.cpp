@@ -31,6 +31,8 @@
 //     basepointer = &dr;
 
 //     basepointer->display();
+//     obj_base.display();
+//     dr.display();
 
 //     return 0;
 // }
@@ -47,7 +49,6 @@
 // protected:
 //     string title;
 //     float rating;
-
 // public:
 //     CWH(string s, float r)
 //     {
@@ -56,6 +57,7 @@
 //     }
 //     virtual void display() {}
 // };
+
 // class CWHVideo : public CWH
 // {
 //     float videoLength;
@@ -72,12 +74,14 @@
 //         cout << "Length of this video is: " << videoLength << " minutes" << endl;
 //     }
 // };
+
 // class CWHText : public CWH
 // {
+
 //     int words;
 
 // public:
-//     CWHText(string s, float r, int wc) : CWH(s, r)
+//     CWHText(string s, float r, int wc):CWH(s,r)
 //     {
 //         words = wc;
 //     }
@@ -194,4 +198,3 @@
 
 //     return 0;
 // }
-

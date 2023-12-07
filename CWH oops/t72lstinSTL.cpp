@@ -50,7 +50,5 @@ int main()
     cout<<"list after reverse :";
     display(list1);
 
-
-
     return 0;
 }

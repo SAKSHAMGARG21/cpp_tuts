@@ -51,10 +51,10 @@
 //         return ;
 //     }
 //     // head recursive relation
-//     counting(n-1);
+//     // counting(n-1);
 //     cout<<n<<endl;
 //     // tail recursive relation
-//     // counting(n-1);
+//     counting(n-1);
 
 // }
 // int main()
@@ -70,11 +70,11 @@
 // #include <iostream>
 // #include <bits/stdc++.h>
 // using namespace std;
-// int power(int n,int m){
+// int power(int m,int n){
 //     if (n==0){
 //         return 1;
 //     }
-//     int sc=power(n-1,m);
+//     int sc=power(m,n-1);
 //     int bc=m*sc;
 
 //     return bc;
@@ -84,8 +84,9 @@
 // {
 //     int n, m;
 //     cin >> m>>n;
-//     int ans=power(n,m);
+//     int ans=power(m,n);
 //     cout<<ans<<endl;
 
 //     return 0;
 // }
+

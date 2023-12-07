@@ -1,4 +1,4 @@
-// // Reference variable 
+// Reference variable 
 // #include<iostream>
 // using namespace std;
 
@@ -23,7 +23,6 @@
 
 // int main() {
 
-//     /*
 //     int i = 5;
 
 //     //create a ref variable 
@@ -36,16 +35,17 @@
 //     j++;
 //     cout << i << endl; 
 //     cout << j << endl;
-//     */
 
-//    int n = 5;
+//    int n = 5; 
    
 //    cout << "Before " << n << endl;
 //    update2(n);
 //    cout << "After " << n << endl;
 
-
-//     fun(n);
+//    int *ptr=&n;
+//    cout<<ptr<<endl;
+//    int *ans=fun(n);
+//    cout<<ans<<endl;
 
 //     return 0;
 // }
@@ -57,7 +57,6 @@
 // using namespace std;
 
 // int getSum(int *arr, int n) {
-
 //     int sum = 0;
 //     for(int i=0; i<n; i++) {
 //         sum += arr[i];
@@ -83,17 +82,14 @@
 //     cout << "answer is "<< ans << endl;
 
 // //case 1
-//     while(true) {
-//         int i = 5;
-//     }
+//     // while(true) {
+//     //     int i = 5;
+//     // }
     
 // //case 2
 //     while(true) {
 //         int* ptr = new int;
 //     }
-
-
-
 
 //     return 0;
 // }

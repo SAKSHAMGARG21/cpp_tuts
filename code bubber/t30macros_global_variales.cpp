@@ -17,8 +17,6 @@
 // 	return 0;
 // }
 
-
-
 // C++ program to illustrate macros
 // #include <iostream>
 // using namespace std;
@@ -218,9 +216,6 @@
 
 // #include<iostream>
 // using namespace std;
-
-
-
 // inline int getMax(int& a, int& b) {
 //     return (a>b) ? a : b;
 // }
@@ -238,8 +233,6 @@
 
 //     ans = getMax(a,b);
 //     cout << ans << endl;
-
-
 
 //     return 0;
 // }

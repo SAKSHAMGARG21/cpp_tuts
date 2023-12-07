@@ -162,3 +162,73 @@
 //     a1.getx();
 //     return 0;
 // }
+
+// #include <iostream>
+// using namespace std;
+// class Animals
+// {
+// public:
+//     void sound()
+//     {
+//         cout << "Genric animal sound" << endl;
+//     }
+// };
+// class Cats : public Animals
+// {
+// public:
+//     void sound()
+//     {
+//         cout << "Cat meow" << endl;
+//     }
+// };
+// int main()
+// {
+//     Animals *a;
+//     Cats c;
+//     a = &c;
+//     a->sound(); // early binding
+//     return 0;
+// }
+
+// __________________________________________________________________________________
+// #include <iostream>
+
+// using namespace std;
+
+// class Animals
+
+// {
+// public:
+//     virtual void sound()
+
+//     {
+
+//         cout << "Genric animal sound" << endl;
+//     }
+// };
+
+// class Cats : public Animals
+
+// {
+
+// public:
+//     void sound()
+
+//     {
+
+//         cout << "Cats meow" << endl;
+//     }
+// };
+
+// int main()
+
+// {
+
+//     Animals *a;
+
+//     Cats c;
+//     a = &c;
+//     a->sound(); // late binding
+
+//     return 0;
+// }

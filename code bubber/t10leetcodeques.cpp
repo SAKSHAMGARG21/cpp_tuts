@@ -152,8 +152,6 @@
 // duplicate in array
 // C4
 // #include <iostream>
-// #include <climits>
-// #include <vector>
 // #include "bits/stdc++.h"
 // using namespace std;
 

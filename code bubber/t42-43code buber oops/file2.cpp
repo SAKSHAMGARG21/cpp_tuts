@@ -1,6 +1,5 @@
 // -----------------------------------------------------------------------------------------------------------------
 // c1
-
 // Encapulation
 // #include <iostream>
 // #include <bits/stdc++.h>
@@ -53,27 +52,27 @@
 //     }
 // };
 
-// // class male:public human{
-// //     public:
-// //     string color="royl gold";
+// class male:public human{
+//     public:
+//     string color="royl gold";
 
-// //     void sleep(){
-// //         cout<<"Male sleeping"<<endl;
-// //     }
-// // };
+//     void sleep(){
+//         cout<<"Male sleeping"<<endl;
+//     }
+//     int getheight(){
+//         return this->height;
+//     }
+// };
 
-// // class male:protected human{
-// //     public:
-// //     string color="royl gold";
+// class male:protected human{
+//     public:
+//     string color="royl gold";
 
-// //     void sleep(){
-// //         cout<<"Male sleeping"<<endl;
-// //     }
+//     void sleep(){
+//         cout<<"Male sleeping"<<endl;
+//     }
 
-// //     int getheight(){
-// //         return this->height;
-// //     }
-// // };
+// };
 
 // int main()
 // {
@@ -83,27 +82,27 @@
 //     // cout<<mi.getheight()<<endl;
 
 //     // _________________________________
-//     // male mi;
-//     // human ml;
+//     male mi;
+//     human ml;
 
-//     // mi.weight=90;
-//     // cout<<mi.weight<<endl;
+//     mi.weight=90;
+//     cout<<mi.weight<<endl;
 
-//     // ml.setage(23);
-//     // cout<<ml.getage()<<endl;
+//     ml.setage(23);
+//     cout<<ml.getage()<<endl;
 
 //     // ________________________________
-//     // male obj1;
-//     // cout<<obj1.age<<endl;
+//     male obj1;
+//     // // cout<<obj1.age<<endl;
 //     // cout<<obj1.height<<endl;
 //     // cout<<obj1.weight<<endl;
 
-//     // cout<<obj1.getage()<<endl;
-//     // obj1.setweight(45);
-//     // cout<<obj1.weight<<endl;
+//     cout<<obj1.getage()<<endl;
+//     obj1.setweight(45);
+//     cout<<obj1.weight<<endl;
 
-//     // cout<<obj1.color<<endl;
-//     // obj1.sleep();
+//     cout<<obj1.color<<endl;
+//     obj1.sleep();
 
 //     return 0;
 // }
@@ -209,14 +208,14 @@
 // public:
 //     string color;
 
-//     public:
-//     void bark(){
-//         cout<<"barking"<<endl;
+// public:
+//     void bark()
+//     {
+//         cout << "barking" << endl;
 //     }
 // };
 
 // class hybrid: public animal,public human{
-
 //     public:
 //     string name;
 // };
@@ -535,7 +534,6 @@
 //     char sm2[]="world";
 //     adds a(sm1,sm2);
 //     +a;
-
 //     return 0;
 // }
 
@@ -568,37 +566,35 @@
 //     return 0;
 // }
 
-
 // class to Basic type
-#include <iostream>
-#include <bits/stdc++.h>
-using namespace std;
-class timel
-{
-    int hrs;
-    int min;
+// #include <iostream>
+// #include <bits/stdc++.h>
+// using namespace std;
+// class timel
+// {
+//     int hrs;
+//     int min;
 
-public:
-    timel(int t)
-    {
-        hrs = t / 60;
-        min = t % 60;
-    }
+// public:
+//     timel(int t)
+//     {
+//         hrs = t / 60;
+//         min = t % 60;
+//     }
 
-    int add()
-    {
-        cout << hrs << " hour and " << min << " min" << endl;
-        int m;
-        m=min;
-        return m;
-    }
-};
-int main()
-{
-    int x=90;
-    timel t1(x);
-    int j=t1.display();
-    cout<<"The value of j is "<<j<<endl;
-    return 0;
-}
-
+//     int display()
+//     {
+//         cout << hrs << " hour and " << min << " min" << endl;
+//         int m;
+//         m=min;
+//         return m;
+//     }
+// };
+// int main()
+// {
+//     int x=90;
+//     timel t1(x);
+//     int j=t1.display();
+//     cout<<"The value of j is "<<j<<endl;
+//     return 0;
+// }

@@ -1,10 +1,10 @@
 // #include<iostream>
-// #include "hello.cpp"
+// // #include "hello.cpp"
 // using namespace std;
-// // class Hero {
-// //     // properties
-// //     // int height;
-// // };
+// class Hero {
+//     // properties
+//     // int height;
+// };
 // int main(int argc, char const *argv[])
 // {
 //     Hero h1;
@@ -72,7 +72,8 @@ public:
         cout << "[name:" << this->name << " ,";
         cout << "health:" << this->health << " ,";
         cout << "level:" << this->level << " ]";
-        cout << endl<< endl;
+        cout << endl
+             << endl;
     }
 
     // copy constructor
@@ -96,19 +97,19 @@ public:
     {
         cout << "Dynamically called Destructor" << endl;
     }
-
-    static int random(){
+    static int random()
+    {
         return timetocomplete;
     }
 };
 
-int Hero::timetocomplete=5;
+int Hero::timetocomplete = 5;
 int main(int argc, char const *argv[])
 {
-    // cout<<Hero::timetocomplete<<endl;
+    // cout << Hero::timetocomplete << endl;
 
-    // cout<<random()<<endl;
-
+    // Hero a;
+    // cout << a.random() << endl;
 
     // // bellow method is not recomended because timetocomplete variable belongs to class not object
     // Hero a;
@@ -121,14 +122,14 @@ int main(int argc, char const *argv[])
     // cout<<a.timetocomplete<<endl;
     // cout<<b.timetocomplete<<endl;
 
-// ------------------------------------------------------------
+    // ------------------------------------------------------------
 
     // statically
     // Hero a;
 
     // Dynamically
     // Hero *b=new Hero();
-    // manually called destructor
+    // // manually called destructor
     // delete b;
 
     // Hero hero1;
@@ -141,11 +142,12 @@ int main(int argc, char const *argv[])
 
     // // use default  copy constructor
     // Hero hero2(hero1);
-    // // hero2.print();
+    // hero2.print();
 
     // hero1.name[0] = 'G';
     // hero1.print();
 
+    // cout<<"hero2:";
     // hero2.print(); // shallow copy
 
     // hero1 = hero2;
@@ -154,19 +156,21 @@ int main(int argc, char const *argv[])
 
     // hero2.print();
 
-    // Hero S(56,'d');
-    // S.print();
+    // deep copy
+    Hero S(56,'d');
+    S.print();
 
-    // // copy constructor
-    // Hero R(S);
-    // R.print();
+    // copy constructor
+    Hero R(S);
+    R.print();
 
     // // object created statically
     // Hero remash(10);
     // // cout << "address of remash is:" << &remash << endl;
     // remash.print();
 
-    // // dynamically
+    // dynamically
+
     // Hero *b = new Hero(11);
     // b->print();
 
@@ -200,7 +204,6 @@ int main(int argc, char const *argv[])
     return 0;
 }
 
-
-// homework 
+// homework
 // const keyword => object creation , function
 // initialisation.
