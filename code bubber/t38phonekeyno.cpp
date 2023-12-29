@@ -52,58 +52,58 @@ using namespace std;
 //     return res;
 // }
 
-// vector<string> letterCombinations(string digits)
-// {
-//     int idx = 0;
-//     string mapping[10] = {"", "", "abc", "def", "ghi", "jkl", "mno", "pqrs", "tuv", "wxyz"};
-//     int dl = digits.size();
-//     vector<string> ans;
-//     string output;
+vector<string> letterCombinations(string digits)
+{
+    int idx = 0;
+    string mapping[10] = {"", "", "abc", "def", "ghi", "jkl", "mno", "pqrs", "tuv", "wxyz"};
+    int dl = digits.size();
+    vector<string> ans;
+    string output;
 
-//     if (dl == 0)
-//     {
-//         return ans; // Return an empty vector for empty input
-//     }
+    if (dl == 0)
+    {
+        return ans; // Return an empty vector for empty input
+    }
 
-//     if (dl == 1)
-//     {
-//         int val = digits[0] - '0';
-//         if (val >= 2 && val <= 9)
-//         {
-//             string letters = mapping[val];
-//             for (char letter : letters)
-//             {
-//                 output = letter;
-//                 ans.push_back(output);
-//             }
-//         }
-//         return ans;
-//     }
+    if (dl == 1)
+    {
+        int val = digits[0] - '0';
+        if (val >= 2 && val <= 9)
+        {
+            string letters = mapping[val];
+            for (char letter : letters)
+            {
+                output = letter;
+                ans.push_back(output);
+            }
+        }
+        return ans;
+    }
 
-//     vector<string> arr;
-//     for (int i = 0; i < dl; i++)
-//     {
-//         int val = digits[i] - '0';
-//         if (val >= 2 && val <= 9)
-//         {
-//             arr.push_back(mapping[val]);
-//         }
-//     }
+    vector<string> arr;
+    for (int i = 0; i < dl; i++)
+    {
+        int val = digits[i] - '0';
+        if (val >= 2 && val <= 9)
+        {
+            arr.push_back(mapping[val]);
+        }
+    }
 
-//     int t=0;
-//     for (int j = 0; j < arr[t].size(); j++)
-//     {
-//         for (int l = 0; l < arr[t + 1].size(); l++)
-//         {
-//             output.push_back(arr[t][j]);
-//             output.push_back(arr[t + 1][l]);
-//             ans.push_back(output);
-//             output = ""; // Clear the output string for the next iteration
-//         }
-//     }
+    int t=0;
+    for (int j = 0; j < arr[t].size(); j++)
+    {
+        for (int l = 0; l < arr[t + 1].size(); l++)
+        {
+            output.push_back(arr[t][j]);
+            output.push_back(arr[t + 1][l]);
+            ans.push_back(output);
+            output = ""; // Clear the output string for the next iteration
+        }
+    }
 
-//     return ans;
-// }
+    return ans;
+}
 
 // vector<string> letterCombinations(string digits)
 // {
@@ -180,18 +180,18 @@ using namespace std;
 //     solve(digits, oput, idx, ans, map);
 //     return ans;
 // }
-// int main()
-// {
-//     string s;
-//     cin >> s;
-//     vector<string> ans = letterCombinations(s);
+int main()
+{
+    string s;
+    cin >> s;
+    vector<string> ans = letterCombinations(s);
 
-//     for (auto i : ans)
-//     {
-//         cout << i << " ";
-//     }
+    for (auto i : ans)
+    {
+        cout << i << " ";
+    }
 
-//     return 0;
-// }
+    return 0;
+}
 
 

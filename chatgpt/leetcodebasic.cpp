@@ -131,28 +131,41 @@
 // ------------------------------------------------------------------------
 
 // frequency of an array
-//  #include <iostream>
-//  #include <unordered_map>
-//  using namespace std;
+#include <iostream>
+#include <unordered_map>
+#include <vector>
+#include <algorithm>
 
-// int main() {
-//     int arr[] = {1, -2, 3, 2, 1, 4, 2, 3, 4, 5, 6, 5};
-//     int n = sizeof(arr) / sizeof(arr[0]);
+using namespace std;
 
-//     // Create an unordered_map to store element frequency
-//     unordered_map<int, int> frequencyMap;
+int main() {
+    int arr[] = {1, -2, 3, 2, 1, 4, 2, 3, 4, 5, 6, 5};
+    int n = sizeof(arr) / sizeof(arr[0]);
 
-//     // Count the frequency of each element
-//     for (int i = 0; i < n; i++) {
-//         frequencyMap[arr[i]]++;
-//     }
+    // Create an unordered_map to store element frequency
+    unordered_map<int, int> frequencyMap;
 
-//     // Print the frequency of each element
-//     for (const auto& entry : frequencyMap) {
-//         cout<< entry.first << ":" << entry.second << endl;
-//     }
-//     return 0;
-// }
+    // Count the frequency of each element
+    for (int i = 0; i < n; i++) {
+        frequencyMap[arr[i]]++;
+    }
+
+    // Copy elements to a vector for sorting
+    vector<pair<int, int>> frequencyVector(frequencyMap.begin(), frequencyMap.end());
+
+    // Sort the vector based on frequency in descending order
+    sort(frequencyVector.begin(), frequencyVector.end(), [](const auto& a, const auto& b) {
+        return a.first < b.first;
+    });
+
+    // Print the frequency of each element
+    for (const auto& entry : frequencyVector) {
+        cout << entry.first << ":" << entry.second << endl;
+    }
+
+    return 0;
+}
+
 
 // ----------------------------------------------------------------------
 

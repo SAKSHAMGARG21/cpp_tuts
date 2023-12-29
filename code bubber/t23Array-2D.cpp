@@ -384,7 +384,6 @@
 // {
 //     int rs = arr.size();
 //     int cs = arr[0].size();
-
 //     vector<vector<int>> narr(rs,vector<int>(cs));
 //     for (int i = 0; i < rs; i++)
 //     {
@@ -393,10 +392,8 @@
 //             narr[j][i]=arr[rs-i-1][j];
 //         }
 //     }
-
 //     // int nrs=narr.size();
 //     // int ncs=narr[0].size();
-
 //     // for (int i = 0; i < rs; i++)
 //     // {
 //     //     for (int j = 0; j < cs; j++)
@@ -404,7 +401,6 @@
 //     //         arr[i][j] = narr[i][j];
 //     //     }
 //     // }
-
 //     arr=narr;
 // }
 // int main()
@@ -618,46 +614,46 @@
 // }
 
 // practice question
-// #include <iostream>
-// #include <vector>
-// using namespace std;
-// void rotateArrayKTimes(vector<vector<int>>& arr, int k) {
-//     int nRows = arr.size();
-//     int nCols = arr[0].size();
-//     vector<vector<int>> tempArray(nRows, vector<int>(nCols));
+#include <iostream>
+#include <vector>
+using namespace std;
+void rotateArrayKTimes(vector<vector<int>>& arr, int k) {
+    int nRows = arr.size();
+    int nCols = arr[0].size();
+    vector<vector<int>> tempArray(nRows, vector<int>(nCols));
 
-//     // Calculate effective number of rotations (0 to 3)
-//     k = k % 4;
+    // Calculate effective number of rotations (0 to 3)
+    k = k % 4;
 
-//     for (int r = 0; r < k; r++) {
-//         for (int i = 0; i < nRows; i++) {
-//             for (int j = 0; j < nCols; j++) {
-//                 tempArray[j][nRows - i - 1] = arr[i][j];
-//             }
-//         }
-//         arr = tempArray;
-//     }
-// }
+    for (int r = 0; r < k; r++) {
+        for (int i = 0; i < nRows; i++) {
+            for (int j = 0; j < nCols; j++) {
+                tempArray[j][nRows - i - 1] = arr[i][j];
+            }
+        }
+        arr = tempArray;
+    }
+}
 
-// int main() {
-//     int nRows, nCols, k;
-//     cin >> nRows >> nCols >> k;
-//     vector<vector<int>> arr(nRows, vector<int>(nCols));
+int main() {
+    int nRows, nCols, k;
+    cin >> nRows >> nCols >> k;
+    vector<vector<int>> arr(nRows, vector<int>(nCols));
 
-//     for (int i = 0; i < nRows; i++) {
-//         for (int j = 0; j < nCols; j++) {
-//             cin >> arr[i][j];
-//         }
-//     }
+    for (int i = 0; i < nRows; i++) {
+        for (int j = 0; j < nCols; j++) {
+            cin >> arr[i][j];
+        }
+    }
 
-//     rotateArrayKTimes(arr, k);
+    rotateArrayKTimes(arr, k);
 
-//     for (int i = 0; i < nRows; i++) {
-//         for (int j = 0; j < nCols; j++) {
-//             cout << arr[i][j] << " ";
-//         }
-//         cout << endl;
-//     }
+    for (int i = 0; i < nRows; i++) {
+        for (int j = 0; j < nCols; j++) {
+            cout << arr[i][j] << " ";
+        }
+        cout << endl;
+    }
 
-//     return 0;
-// }
+    return 0;
+}

@@ -122,6 +122,7 @@
 // c3
 // // lcm of two nos
 // #include <iostream>
+// using namespace std;
 // // Function to find the LCM of two numbers
 // int findLCM(int a, int b) {
 //     int maxNum = (a > b) ? a : b;
@@ -185,29 +186,29 @@
 // c5
 // code stdio
 // Modular Exponentiation
-#include <iostream>
-#include <bits/stdc++.h>
-using namespace std;
-int modularExponentiation(int x, int n, int m) {
-	// Write your code here.
-	int res=1;
-	while(n>0){
-		if (n&1){
-			res=(1LL*res*(x)%m)%m;
-		}
-		x=(1LL*(x)%m*(x)%m)%m;
-		n=n>>1;
-	}
-	return res;
-}
-int main()
-{
-    int n, x,m;
-    cin >> x >>n>> m;
-    int ans=modularExponentiation(x,n,m);
-    cout<<ans;
-    return 0;
-}
+// #include <iostream>
+// #include <bits/stdc++.h>
+// using namespace std;
+// int modularExponentiation(int x, int n, int m) {
+// 	// Write your code here.
+// 	int res=1;
+// 	while(n>0){
+// 		if (n&1){
+// 			res=(1LL*res*(x)%m)%m;
+// 		}
+// 		x=(1LL*(x)%m*(x)%m)%m;
+// 		n=n>>1;
+// 	}
+// 	return res;
+// }
+// int main()
+// {
+//     int n, x,m;
+//     cin >> x >>n>> m;
+//     int ans=modularExponentiation(x,n,m);
+//     cout<<ans;
+//     return 0;
+// }
 
 // homwork 
 

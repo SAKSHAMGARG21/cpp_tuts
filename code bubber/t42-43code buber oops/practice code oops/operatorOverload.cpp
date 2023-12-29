@@ -1,3 +1,4 @@
+// 😂😂
 // -----------------------------------------------------------------------------------------------------------------
 // c1
 // #include <iostream>
@@ -634,7 +635,6 @@
 // };
 // int main()
 // {
-//     using namespace std;
 //     Apples appleBasket;
 //     Mangoes mangoBasket;
 //     appleBasket.addApples(5);  // Adding 5 apples to the basket

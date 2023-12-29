@@ -108,19 +108,19 @@ int main(int argc, char const *argv[])
 {
     // cout << Hero::timetocomplete << endl;
 
-    // Hero a;
-    // cout << a.random() << endl;
+    Hero a;
+    cout << a.random() << endl;
 
     // // bellow method is not recomended because timetocomplete variable belongs to class not object
     // Hero a;
     // cout<<a.timetocomplete<<endl;
 
-    // Hero b;
+    Hero b;
 
-    // b.timetocomplete=10;
+    b.timetocomplete=10;
 
-    // cout<<a.timetocomplete<<endl;
-    // cout<<b.timetocomplete<<endl;
+    cout<<a.timetocomplete<<endl;
+    cout<<b.timetocomplete<<endl;
 
     // ------------------------------------------------------------
 

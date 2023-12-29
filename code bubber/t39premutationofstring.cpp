@@ -55,50 +55,50 @@
 // }
 
 // c1
-// #include <iostream>
-// #include <bits/stdc++.h>
-// using namespace std;
+#include <iostream>
+#include <bits/stdc++.h>
+using namespace std;
 
-// void solve(vector<int> nums, int idx, vector<vector<int>> &ans)
-// {
-//     if (idx >= nums.size())
-//     {
-//         ans.push_back(nums);
-//         return;
-//     }
+void solve(vector<int> nums, int idx, vector<vector<int>> &ans)
+{
+    if (idx >= nums.size())
+    {
+        ans.push_back(nums);
+        return;
+    }
 
-//     for (int i = idx; i < nums.size(); i++)
-//     {
-//         swap(nums[i], nums[idx]);
-//         solve(nums, idx + 1, ans);
-//         swap(nums[i], nums[idx]);
-//     }
-// }
+    for (int i = idx; i < nums.size(); i++)
+    {
+        swap(nums[i], nums[idx]);
+        solve(nums, idx + 1, ans);
+        swap(nums[i], nums[idx]);
+    }
+}
 
-// vector<vector<int>> permute(vector<int> &nums)
-// {
-//     vector<vector<int>> ans;
-//     int idx = 0;
-//     solve(nums, idx, ans);
-//     return ans;
-// }
-// int main()
-// {
-//     int n;
-//     cin>>n;
-//     vector<int> arr(n);
-//     for (int i=0;i<n;i++){
-//         cin >> arr[i];
-//     }
+vector<vector<int>> permute(vector<int> &nums)
+{
+    vector<vector<int>> ans;
+    int idx = 0;
+    solve(nums, idx, ans);
+    return ans;
+}
+int main()
+{
+    int n;
+    cin>>n;
+    vector<int> arr(n);
+    for (int i=0;i<n;i++){
+        cin >> arr[i];
+    }
 
-//     vector<vector<int>> ans = permute(arr);
-//     for (const vector<int>& a:ans){
-//         for (auto i : a)
-//         {
-//             cout << i << " ";
-//         }
-//         cout<<endl;
-//     }
+    vector<vector<int>> ans = permute(arr);
+    for (const vector<int>& a:ans){
+        for (auto i : a)
+        {
+            cout << i << " ";
+        }
+        cout<<endl;
+    }
 
-//     return 0;
-// }
+    return 0;
+}

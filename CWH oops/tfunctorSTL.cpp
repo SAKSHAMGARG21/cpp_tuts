@@ -8,7 +8,7 @@ int main()
     int arr[]={1,2,9,4,6,5};
     // sort(arr,arr+5);
 
-    sort(arr,arr+5,greater<int>());
+    sort(arr,arr+5);
     for (int i = 0; i < 6; i++)
     {
         cout<<arr[i]<<endl;

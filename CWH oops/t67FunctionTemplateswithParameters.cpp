@@ -3,7 +3,7 @@
 #include <iostream>
 #include <bits/stdc++.h>
 using namespace std;
-// template <class T1 = int, class T2 = float>
+template <class T1 = int, class T2 = float>
 // float funcAverage(int a, int b){
 //     float avg= (a+b)/2.0; 
 //     return avg;
@@ -15,7 +15,7 @@ using namespace std;
 //     return avg;
 // }
 
-template<class T1, class T2>
+// template<class T1, class T2>
 float funcAverage(T1 a, T2 b){
     float avg= (a+b)/2.0; 
     return avg;

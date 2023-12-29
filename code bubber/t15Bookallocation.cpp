@@ -136,66 +136,66 @@
 // // c3
 // // code stdio
 // // Aggresive cows
-// // #include <iostream>
-// // #include <bits/stdc++.h>
-// // using namespace std;
-// // int ispossible(vector<int> &stalls, int k, int mid)
-// // {
-// //     int ss = stalls.size();
-// //     int lp = stalls[0];
-// //     int cowcount = 1;
-// //     for (int i = 0; i < ss; i++)
-// //     {
-// //         if (stalls[i] - lp >= mid)
-// //         {
-// //             cowcount++;
-// //             if (cowcount == k)
-// //             {
-// //                 return true;
-// //             }
-// //             lp = stalls[i];
-// //         }
-// //     }
-// //     return false;
-// // }
-// // int aggressiveCows(vector<int> &stalls, int k)
-// // {
-// //     sort(stalls.begin(), stalls.end());
-// //     int s = 0;
-// //     int ss = stalls.size();
-// //     int mx = -1;
-// //     for (int i = 0; i < ss; i++)
-// //     {
-// //         mx = max(mx, stalls[i]);
-// //     }
+// #include <iostream>
+// #include <bits/stdc++.h>
+// using namespace std;
+// int ispossible(vector<int> &stalls, int k, int mid)
+// {
+//     int ss = stalls.size();
+//     int lp = stalls[0];
+//     int cowcount = 1;
+//     for (int i = 0; i < ss; i++)
+//     {
+//         if (stalls[i] - lp >= mid)
+//         {
+//             cowcount++;
+//             if (cowcount == k)
+//             {
+//                 return true;
+//             }
+//             lp = stalls[i];
+//         }
+//     }
+//     return false;
+// }
+// int aggressiveCows(vector<int> &stalls, int k)
+// {
+//     sort(stalls.begin(), stalls.end());
+//     int s = 0;
+//     int ss = stalls.size();
+//     int mx = -1;
+//     for (int i = 0; i < ss; i++)
+//     {
+//         mx = max(mx, stalls[i]);
+//     }
 
-// //     int end = mx;
-// //     int ans = -1;
-// //     while (s <= end)
-// //     {
-// //         int mid = (s + end) / 2;
-// //         if (ispossible(stalls, k, mid))
-// //         {
-// //             ans = mid;
-// //             s = mid + 1;
-// //         }
-// //         else
-// //         {
-// //             end = mid - 1;
-// //         }
-// //     }
-// //     return ans;
-// // }
-// // int main()
-// // {
-// //     int n, m;
-// //     cin >> n >> m;
-// //     vector<int> arr(n);
-// //     for (int i = 0; i < n; i++)
-// //     {
-// //         cin >> arr[i];
-// //     }
-// //     int ans = aggressiveCows(arr, m);
-// //     cout<<ans<<endl;
-// //     return 0;
-// // }
+//     int end = mx;
+//     int ans = -1;
+//     while (s <= end)
+//     {
+//         int mid = (s + end) / 2;
+//         if (ispossible(stalls, k, mid))
+//         {
+//             ans = mid;
+//             s = mid + 1;
+//         }
+//         else
+//         {
+//             end = mid - 1;
+//         }
+//     }
+//     return ans;
+// }
+// int main()
+// {
+//     int n, m;
+//     cin >> n >> m;
+//     vector<int> arr(n);
+//     for (int i = 0; i < n; i++)
+//     {
+//         cin >> arr[i];
+//     }
+//     int ans = aggressiveCows(arr, m);
+//     cout<<ans<<endl;
+//     return 0;
+// }
