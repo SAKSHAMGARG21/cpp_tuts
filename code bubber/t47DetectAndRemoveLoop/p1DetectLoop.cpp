@@ -91,109 +91,6 @@ void insertatpost(node *&tail, node *&head, int pos, int d)
     temp->next = nti;
 }
 
-node* reverse1(node* &head){
-    if (head==NULL || head->next==NULL){
-        return head;
-    }
-
-    node* chotahead=reverse1(head->next);
-
-    head->next->next=head;
-    head->next=NULL;
-    return chotahead;
-}
-void reverse(node* &head,node* curr,node* prev){
-
-    if (curr==NULL){
-        head=prev;
-        return ;
-    }
-
-    node* forward = curr->next;
-    reverse(head , forward, curr);
-    curr->next=prev;
-
-}
-node *reverseLinkedList(node *head)
-{
-    // Write your code here
-
-    node* ans=reverse1(head);
-    return ans;
-
-
-    // node* curr=head;
-    // node* prev=NULL;
-    // reverse(head,curr,prev);
-    // return head;
-
-
-    /*if (head == NULL || head->next == NULL)
-    {
-        return head;
-    }
-    node *prev = NULL;
-    node *curr = head;
-    node *forward = NULL;
-
-    while (curr != NULL)
-    {
-
-        forward = curr->next;
-        curr->next = prev;
-        prev = curr;
-        curr = forward;
-    }
-
-    return prev;*/
-}
-
-
-int getlen(node* head){
-
-    int cnt=0;
-    node* temp=head;
-    while (temp!=NULL){
-        cnt++;
-        temp=temp->next;
-    }
-    return cnt;
-}
-node* getmiddle(node* head){
-
-    if(head ==NULL || head->next==NULL){
-        return head;
-    }
-
-    node* slow=head;
-    node* fast=head->next;
-
-    while(fast != NULL){
-        fast=fast->next;
-        if (fast !=NULL ){
-            fast=fast->next;
-        }
-        slow=slow->next;
-    }
-
-    return slow;
-}
-node *findMiddle(node *head) {
-    // Write your code here
-
-    return getmiddle(head);
-    // int len=getlen(head);
-    // int mid1=(len/2);
-    
-    // node* temp=head;
-    // int cnt=0;
-    // while(cnt < mid1){
-    //     temp=temp->next;
-    //     cnt++;
-    // }
-    // return temp;
-}
-
 void deletenode(node *&head, node *&tail, int pos)
 {
     // deleting first or start node
@@ -228,31 +125,139 @@ void deletenode(node *&head, node *&tail, int pos)
     }
 }
 
+// First algo
+// Detect the loop in linked list 
+// bool checkloop(node* head){
+
+//     node* temp=head;
+
+//     map<node*,bool> visited;
+//     while(temp != NULL){
+//         if (visited[temp]==true){
+//             cout<<"loop is present at "<<temp->data<<endl;
+//             return true;
+//         }
+
+//         visited[temp]=true;
+//         temp=temp->next;
+//     }
+
+//     return false;
+// }
+
+// Second algo name is Floyed cycle detection
+node* checkloop(node* head){
+
+    if (head==NULL){
+        return NULL;
+    }
+    node* slow=head;
+    node* fast=head;
+
+    while(slow != NULL && fast != NULL){
+        fast=fast->next;
+
+        if (fast!=NULL){
+            fast=fast->next;
+        }
+
+        slow = slow->next;
+        if (slow == fast){
+            cout<<"loop is present at "<< slow->data<<endl;
+            return slow;
+        }
+    }
+    return NULL;
+}
+
+node* getstartofloop(node* head){
+    if (head == NULL){
+        return NULL;
+    }
+
+    node* intersection = checkloop(head);
+
+    node* slow = head;
+
+    while (slow != intersection){
+        slow=slow->next;
+        intersection= intersection->next;
+    }
+    return slow;
+}
+
+void removeloop(node* head){
+    if (head == NULL){
+        return ;
+    }
+
+    node* startnode=getstartofloop(head);
+
+    node* temp=startnode;
+
+    while (temp->next != startnode){
+        temp=temp->next;
+    }
+
+    temp->next=NULL;
+}
 int main()
 {
     // create a new linked list node
     node *node1 = new node(64);
-    cout << node1->data << endl;
+    // cout << node1->data << endl;
+    // cout << node1->next << endl;
+
+    // head pointed to nodel
+    // node *head = node1;
+    // insertathead(head, 12);
+    // print(head);
+    // insertathead(head, 35);
+    // print(head);
 
     // tail pointed to nodel
     node *head = node1;
     node *tail = node1;
     insertattail(tail, 12);
-    print(head);
+    // print(head);
     insertattail(tail, 35);
-    print(head);
+    // print(head);
 
     // insert the element at position in linked list
     // insertatpost(head,3,58);
     // print(head);
 
-    insertatpost(tail, head, 1, 58);
-    print(head);
-    // insertatpost(tail, head, 4, 58);
+    // insertatpost(tail,head,1,58);
+    // print(head);
+    insertatpost(tail, head, 4, 58);
     // print(head);
 
-    // cout << "head data " << head->data << endl;
-    // cout << "tail data " << tail->data << endl;
+    tail->next=head->next;
+
+
+
+    // if (checkloop(head) != NULL){
+    //     cout<<"list is in loop"<<endl;
+    // }
+    // else{
+    //     cout<<"list is not in loop"<<endl;
+    // }
+
+    // if (checkloop(head)){
+    //     cout<<"list is in loop"<<endl;
+    // }
+    // else{
+    //     cout<<"list is not in loop"<<endl;
+    // }
+
+    node* loop=getstartofloop(head);
+    cout<<"start is "<<loop->data <<endl;
+
+    removeloop(head);
+    print(head);
+    
+    cout << "head data " << head->data << endl;
+    cout << "tail data " << tail->data << endl;
 
     // // delete the element in linked list
     // deletenode(head, tail, 4);
@@ -260,11 +265,6 @@ int main()
 
     // cout << "head data " << head->data << endl;
     // cout << "tail data " << tail->data << endl;
-
-    cout << "Reversed Linked list " << endl;
-    node *newhead = reverseLinkedList(head);
-    print(newhead);
     return 0;
 }
 
-// reverse in a doubly linked list

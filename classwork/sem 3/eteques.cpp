@@ -207,7 +207,7 @@
 // class findcolms
 // {
 // public:
-//     string findnoscol(int n)
+//     string findnosroman(int n)
 //     {
 //         string ans = "";
 //         while (n > 0)
@@ -224,7 +224,7 @@
 // int main()
 // {
 //     findcolms ob;
-//     cout << ob.findnoscol(704);
+//     cout << ob.findnosroman(704);
 //     return 0;
 // }
 

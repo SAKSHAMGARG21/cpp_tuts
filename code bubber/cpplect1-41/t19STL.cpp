@@ -230,56 +230,56 @@
 // }
 
 // // set
-// #include <iostream>
-// #include <set>
-// using namespace std;
+#include <iostream>
+#include <set>
+using namespace std;
 
-// int main(int argc, char const *argv[]) {
-//     set<int> a;
+int main(int argc, char const *argv[]) {
+    set<int> a;
 
-//     a.insert(1);
-//     a.insert(1);
-//     a.insert(1);
-//     a.insert(5);
-//     a.insert(2);
-//     a.insert(2);
-//     a.insert(3);
-//     a.insert(3);
-//     a.insert(3);
-//     a.insert(0);
-//     a.insert(0);
+    a.insert(1);
+    a.insert(1);
+    a.insert(1);
+    a.insert(5);
+    a.insert(2);
+    a.insert(2);
+    a.insert(3);
+    a.insert(3);
+    a.insert(3);
+    a.insert(0);
+    a.insert(0);
 
-//     for (int i : a) {
-//         cout << i << endl;
-//     }
-//     cout << endl;
+    for (int i : a) {
+        cout << i << endl;
+    }
+    cout << endl;
 
-//     cout<<"//"<<endl;
-//     set<int>::iterator it = a.begin();
-//     it++;
-//     cout << *it << endl; // Use *it to print the value, not it itself
-//     a.erase(it);
+    cout<<"//"<<endl;
+    set<int>::iterator it = a.end();
+    // it++;
+    cout << *it << endl; // Use *it to print the value, not it itself
+    a.erase(it);
 
-//     cout<<"//"<<endl;
-//     for (auto i : a) {
-//         cout << i << endl;
-//     }
-//     cout << endl;
+    cout<<"//"<<endl;
+    for (auto i : a) {
+        cout << i << endl;
+    }
+    cout << endl;
 
-//     cout << "-5 is not present in set: " << a.count(-5) << endl;
+    cout << "-5 is not present in set: " << a.count(-5) << endl;
 
-//     set<int>::iterator itr = a.find(0);
-//     cout<<*itr<<endl;
-//     if (itr != a.end()) {
-//         for (auto it = itr; it != a.end(); it++) {
-//             cout << *it << " ";
-//         }
-//     } else {
-//         cout << "5 is not found in the set.";
-//     }
-//     cout << endl;
-//     return 0;
-// }
+    set<int>::iterator itr = a.find(0);
+    cout<<*itr<<endl;
+    if (itr != a.end()) {
+        for (auto it = itr; it != a.end(); it++) {
+            cout << *it << " ";
+        }
+    } else {
+        cout << "5 is not found in the set.";
+    }
+    cout << endl;
+    return 0;
+}
 
 // map
 // #include <iostream>
@@ -324,45 +324,45 @@
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 // Algorithms
-#include<iostream>
-#include<vector>
-#include<algorithm>
-using namespace std;
-int main(int argc, char const *argv[])
-{
-    vector<int> m;
+// #include<iostream>
+// #include<vector>
+// #include<algorithm>
+// using namespace std;
+// int main(int argc, char const *argv[])
+// {
+//     vector<int> m;
 
-    m.push_back(1);
-    m.push_back(3);
-    m.push_back(6);
-    m.push_back(7);
+//     m.push_back(1);
+//     m.push_back(3);
+//     m.push_back(6);
+//     m.push_back(7);
 
-    cout<<"binary search :"<<binary_search(m.begin(),m.end(),6)<<endl;
+//     cout<<"binary search :"<<binary_search(m.begin(),m.end(),6)<<endl;
 
-    cout<<"lower bound:"<<lower_bound(m.begin(),m.end(),6)-m.begin()<<endl;
-    cout<<"upper bound:"<<upper_bound(m.begin(),m.end(),6)-m.begin()<<endl;
+//     cout<<"lower bound:"<<lower_bound(m.begin(),m.end(),6)-m.begin()<<endl;
+//     cout<<"upper bound:"<<upper_bound(m.begin(),m.end(),6)-m.begin()<<endl;
 
-    int a=3;
-    int b=5;
+//     int a=3;
+//     int b=5;
 
-    swap(a,b);
-    cout<<"swap A:"<<a<<endl;
-    cout<<"swap B:"<<b<<endl;
+//     swap(a,b);
+//     cout<<"swap A:"<<a<<endl;
+//     cout<<"swap B:"<<b<<endl;
 
-    string rev="abcd";
-    reverse(rev.begin(),rev.end());
-    cout<<rev<<endl;
+//     string rev="abcd";
+//     reverse(rev.begin(),rev.end());
+//     cout<<rev<<endl;
 
-    rotate(m.begin(),m.begin()+1,m.end());
-    cout<<"after rotation:"<<endl;
-    for (int i:m){
-        cout<<i<<" ";
-    }
-    cout<<endl;
-    cout<<"after sorting:"<<endl;
-    sort(m.begin(),m.end());
-    for (int i:m){
-        cout<<i<<" ";
-    }
-    return 0;
-}
+//     rotate(m.begin(),m.begin()+1,m.end());
+//     cout<<"after rotation:"<<endl;
+//     for (int i:m){
+//         cout<<i<<" ";
+//     }
+//     cout<<endl;
+//     cout<<"after sorting:"<<endl;
+//     sort(m.begin(),m.end());
+//     for (int i:m){
+//         cout<<i<<" ";
+//     }
+//     return 0;
+// }
