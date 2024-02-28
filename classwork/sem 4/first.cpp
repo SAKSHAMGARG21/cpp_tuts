@@ -114,74 +114,217 @@
 // }
 
 
+// #include <iostream>
+// #include <bits/stdc++.h>
+// using namespace std;
+
+// class stdc
+// {
+// public:
+//     int rolno;
+//     string name;
+//     int age;
+
+//     // setters
+//     void setrolno(int rolno)
+//     {
+//         rolno = rolno;
+//     }
+
+//     void setname(string name)
+//     {
+//         name = name;
+//     }
+
+//     void setage(int age)
+//     {
+//         age = age;
+//     }
+
+
+//     // constructors
+//     stdc()
+//     {
+//         this->age = 0;
+//         this->rolno = 0;
+//     }
+
+//     stdc(int age, const string &name)
+//     {
+//         this->age = age;
+//         this->name = name;
+//     }
+
+//     stdc(int rolno, int age, const string &name)
+//     {
+//         this->rolno = rolno;
+//         this->age = age;
+//         this->name = name;
+//     }
+
+//     void print()
+//     {
+//         cout << "Roll no:" <<rolno << endl;
+//         cout << "Name:" <<name << endl;
+//         cout << "Age :" <<age << endl;
+//     }
+// };
+
+// int main()
+// {
+//         stdc obj;
+//         obj.print();
+
+//         stdc obj1(21,20,"saksham");
+//         obj1.print();
+
+//         stdc obj2(19,"saksham garg");
+
+//         obj2.print();
+   
+
+//     return 0;
+// }
+
+
+// First of an element in sorted array
+// #include <iostream>
+// using namespace std;
+// int lastocc(int arr[], int n, int key)
+// {
+//     int s = 0;
+//     int e = n;
+//     int mid = 0;
+//     int ans = -1;
+//     while (s <= e)
+//     {
+//         /* code */
+//         mid = (s + e) / 2;
+//         if (arr[mid] == key)
+//         {
+//             ans = mid;
+//             s = mid + 1;
+//         }
+//         else if (arr[mid] > key)
+//         {
+//             e = mid - 1;
+//         }
+//         else
+//         {
+//             s = mid + 1;
+//         }
+//     }
+//     return ans;
+// }
+// int firstocc(int arr[], int n, int key)
+// {
+
+//     int s = 0;
+//     int e = n;
+//     int mid = 0;
+//     int ans = -1;
+//     while (s <= e)
+//     {
+//         /* code */
+//         mid = (s + e) / 2;
+//         if (arr[mid] == key)
+//         {
+//             ans = mid;
+//             e = mid - 1;
+//         }
+//         else if (arr[mid] > key)
+//         {
+//             e = mid - 1;
+//         }
+//         else
+//         {
+//             s = mid + 1;
+//         }
+//     }
+//     return ans;
+// }
+// int main()
+// {
+//     int n;
+//     cin >> n;
+//     int arr[n];
+//     for (int i = 0; i < n; i++)
+//     {
+//         cin >> arr[i];
+//     }
+//     int fstocc = firstocc(arr, n,1);
+//     cout << fstocc << endl;
+//     return 0;
+// }
+
 #include <iostream>
-#include <bits/stdc++.h>
+#include <vector>
 using namespace std;
-
-class stdc
+int pivotelement(vector<int> &arr, int n)
 {
-public:
-    int rolno;
-    string name;
-    int age;
-
-    // setters
-    void setrolno(int rolno)
+    int s = 0;
+    int e = n - 1;
+    int mid;
+    while (s < e)
     {
-        rolno = rolno;
+        /* code */
+        mid = (s + e) / 2;
+        if (arr[mid] >= arr[0])
+        {
+            s = mid + 1;
+        }
+        else
+        {
+            e = mid;
+        }
     }
+    return s;
+}
 
-    void setname(string name)
+int binarysearch(vector<int> &arr, int s, int e, int key)
+{
+    while (s <= e)
     {
-        name = name;
+        int mid = s + (e - s) / 2;
+        if (key == arr[mid])
+        {
+            return mid;
+        }
+        else if (key > arr[mid])
+        {
+            s = mid + 1;
+        }
+        else
+        {
+            e = mid - 1;
+        }
     }
+    return -1;
+}
 
-    void setage(int age)
+int search(vector<int> &arr, int n, int k)
+{
+    int pivot = pivotelement(arr, n);
+    if (k >= arr[pivot] && k <= arr[n - 1])
     {
-        age = age;
+        return binarysearch(arr, pivot, n - 1, k);
     }
-
-
-    // constructors
-    stdc()
+    else
     {
-        this->age = 0;
-        this->rolno = 0;
+        return binarysearch(arr, 0, pivot, k);
     }
-
-    stdc(int age, const string &name)
-    {
-        this->age = age;
-        this->name = name;
-    }
-
-    stdc(int rolno, int age, const string &name)
-    {
-        this->rolno = rolno;
-        this->age = age;
-        this->name = name;
-    }
-
-    void print()
-    {
-        cout << "Roll no:" <<rolno << endl;
-        cout << "Name:" <<name << endl;
-        cout << "Age :" <<age << endl;
-    }
-};
+}
 
 int main()
 {
-        stdc obj;
-        obj.print();
-
-        stdc obj1(21,20,"saksham");
-        obj1.print();
-
-        stdc obj2(19,"saksham garg");
-
-        obj2.print();
-   
-
+    int n, key;
+    cin >> n >> key;
+    vector<int> arr(n);
+    for (int i = 0; i < n; i++)
+    {
+        cin >> arr[i];
+    }
+    int ans = search(arr, n, key);
+    cout << ans << endl;
     return 0;
 }

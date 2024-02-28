@@ -165,7 +165,6 @@ int main(int argc, char const *argv[])
     // R.print();
 
     // S.level='A';
-
     // S.print();
     // R.print();
 
@@ -199,13 +198,13 @@ int main(int argc, char const *argv[])
     // cout<<"health is :"<<b->gethealth()<<endl;
 
     // creating object
-    //  Hero remash;
-    //  cout<<"Ramesh size is :"<<sizeof(remash)<<endl;
-    //  cout << "Ramesh health is :"<<remash.gethealth()<<endl;
-    //  remash.sethealth(70);
-    //  remash.level='A';
-    //  cout<<remash.gethealth()<<endl;
-    //  cout<<remash.level<<endl;
+    // Hero remash;
+    // cout<<"Ramesh size is :"<<sizeof(remash)<<endl;
+    // cout << "Ramesh health is :"<<remash.gethealth()<<endl;
+    // remash.sethealth(70);
+    // remash.level='A';
+    // cout<<remash.gethealth()<<endl;
+    // cout<<remash.level<<endl;
     return 0;
 }
 

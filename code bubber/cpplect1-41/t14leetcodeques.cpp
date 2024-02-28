@@ -39,9 +39,9 @@
 // search in a rotated sorted array
 // c2
 // #include <iostream>
-// #include<vector>
+// #include <vector>
 // using namespace std;
-// int pivotelement(vector<int>& arr, int n)
+// int pivotelement(vector<int> &arr, int n)
 // {
 //     int s = 0;
 //     int e = n - 1;
@@ -61,48 +61,53 @@
 //     }
 //     return s;
 // }
-// int binarysearch(vector<int>& arr, int s,int e, int key)
+// int binarysearch(vector<int> &arr, int s, int e, int key)
 // {
 //     while (s <= e)
 //     {
-//         int mid = s + (e-s) / 2;
-//         if (key==arr[mid]){
+//         int mid = s + (e - s) / 2;
+//         if (key == arr[mid])
+//         {
 //             return mid;
 //         }
-//         else if(key>arr[mid]){
-//             s=mid+1;
+//         else if (key > arr[mid])
+//         {
+//             s = mid + 1;
 //         }
-//         else{
-//             e=mid-1;
+//         else
+//         {
+//             e = mid - 1;
 //         }
 //     }
 //     return -1;
 // }
 
-// int search(vector<int>& arr, int n, int k)
+// int search(vector<int> &arr, int n, int k)
 // {
-//     int pivot=pivotelement(arr,n);
-//     if (k>= arr[pivot] && k <= arr[n-1]){
-//         return binarysearch(arr,pivot,n-1,k);
+//     int pivot = pivotelement(arr, n);
+//     if (k >= arr[pivot] && k <= arr[n - 1])
+//     {
+//         return binarysearch(arr, pivot, n - 1, k);
 //     }
-//     else{
-//         return binarysearch(arr,0,pivot,k);
+//     else
+//     {
+//         return binarysearch(arr, 0, pivot, k);
 //     }
 // }
+
 // int main()
 // {
-//     int n,key;
-//     cin >> n>>key;
+//     int n, key;
+//     cin >> n >> key;
 //     vector<int> arr(n);
 //     for (int i = 0; i < n; i++)
 //     {
 //         cin >> arr[i];
 //     }
-//     int ans = search(arr, n,key);
+//     int ans = search(arr, n, key);
 //     cout << ans << endl;
 //     return 0;
 // }
-
 
 // leet code
 // 69.sqrt(x)
@@ -161,7 +166,6 @@
 //     cout << decimalval(n, 3, sqroot) << endl;
 //     return 0;
 // }
-
 
 // -----------------------------------------------------------------------------------------------------------------------------------
 // practice code
