@@ -5,21 +5,17 @@
 // #include <bits/stdc++.h>
 // using namespace std;
 // class student{
-
 //     private:
 //         string name;
 //         int health;
 //         int age;
-
 //     public:
-
 //     void setage(int age){
 //         this->age=age;
 //     }
 //     int getAge(){
 //         return this->age;
 //     }
-
 // };
 // int main()
 // {
@@ -56,43 +52,43 @@
 //     }
 // };
 
-// // class male:public human{
-// //     public:
-// //     string color="royl gold";
-
-// //     void sleep(){
-// //         cout<<"Male sleeping"<<endl;
-// //     }
-// //     int getheight(){
-// //         return this->height;
-// //     }
-// // };
-
-// class male:protected human{
+// class male:public human{
 //     public:
 //     string color="royl gold";
 
 //     void sleep(){
 //         cout<<"Male sleeping"<<endl;
 //     }
+//     int getheight(){
+//         return this->height;
+//     }
 // };
+
+// // class male:protected human{
+// //     public:
+// //     string color="royl gold";
+
+// //     void sleep(){
+// //         cout<<"Male sleeping"<<endl;
+// //     }
+// // };
 
 // int main()
 // {
-//     // male mi;
-//     // human ml;
+//     male mi;
+//     human ml;
 
-//     // cout<<mi.getheight()<<endl;
+//     cout<<mi.getheight()<<endl;
 
 //     // _________________________________
-//     // male mi;
-//     // human ml;
+//     male mi;
+//     human ml;
 
-//     // mi.weight=90;
-//     // cout<<mi.weight<<endl;
+//     mi.weight=90;
+//     cout<<mi.weight<<endl;
 
-//     // ml.setage(23);
-//     // cout<<ml.getage()<<endl;
+//     ml.setage(23);
+//     cout<<ml.getage()<<endl;
 
 //     // ________________________________
 //     male obj1;
@@ -198,11 +194,10 @@
 // public:
 //     int age;
 //     int weight;
-
 // public:
-//     void speak()
+//     void bark()
 //     {
-//         cout << "Speaking" << endl;
+//         cout << "barking" << endl;
 //     }
 // };
 
@@ -210,12 +205,12 @@
 // {
 // public:
 //     string color;
-
 // public:
-//     void bark()
+//     void speak()
 //     {
-//         cout << "barking" << endl;
+//         cout << "Speaking" << endl;
 //     }
+
 // };
 
 // class hybrid: public animal,public human{

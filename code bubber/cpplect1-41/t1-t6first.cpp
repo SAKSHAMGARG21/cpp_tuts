@@ -22,21 +22,22 @@
 //     // int size = sizeof(d);
 //     // cout<<"size of a is:"<<size<<endl;
 
+//     // -----------------------------------------
 //     /* type casting*/
 //     // int a='a';
 //     // cout<<a<<endl;
 
 //     // char ch=98;
 //     // cout<<ch<<endl;
-
+// // ---------------------------------------
 //     // arthmatic operators
 //     // float a=2.5/2;
 //     // cout<<a<<endl;
 //     // cout<<2.5/2<<endl;
 
 //     // relation operators
-//     // int a=2;
-//     // int b=3;
+//     int a=2;
+//     int b=3;
 
 //     // bool first= (a==b);
 //     // cout<<first<<endl;
@@ -50,8 +51,8 @@
 //     // bool fourth=(a<=b);
 //     // cout<<fourth<<endl;
 
-//     // bool fifth=(a>=b);
-//     // cout<<fifth<<endl;
+//     bool fifth=(a>=b);
+//     cout<<fifth<<endl;
 
 //     // bool six=(a!=b);
 //     // cout<<six<<endl;

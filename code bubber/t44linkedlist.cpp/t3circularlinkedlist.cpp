@@ -41,14 +41,11 @@ void insertnode(node *&tail, int ele, int d)
     else
     {
         // if list is not empty
-
         node *curr = tail;
-
         while (curr->data != ele)
         {
             curr = curr->next;
         }
-
         node *temp = new node(d);
         temp->next = curr->next;
         curr->next = temp;
@@ -56,9 +53,7 @@ void insertnode(node *&tail, int ele, int d)
 }
 
 void print(node* tail){
-
     node* temp=tail;
-
     if (tail==NULL){
         cout<<"list is empty"<<endl;
         return;
@@ -111,23 +106,23 @@ int main()
     insertnode(tail,5,3);
     print(tail);
 
-    // insertnode(tail,3,2);
-    // print(tail);
-
-    // insertnode(tail,2,7);
-    // print(tail);
-
-    // insertnode(tail,7,9);
-    // print(tail);
-
-    // insertnode(tail,9,25);
-    // print(tail);
-
-    // insertnode(tail,3,5);
-    // print(tail);
-
-    deletnode(tail,3);
+    insertnode(tail,3,2);
     print(tail);
+
+    insertnode(tail,2,7);
+    print(tail);
+
+    insertnode(tail,7,9);
+    print(tail);
+
+    insertnode(tail,9,25);
+    print(tail);
+
+    insertnode(tail,3,5);
+    print(tail);
+
+    // deletnode(tail,3);
+    // print(tail);
     return 0;
 }
 

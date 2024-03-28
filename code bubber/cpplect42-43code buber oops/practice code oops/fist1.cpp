@@ -507,9 +507,7 @@
 // int main()
 // {
 //     son obj("Saurabh", "Ramesh", "Suresh");
-
 //     obj.printnames();
-
 //     return 0;
 // }
 
@@ -669,7 +667,6 @@
 // {
 //     string s;
 //     cin>>s;
-
 //     chkst obj1(s);
 //     int ans=obj1.cntvow();
 //     cout<<ans<<endl;
@@ -677,51 +674,32 @@
 // }
 
 // #include <bits/stdc++.h>
-
 // using namespace std;
-
 // bool isArmstrong(int n)
 // {
-
 //     int sum = 0, val = n;
-
 //     while (val)
 //     {
-
 //         int x = val % 10;
-
 //         sum += x * x * x;
-
 //         val /= 10;
-//     }
-
+//    }
 //     return sum == n;
 // }
-
 // int main()
 // {
-
 //     int n;
-
 //     cin >> n;
-
 //     cout << 1 << " ";
-
 //     int first = 1;
-
 //     for (int i = 1; i <= (n - 1); i++)
 //     {
-
 //         for (int j = first + 1;; j++)
 //         {
-
 //             if (isArmstrong(j))
 //             {
-
 //                 cout << j << " ";
-
 //                 first = j;
-
 //                 break;
 //             }
 //         }
@@ -760,39 +738,26 @@
 // using namespace std;
 
 // void printTwoElements(int arr[], int n)
-
 // {
-
 //     int temp[n] = {}; // Creating temp array of size n with  // initial values as 0.
-
 //     int repeatingNumber = -1;
-
 //     int missingNumber = -1;
-
 //     for (int i = 0; i < n; i++)
 //     {
-
 //         temp[arr[i] - 1]++;
-
 //         if (temp[arr[i] - 1] > 1)
 //         {
-
 //             repeatingNumber = arr[i];
 //         }
 //     }
-
 //     for (int i = 0; i < n; i++)
 //     {
-
 //         if (temp[i] == 0)
 //         {
-
 //             missingNumber = i+1;
-
 //             break;
 //         }
 //     }
-
 //     cout << repeatingNumber << " " << missingNumber;
 // }
 
@@ -813,3 +778,34 @@
 
 //     return 0;
 // }
+
+// -----------------------------------------------------------------------------------------------------------------
+// c
+#include <iostream>
+#include <bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int arr[9] = {2, 5, 3, 28, 5, 28, 3, 4, 5};
+    int temp[100] = {-1};
+    for (int i = 0; i < 9; i++)
+    {
+        temp[arr[i]]++;
+    }
+
+    for (int i = 0; i <10; i++)
+    {
+        // if (temp[i] > 0)
+        // {
+        //     cout <<i<<" "<< temp[i]<<endl;
+        // }
+        cout<<i<<" ";
+    }
+    // cout << endl;
+    // for (int i = 0; i < 9; i++)
+    // {
+    //     cout << i << " ";
+    // }
+
+    return 0;
+}

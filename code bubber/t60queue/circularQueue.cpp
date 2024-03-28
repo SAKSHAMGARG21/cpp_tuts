@@ -50,14 +50,16 @@ public:
     int dequeue()
     {
         if (front == -1)
-        { // to check queue is empty
+        {
+            // to check queue is empty
             // cout << "Queue is Empty " << endl;
             return -1;
         }
         int ans = arr[front];
         arr[front] = -1;
         if (front == rear)
-        { // single element is present
+        {
+            // single element is present
             front = rear = -1;
         }
         else if (front == size - 1)
@@ -65,7 +67,8 @@ public:
             front = 0; // to maintain cyclic nature
         }
         else
-        { // normal flow
+        {
+            // normal flow
             front++;
         }
         return ans;

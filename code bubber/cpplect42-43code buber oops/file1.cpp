@@ -80,7 +80,7 @@ public:
     // deep copy
     Hero(Hero &temp)
     {
-        char *ch = new char[strlen(temp.name + 1)];
+        char *ch = new char[strlen(temp.name)];
         strcpy(ch, temp.name);
         this->name = ch;
         cout << "copy constructor called" << endl;
@@ -116,7 +116,6 @@ int main(int argc, char const *argv[])
     // cout<<a.timetocomplete<<endl;
 
     // Hero b;
-
     // b.timetocomplete=10;
 
     // cout<<a.timetocomplete<<endl;
@@ -132,6 +131,7 @@ int main(int argc, char const *argv[])
     // // manually called destructor
     // delete b;
 
+    // ----------------------------------
     // Hero hero1;
     // hero1.sethealth(79);
     // hero1.setlevel('B');
@@ -140,14 +140,14 @@ int main(int argc, char const *argv[])
 
     // hero1.print();
 
-    // // // use default  copy constructor
+    // // // // use default  copy constructor
     // Hero hero2(hero1);
     // hero2.print();
 
     // hero1.name[0] = 'G';
     // hero1.print();
 
-    // cout<<"hero2:";
+    // // cout<<"hero2:";
     // hero2.print(); // shallow copy
 
     // hero1 = hero2;
@@ -155,12 +155,12 @@ int main(int argc, char const *argv[])
     // hero1.print();
 
     // hero2.print();
-
+    // ---------------------------------
     // deep copy
     // Hero S(56,'d');
     // S.print();
 
-    // copy constructor
+    // // copy constructor
     // Hero R(S);
     // R.print();
 

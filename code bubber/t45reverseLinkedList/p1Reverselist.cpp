@@ -127,7 +127,6 @@ node *reverseLinkedList(node *head)
     // reverse(head,curr,prev);
     // return head;
 
-
     /*if (head == NULL || head->next == NULL)
     {
         return head;
@@ -181,6 +180,7 @@ node *findMiddle(node *head) {
     // Write your code here
 
     return getmiddle(head);
+    
     // int len=getlen(head);
     // int mid1=(len/2);
     

@@ -270,6 +270,7 @@ int main(int argc, char const *argv[]) {
 
     set<int>::iterator itr = a.find(0);
     cout<<*itr<<endl;
+    // a.end();
     if (itr != a.end()) {
         for (auto it = itr; it != a.end(); it++) {
             cout << *it << " ";

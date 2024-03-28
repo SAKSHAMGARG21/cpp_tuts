@@ -13,16 +13,16 @@ struct Node {
 
 struct Node* buildList(int size)
 {
-    int val;
-    cin>> val;
+    int data;
+    cin>> data;
     
-    Node* head = new Node(val);
+    Node* head = new Node(data);
     Node* tail = head;
     
     for(int i=0; i<size-1; i++)
     {
-        cin>> val;
-        tail->next = new Node(val);
+        cin>> data;
+        tail->next = new Node(data);
         tail = tail->next;
     }
     

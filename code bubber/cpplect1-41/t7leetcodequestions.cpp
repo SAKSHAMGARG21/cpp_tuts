@@ -19,6 +19,7 @@
 //             cout << "0" << endl;
 //             break;
 //         }
+//         // add = (rem * 10) + add;
 //         add = (add * 10) + rem;
 //         n /= 10;
 //     }
@@ -161,30 +162,30 @@
 // }
 
 // c21
-// #include <iostream>
-// #include <limits>
-// #include <math.h>
-// using namespace std;
-// int main(int argc, char const *argv[])
-// {
-//     int n;
-//     cin >> n;
-//     int i;
-//     int ans = 1;
-//     for (i = 0; i <= 30; i++)
-//     {
-//         // cout<<"ans"<<ans<<endl;
-//         // ans=pow(2,i);
-//         if (ans == n)
-//         {
-//             cout << "true" << n << endl;
-//             break;
-//         }
-//         ans = ans * 2;
-//     }
-//     if (i >= 30)
-//     {
-//         cout << "false" << n << endl;
-//     }
-//     return 0;
-// }
+#include <iostream>
+#include <limits>
+#include <math.h>
+using namespace std;
+int main(int argc, char const *argv[])
+{
+    int n;
+    cin >> n;
+    int i;
+    int ans = 1;
+    for (i = 0; i <= 30; i++)
+    {
+        // cout<<"ans"<<ans<<endl;
+        // ans=pow(2,i);
+        if (ans == n)
+        {
+            cout << "true" << n << endl;
+            break;
+        }
+        ans = ans * 2;
+    }
+    if (i >= 30)
+    {
+        cout << "false" << n << endl;
+    }
+    return 0;
+}

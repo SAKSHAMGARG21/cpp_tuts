@@ -55,77 +55,91 @@ void insertnode(node *&tail, int ele, int d)
     }
 }
 
-void print(node* tail){
+void print(node *tail)
+{
 
-    node* temp=tail;
+    node *temp = tail;
 
-    if (tail==NULL){
-        cout<<"list is empty"<<endl;
+    if (tail == NULL)
+    {
+        cout << "list is empty" << endl;
         return;
     }
-    do{
-        cout<<tail->data<<" ";
-        tail=tail->next;
-    }while(tail!=temp);
-    cout<<endl;
+    do
+    {
+        cout << tail->data << " ";
+        tail = tail->next;
+    } while (tail != temp);
+    cout << endl;
 }
 
-void deletnode(node* &tail,int ele){
+void deletnode(node *&tail, int ele)
+{
 
     // empty
-    if (tail==NULL){
-        cout<<"list is empty"<<endl;
+    if (tail == NULL)
+    {
+        cout << "list is empty" << endl;
         return;
     }
 
-    else{
-        
-        node* prev=tail;
-        node* curr=prev->next;
+    else
+    {
 
-        while(curr->data!=ele){
-            prev=curr;
-            curr=curr->next;
+        node *prev = tail;
+        node *curr = prev->next;
+
+        while (curr->data != ele)
+        {
+            prev = curr;
+            curr = curr->next;
         }
 
-        prev->next=curr->next;
+        prev->next = curr->next;
         // 1 NODE linked list
-        if (curr==prev){
-            tail=NULL;
+        if (curr == prev)
+        {
+            tail = NULL;
         }
 
         // >=2 node
-        else if (tail==curr){
-            tail=prev;
+        else if (tail == curr)
+        {
+            tail = prev;
             // tail=curr->next;
         }
-        curr->next=NULL;
-        delete curr;    
+        curr->next = NULL;
+        delete curr;
     }
 }
 
-node* kReverse(node* head, int k) {
-    // base case 
-    if (head == nullptr) {
+node *kReverse(node *head, int k)
+{
+    // base case
+    if (head == nullptr)
+    {
         return nullptr;
     }
 
-    node* fard = nullptr;
-    node* curr = head;
-    node* back = nullptr;
+    node *fard = nullptr;
+    node *curr = head;
+    node *back = nullptr;
     int count = 0;
 
     // Count the number of nodes in the current segment
-    node* temp = head;
-    while (temp != nullptr && count < k) {
+    node *temp = head;
+    while (temp != nullptr && count < k)
+    {
         temp = temp->next;
         count++;
     }
 
     // If there are at least k nodes, reverse the current segment
-    if (count == k) {
+    if (count == k)
+    {
         count = 0;
-        while (curr != nullptr && count < k) {
+        while (curr != nullptr && count < k)
+        {
             fard = curr->next;
             curr->next = back;
             back = curr;
@@ -134,16 +148,18 @@ node* kReverse(node* head, int k) {
         }
 
         // Recursive call for the next segment
-        if (fard != nullptr) {
+        if (fard != nullptr)
+        {
             head->next = kReverse(fard, k);
         }
 
         // 'back' is the new head of the reversed segment
         return back;
     }
-    
+
     // Less than k nodes remaining or no more nodes, connect the remaining nodes as they are
-    else {
+    else
+    {
         return head;
     }
 }
@@ -151,9 +167,9 @@ node* kReverse(node* head, int k) {
 int main()
 {
 
-    node* tail=NULL;
+    node *tail = NULL;
 
-    insertnode(tail,5,3);
+    insertnode(tail, 5, 3);
     print(tail);
 
     // insertnode(tail,3,2);
@@ -174,35 +190,8 @@ int main()
     // deletnode(tail,3);
     // print(tail);
 
-    
     return 0;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 // #include<iostream>
 // #include<map>
@@ -231,7 +220,6 @@ int main()
 // };
 
 // void insertNode(node* &tail, int element, int d) {
-    
 
 //     //empty list
 //     if(tail == NULL) {
@@ -248,7 +236,7 @@ int main()
 //         while(curr->data != element) {
 //             curr = curr -> next;
 //         }
-        
+
 //         //element found -> curr is representing element wala node
 //         node* temp = new Node(d);
 //         temp -> next = curr -> next;
@@ -256,7 +244,7 @@ int main()
 
 //     }
 
-// }    
+// }
 
 // void print(node* tail) {
 
@@ -274,10 +262,9 @@ int main()
 //     } while(tail != temp);
 
 //     cout << endl;
-// } 
+// }
 
 // void deleteNode(node* &tail, int value) {
-
 //     //empty list
 //     if(tail == NULL) {
 //         cout << " List is empty, please check again" << endl;
@@ -285,33 +272,25 @@ int main()
 //     }
 //     else{
 //         //non-empty
-
 //         //assuming that "value" is present in the Linked List
 //         node* prev = tail;
 //         node* curr = prev -> next;
-
 //         while(curr -> data != value) {
 //             prev = curr;
 //             curr = curr -> next;
 //         }
-
 //         prev -> next = curr -> next;
-
 //         //1 Node Linked List
 //         if(curr == prev) {
 //             tail = NULL;
 //         }
-
 //         //>=2 Node linked list
 //         else if(tail == curr ) {
 //             tail = prev;
 //         }
-
 //         curr -> next = NULL;
 //         delete curr;
-
 //     }
-
 // }
 
 // bool isCircularList(node* head) {
@@ -357,7 +336,6 @@ int main()
 
 // }
 
-
 // int main() {
 
 //     node* tail = NULL;
@@ -377,13 +355,12 @@ int main()
 
 //     insertNode(tail, 5, 6);
 //     print(tail);
-    
+
 //     insertNode(tail, 9, 10);
 //     print(tail);
 
 //     insertNode(tail, 3, 4);
 //     print(tail);*/
-   
 
 //     deleteNode(tail, 3);
 //     print(tail);

@@ -250,7 +250,6 @@ void insertatpos(node *&tail, node *&head, int pos, int d)
     }
 
     node *ndi = new node(d);
-
     ndi->next = temp->next;
     temp->next->prev = ndi;
     temp->next = ndi;

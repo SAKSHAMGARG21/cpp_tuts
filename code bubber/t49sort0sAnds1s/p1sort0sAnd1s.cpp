@@ -144,10 +144,8 @@ node* sortList(node *head){
     delete zerohead;
     delete onehead;
     delete twohead;
-
+    
     return head;
-
-
 }
 
 int main()

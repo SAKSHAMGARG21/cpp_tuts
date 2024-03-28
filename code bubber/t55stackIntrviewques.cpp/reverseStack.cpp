@@ -27,5 +27,5 @@ void reverseStack(stack<int> &stack) {
     //recursive call
     reverseStack(stack);
     
-    insertAtBottom(stack,num);
+    insertAtBottom(stack,num); 
 }

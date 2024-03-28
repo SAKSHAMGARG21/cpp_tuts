@@ -392,10 +392,10 @@
 //         }
 //     }
 //     return narr;
-//     // if (flag == 0)
-//     // {
-//     //     return -1;
-//     // }
+//     if (flag == 0)
+//     {
+//         return -1;
+//     }
 // }
 
 // int main(int argc, char const *argv[])

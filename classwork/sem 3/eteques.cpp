@@ -573,13 +573,13 @@
 // int main()
 // {
 //     // string s = "MCMXCIV";
-//     // string s = "III";
+//     string s = "III";
 //     // string s = "LVIII";
 //     // string s = "INVALID";
 //     // string s = "IX";
 //     // string s = "CDXLIV";
 //     // string s = "MMMCMXCIX";
-//     string s = "IIX";
+//     // string s = "IIX";
 
 //     int sum = 0;
 //     int flag=0;
@@ -731,63 +731,63 @@
 //     return 0;
 // }
 
-#include <iostream>
-#include <stack>
-#include <cstring>
+// #include <iostream>
+// #include <stack>
+// #include <cstring>
 
-using namespace std;
+// using namespace std;
 
-bool isMatchingPair(char character1, char character2)
-{
-    return (character1 == '(' && character2 == ')') ||
-           (character1 == '{' && character2 == '}') ||
-           (character1 == '[' && character2 == ']');
-}
+// bool isMatchingPair(char character1, char character2)
+// {
+//     return (character1 == '(' && character2 == ')') ||
+//            (character1 == '{' && character2 == '}') ||
+//            (character1 == '[' && character2 == ']');
+// }
 
-bool areParenthesesBalanced(const string &exp)
-{
-    stack<char> st;
-    for (char c : exp)
-    {
-        if (c == '(' || c == '{' || c == '[')
-        {
-            st.push(c);
-        }
-        else if (c == ')' || c == '}' || c == ']')
-        {
-            if (st.empty() || !isMatchingPair(st.top(), c))
-            {
-                return false;
-            }
-            st.pop();
-        }
-    }
-    return st.empty();
-}
+// bool areParenthesesBalanced(const string &exp)
+// {
+//     stack<char> st;
+//     for (char c : exp)
+//     {
+//         if (c == '(' || c == '{' || c == '[')
+//         {
+//             st.push(c);
+//         }
+//         else if (c == ')' || c == '}' || c == ']')
+//         {
+//             if (st.empty() || !isMatchingPair(st.top(), c))
+//             {
+//                 return false;
+//             }
+//             st.pop();
+//         }
+//     }
+//     return st.empty();
+// }
 
-int main()
-{
-    int n;
-    // cout << "Enter the number of strings: ";
-    cin >> n;
+// int main()
+// {
+//     int n;
+//     // cout << "Enter the number of strings: ";
+//     cin >> n;
 
-    cin.ignore(); // Consume the newline character left in the buffer
+//     cin.ignore(); // Consume the newline character left in the buffer
 
-    for (int i = 0; i < n; i++)
-    {
-        string str;
-        // cout << "Enter the string: ";
-        getline(cin, str);
+//     for (int i = 0; i < n; i++)
+//     {
+//         string str;
+//         // cout << "Enter the string: ";
+//         getline(cin, str);
 
-        if (areParenthesesBalanced(str))
-        {
-            cout << "YES" << endl;
-        }
-        else
-        {
-            cout << "NO" << endl;
-        }
-    }
+//         if (areParenthesesBalanced(str))
+//         {
+//             cout << "YES" << endl;
+//         }
+//         else
+//         {
+//             cout << "NO" << endl;
+//         }
+//     }
 
-    return 0;
-}
+//     return 0;
+// }
