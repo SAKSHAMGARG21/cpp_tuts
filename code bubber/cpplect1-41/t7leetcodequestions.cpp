@@ -1,6 +1,6 @@
 // c17
 // leet code problem
-// lect 7 
+// lect 7
 // reverse interger
 // #include <iostream>
 // #include <limits>
@@ -31,7 +31,7 @@
 // }
 
 // c18
-// leet code problem 
+// leet code problem
 // fst complement code by self
 // #include <iostream>
 // #include <limits>
@@ -124,7 +124,6 @@
 //     }
 //     return 0;
 // }
-
 // #include <iostream>
 // #include <limits>
 // #include <math.h>
@@ -162,30 +161,30 @@
 // }
 
 // c21
-#include <iostream>
-#include <limits>
-#include <math.h>
-using namespace std;
-int main(int argc, char const *argv[])
-{
-    int n;
-    cin >> n;
-    int i;
-    int ans = 1;
-    for (i = 0; i <= 30; i++)
-    {
-        // cout<<"ans"<<ans<<endl;
-        // ans=pow(2,i);
-        if (ans == n)
-        {
-            cout << "true" << n << endl;
-            break;
-        }
-        ans = ans * 2;
-    }
-    if (i >= 30)
-    {
-        cout << "false" << n << endl;
-    }
-    return 0;
-}
+// #include <iostream>
+// #include <limits>
+// #include <math.h>
+// using namespace std;
+// int main(int argc, char const *argv[])
+// {
+//     int n;
+//     cin >> n;
+//     int i;
+//     int ans = 1;
+//     for (i = 0; i <= 30; i++)
+//     {
+//         // cout<<"ans"<<ans<<endl;
+//         // ans=pow(2,i);
+//         if (ans == n)
+//         {
+//             cout << "true" << n << endl;
+//             break;
+//         }
+//         ans = ans * 2;
+//     }
+//     if (i >= 30)
+//     {
+//         cout << "false" << n << endl;
+//     }
+//     return 0;
+// }

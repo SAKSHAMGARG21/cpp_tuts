@@ -72,56 +72,50 @@ void levelordertrev(node *root)
     }
 }
 
-void inordertrav(node *root)
+void buildordertrav(node *&root)
 {
-    if (root == NULL)
-    {
-        return;
-    }
+    queue<node *> q;
+    cout<<"Enter the data for root node :"<<endl;
+    int n;
+    cin>>n;
+    root = new node(n);
+    q.push(root);
 
-    inordertrav(root->left);
-    cout << root->data << " ";
-    inordertrav(root->right);
-}
-void preordertrav(node *root)
-{
-    if (root == NULL)
+    while (!q.empty())
     {
-        return;
-    }
 
-    cout << root->data << " ";
-    preordertrav(root->left);
-    preordertrav(root->right);
-}
-void postordertrav(node *root)
-{
-    if (root == NULL)
-    {
-        return;
-    }
+        node *temp = q.front();
+        q.pop();
 
-    postordertrav(root->left);
-    postordertrav(root->right);
-    cout << root->data << " ";
+        cout << "Enter the data for left node  of : " << temp->data << endl;
+        int ldata;
+        cin >> ldata;
+
+        if (ldata != -1)
+        {
+            temp->left=new node(ldata);
+            q.push(temp->left);
+        }
+
+        cout << "Enter the data for right node  of : " << temp->data << endl;
+        int rdata;
+        cin >> rdata;
+
+        if (rdata != -1)
+        {
+            temp->right=new node(rdata);
+            q.push(temp->right);
+        }
+    }
 }
+
 int main()
 {
     node *root = NULL;
+    // 1 3 5 7 11 17 -1 -1 -1 -1 -1 -1 -1
 
-    root = bulidTree(root);
-    // 1 3 7 -1 -1 11 -1 -1 5 17 -1 -1 -1
+    buildordertrav(root);
     levelordertrev(root);
-
-    cout << "Printing the inordertravsal : ";
-    inordertrav(root);
-    cout << endl;
-    cout << "Printing the preordertravsal : ";
-    preordertrav(root);
-    cout << endl;
-    cout << "Printing the postordertravsal : ";
-    postordertrav(root);
-    cout << endl;
 
     return 0;
 }

@@ -146,7 +146,6 @@
 // {
 //     double factor = 1;
 //     double ans = sqroot;
-
 //     for (int i = 0; i < decimal; i++)
 //     {
 //         factor = factor / 10;
@@ -173,48 +172,61 @@
 #include <vector>
 using namespace std;
 
-void setZeros(vector<vector<int>> &arr) {
+void setZeros(vector<vector<int>> &arr)
+{
     int numrow = arr.size();
     int numcol = arr[0].size();
 
     vector<bool> zeroRows(numrow, false);
     vector<bool> zeroCols(numcol, false);
 
-    for (int i = 0; i < numrow; i++) {
-        for (int j = 0; j < numcol; j++) {
-            if (arr[i][j] == 0) {
+    for (int i = 0; i < numrow; i++)
+    {
+        for (int j = 0; j < numcol; j++)
+        {
+            if (arr[i][j] == 0)
+            {
                 zeroRows[i] = true;
                 zeroCols[j] = true;
             }
         }
     }
 
-    for (int i = 0; i < numrow; i++) {
-        for (int j = 0; j < numcol; j++) {
-            if (zeroRows[i] || zeroCols[j]) {
+    for (int i = 0; i < numrow; i++)
+    {
+        for (int j = 0; j < numcol; j++)
+        {
+            if (zeroRows[i] || zeroCols[j])
+            {
                 arr[i][j] = 0;
             }
         }
     }
 }
 
-int main() {
+int main()
+{
     int a;
     int n, m;
     cin >> a;
-    for (int l = 0; l < a; l++) {
+    for (int l = 0; l < a; l++)
+    {
         cin >> n >> m;
         vector<vector<int>> arr(n, vector<int>(m));
-        for (int i = 0; i < n; i++) {
-            for (int j = 0; j < m; j++) {
+        for (int i = 0; i < n; i++)
+        {
+            for (int j = 0; j < m; j++)
+            {
                 cin >> arr[i][j];
             }
         }
         setZeros(arr);
 
         // Print the modified vector
-        for (int i = 0; i < n; i++) {
-            for (int j = 0; j < m; j++) {
+        for (int i = 0; i < n; i++)
+        {
+            for (int j = 0; j < m; j++)
+            {
                 cout << arr[i][j] << " ";
             }
             cout << endl;
