@@ -16,7 +16,6 @@
 //                 int t=arr[j];
 //                 arr[j]=s;
 //                 arr[i]=t;
-
 //                 // int temp =arr[i];
 //                 // arr[i]=arr[j];
 //                 // arr[j]=temp;

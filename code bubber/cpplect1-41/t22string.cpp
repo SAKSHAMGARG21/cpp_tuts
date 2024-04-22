@@ -106,7 +106,6 @@
 //     return 0;
 // }
 
-
 // #include <iostream>
 // #include<bits/stdc++.h>
 // using namespace std;
@@ -216,9 +215,9 @@
 //     for (int i = 0; i < ss; i++)
 //     {
 //         if (islower(s[i]))
-//         {                               // Use islower to check if a character is lowercase
+//         {                            // Use islower to check if a character is lowercase
 //             s[i] = toupper(s[i]);    // Use toupper to convert to uppercase
-//             s[i] = 'A' + s[i] -'a';     // Use toupper to convert to uppercase
+//             s[i] = 'A' + s[i] - 'a'; // Use toupper to convert to uppercase
 //         }
 //         else if (!isalnum(s[i]) || s[i] == ' ')
 //         {
@@ -714,7 +713,7 @@
 //     {
 //         if (a[i] != b[i])
 //         {
-//             cout << i << endl;
+//             // cout << i << endl;
 //             return 0;
 //         }
 //     }
@@ -750,7 +749,7 @@
 //         int index = newchar - 'a';
 //         count2[index]++;
 
-//         int oldchar = s2[i - windosize];
+//         char oldchar = s2[i - windosize];
 //         index = oldchar - 'a';
 //         count2[index]--;
 //         i++;
@@ -803,7 +802,7 @@
 
 //     return result;
 //     // return s;
-// }                                                                                
+// }
 // int main(int argc, char const *argv[])
 // {
 //     string s1;
@@ -947,7 +946,6 @@
 //     return 0;
 // }
 
-
 // -----------------------------------------------------------------------------------------------------------------
 // #include <iostream>
 // #include <string>
@@ -980,7 +978,6 @@
 //     return 0;
 // }
 
-
 // #include <iostream>
 // #include <bits/stdc++.h>
 // using namespace std;
@@ -1001,8 +998,6 @@
 //         }
 //     }
 //     // cout<<ans<<mx;
-    
-
 
 //     return 0;
 // }
