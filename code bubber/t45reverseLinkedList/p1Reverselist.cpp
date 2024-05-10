@@ -91,36 +91,38 @@ void insertatpost(node *&tail, node *&head, int pos, int d)
     temp->next = nti;
 }
 
-node* reverse1(node* &head){
-    if (head==NULL || head->next==NULL){
+node *reverse1(node *&head)
+{
+    if (head == NULL || head->next == NULL)
+    {
         return head;
     }
 
-    node* chotahead=reverse1(head->next);
+    node *chotahead = reverse1(head->next);
 
-    head->next->next=head;
-    head->next=NULL;
+    head->next->next = head;
+    head->next = NULL;
     return chotahead;
 }
-void reverse(node* &head,node* curr,node* prev){
+void reverse(node *&head, node *curr, node *prev)
+{
 
-    if (curr==NULL){
-        head=prev;
-        return ;
+    if (curr == NULL)
+    {
+        head = prev;
+        return;
     }
 
-    node* forward = curr->next;
-    reverse(head , forward, curr);
-    curr->next=prev;
-
+    node *forward = curr->next;
+    reverse(head, forward, curr);
+    curr->next = prev;
 }
 node *reverseLinkedList(node *head)
 {
     // Write your code here
 
-    node* ans=reverse1(head);
+    node *ans = reverse1(head);
     return ans;
-
 
     // node* curr=head;
     // node* prev=NULL;
@@ -146,44 +148,50 @@ node *reverseLinkedList(node *head)
     return prev;*/
 }
 
+int getlen(node *head)
+{
 
-int getlen(node* head){
-
-    int cnt=0;
-    node* temp=head;
-    while (temp!=NULL){
+    int cnt = 0;
+    node *temp = head;
+    while (temp != NULL)
+    {
         cnt++;
-        temp=temp->next;
+        temp = temp->next;
     }
     return cnt;
 }
-node* getmiddle(node* head){
+node *getmiddle(node *head)
+{
 
-    if(head ==NULL || head->next==NULL){
+    if (head == NULL || head->next == NULL)
+    {
         return head;
     }
 
-    node* slow=head;
-    node* fast=head->next;
+    node *slow = head;
+    node *fast = head->next;
 
-    while(fast != NULL){
-        fast=fast->next;
-        if (fast !=NULL ){
-            fast=fast->next;
+    while (fast != NULL)
+    {
+        fast = fast->next;
+        if (fast != NULL)
+        {
+            fast = fast->next;
         }
-        slow=slow->next;
+        slow = slow->next;
     }
 
     return slow;
 }
-node *findMiddle(node *head) {
+node *findMiddle(node *head)
+{
     // Write your code here
 
     return getmiddle(head);
-    
+
     // int len=getlen(head);
     // int mid1=(len/2);
-    
+
     // node* temp=head;
     // int cnt=0;
     // while(cnt < mid1){

@@ -37,6 +37,7 @@ node *bulidTree(node *root)
     return root;
 }
 
+
 int main()
 {
     node* root=NULL;

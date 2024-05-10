@@ -3,61 +3,108 @@
 #include <iostream>
 #include <bits/stdc++.h>
 using namespace std;
-bool checkequal(int arr[], int arr2[])
-{
-    for (int i = 0; i < 26; i++)
-    {
-        if (arr[i] != arr2[i])
-        {
-            return false;
+class node{
+    public:
+    int data;
+    node* left;
+    node* right;
+
+    node(int data){
+        this->data=data;
+        this->left=NULL;
+        this->right=NULL;
+    }
+};
+
+node* buildtree(node* root){
+
+    int n;
+    cout<<"Enter the data :"<<endl;
+    cin>>n;
+    root=new node(n);
+
+    if (n == -1){
+        return NULL;
+    }
+
+    cout<<"Enter the data for left node "<<n<<endl;
+    root->left=buildtree(root->left);
+    cout<<"Enter the data for right node "<<n<<endl;
+    root->right=buildtree(root->right);
+
+    return root;
+}
+
+int heighoftree(node* root){
+
+    if (root==NULL){
+        return 0;
+    }
+
+    int left=heighoftree(root->left);
+    int right=heighoftree(root->right);
+
+    int ans=max(left,right)+1;
+    return ans;
+}
+void levelordertrav(node* root){
+
+    queue<node*> q;
+    q.push(root);
+    q.push(NULL);
+
+    while(!q.empty()){
+
+        node* temp=q.front();
+        q.pop();
+
+        if (temp==NULL){
+            cout<<endl;
+            if (!q.empty()){
+                q.push(NULL);
+            }
+        }
+        else{
+
+            cout<<temp->data<<" ";
+            if (temp->left){
+                q.push(temp->left);
+            }
+            if (temp->right){
+                q.push(temp->right);
+            }
         }
     }
-    return true;
 }
-bool checkprem(string s1, string s2)
-{
 
-    int cnt[26] = {0};
 
-    for (int i = 0; i < s1.size(); i++)
-    {
-        int idx = s1[i] - 'a';
-        cnt[idx]++;
+void inorder(node *root, int &count) {
+    if (root == nullptr) {
+        return;
     }
 
-    int cnt2[26] = {0};
-    int windSize = s1.length();
-    int i = 0;
-    while (i < windSize && i < s2.length())
-    {
-        int idx = s2[i] - 'a';
-        cnt2[idx]++;
-        i++;
+    inorder(root->left, count);
+
+    // Leaf node
+    if (root->left == nullptr && root->right == nullptr) {
+        count++;
     }
 
-    if (checkequal(cnt, cnt2))
-        return true;
+    inorder(root->right, count);
+}
 
-    while (i < s2.length())
-    {
-        int nwidx = s2[i] - 'a';
-        cnt2[nwidx]++;
-
-        int oldidx = s2[i - windSize] - 'a';
-        cnt2[oldidx]--;
-        i++;
-
-        if (checkequal(cnt, cnt2))
-            return true;
-    }
-    return false;
+int noOfLeafNodes(node *root) {
+    int cnt = 0;
+    inorder(root, cnt);
+    return cnt;
 }
 int main()
 {
-    string s1, s2;
-    cin >> s1 >> s2;
-
-    cout << checkprem(s1, s2);
-
+    node* root=NULL;
+    root=buildtree(root);
+    int ans=heighoftree(root);
+    cout<<ans<<endl;
+    levelordertrav(root);
+    cout<<noOfLeafNodes(root)<<endl;
     return 0;
 }

@@ -90,7 +90,7 @@ class Solution
         // while(temp2!=NULL){
         //     int rem=temp2->data;
         //     ans1=(ans1*10)+rem;
-        //     temp2=temp2->next;
+        //      temp2=temp2->next;
         // }
         
         // long long int mans=ans+ans1;

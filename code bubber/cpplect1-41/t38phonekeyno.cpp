@@ -9,7 +9,7 @@ using namespace std;
 // bing ai code
 // vector<string> letterCombinations(string digits) {
 //     if(digits.empty()) return {};
-//     vector<string> res{""};
+//     vector<string> res{""};k
 //     vector<string> mapping{"0", "1", "abc", "def", "ghi", "jkl", "mno", "pqrs", "tuv", "wxyz"};
 //     for(char digit : digits) {
 //         vector<string> temp;

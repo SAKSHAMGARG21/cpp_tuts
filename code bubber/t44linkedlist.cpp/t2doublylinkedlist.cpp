@@ -11,7 +11,7 @@
 //     node *prev;
 
 // public:
-// //constructor 
+// //constructor
 //     node(int data)
 //     {
 //         this->data = data;
@@ -102,7 +102,6 @@
 //     nti->prev=temp;
 // }
 
-
 // int main()
 // {
 //     node *node1 = new node(11);
@@ -187,8 +186,8 @@ int getlen(node *&head)
 
     while (temp != NULL)
     {
-        temp = temp->next;
         len++;
+        temp = temp->next;
     }
     return len;
 }
@@ -281,6 +280,7 @@ void deletenode(node *&tail, node *&head, int pos)
 
         curr->prev = NULL;
         pre->next = curr->next;
+        // handle the node
         if (curr->next == NULL)
         {
             tail = pre;
@@ -288,8 +288,8 @@ void deletenode(node *&tail, node *&head, int pos)
         else
         {
             curr->next->prev = pre;
+            curr->next = NULL;
         }
-        curr->next = NULL;
         delete curr;
     }
 }
@@ -321,4 +321,3 @@ int main()
 
     return 0;
 }
-

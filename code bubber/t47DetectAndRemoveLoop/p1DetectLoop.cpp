@@ -126,7 +126,7 @@ void deletenode(node *&head, node *&tail, int pos)
 }
 
 // First algo
-// Detect the loop in linked list 
+// Detect the loop in linked list
 // bool checkloop(node* head){
 
 //     node* temp=head;
@@ -146,61 +146,73 @@ void deletenode(node *&head, node *&tail, int pos)
 // }
 
 // Second algo name is Floyed cycle detection
-node* checkloop(node* head){
+node *checkloop(node *head)
+{
 
-    if (head==NULL){
+    if (head == NULL)
+    {
         return NULL;
     }
-    node* slow=head;
-    node* fast=head;
+    node *slow = head;
+    node *fast = head;
 
-    while(slow != NULL && fast != NULL){
-        fast=fast->next;
+    while (slow != NULL && fast != NULL)
+    {
+        fast = fast->next;
 
-        if (fast!=NULL){
-            fast=fast->next;
+        if (fast != NULL)
+        {
+            fast = fast->next;
         }
 
         slow = slow->next;
-        if (slow == fast){
-            cout<<"loop is present at "<< slow->data<<endl;
+        if (slow == fast)
+        {
+            cout << "loop is present at " << slow->data << endl;
             return slow;
         }
     }
     return NULL;
 }
 
-node* getstartofloop(node* head){
-    if (head == NULL){
+node *getstartofloop(node *head)
+{
+    if (head == NULL)
+    {
         return NULL;
     }
 
-    node* intersection = checkloop(head);
+    node *intersection = checkloop(head);
 
-    node* slow = head;
+    node *slow = head;
 
-    while (slow != intersection){
-        slow=slow->next;
-        intersection= intersection->next;
+    while (slow != intersection)
+    {
+        slow = slow->next;
+        intersection = intersection->next;
     }
     return slow;
 }
 
-void removeloop(node* head){
-    if (head == NULL){
-        return ;
+void removeloop(node *head)
+{
+    if (head == NULL)
+    {
+        return;
     }
 
-    node* startnode=getstartofloop(head);
+    node *startnode = getstartofloop(head);
 
-    node* temp=startnode;
+    node *temp = startnode;
 
-    while (temp->next != startnode){
-        temp=temp->next;
+    while (temp->next != startnode)
+    {
+        temp = temp->next;
     }
 
-    temp->next=NULL;
+    temp->next = NULL;
 }
+
 int main()
 {
     // create a new linked list node
@@ -232,9 +244,8 @@ int main()
     insertatpost(tail, head, 4, 58);
     // print(head);
 
-    tail->next=head->next;
-
-
+    // making the loop 
+    tail->next = head->next;
 
     // if (checkloop(head) != NULL){
     //     cout<<"list is in loop"<<endl;
@@ -250,12 +261,13 @@ int main()
     //     cout<<"list is not in loop"<<endl;
     // }
 
-    node* loop=getstartofloop(head);
-    cout<<"start is "<<loop->data <<endl;
+    node *loop = getstartofloop(head);
+    cout << "start is " << loop->data << endl;
 
     removeloop(head);
     print(head);
     
+
     cout << "head data " << head->data << endl;
     cout << "tail data " << tail->data << endl;
 
@@ -267,4 +279,3 @@ int main()
     // cout << "tail data " << tail->data << endl;
     return 0;
 }
-

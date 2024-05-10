@@ -75,9 +75,9 @@ void levelordertrev(node *root)
 void buildordertrav(node *&root)
 {
     queue<node *> q;
-    cout<<"Enter the data for root node :"<<endl;
+    cout << "Enter the data for root node :" << endl;
     int n;
-    cin>>n;
+    cin >> n;
     root = new node(n);
     q.push(root);
 
@@ -93,7 +93,7 @@ void buildordertrav(node *&root)
 
         if (ldata != -1)
         {
-            temp->left=new node(ldata);
+            temp->left = new node(ldata);
             q.push(temp->left);
         }
 
@@ -103,7 +103,7 @@ void buildordertrav(node *&root)
 
         if (rdata != -1)
         {
-            temp->right=new node(rdata);
+            temp->right = new node(rdata);
             q.push(temp->right);
         }
     }

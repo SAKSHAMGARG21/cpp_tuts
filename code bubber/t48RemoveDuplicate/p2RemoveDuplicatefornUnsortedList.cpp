@@ -53,7 +53,7 @@ void print(node *head)
     cout << endl;
 }
 
-// first appFrom unsorted linked list
+// first approach From unsorted linked list
 // node *removeDuplicates(node *&head)
 // {
 //     if (head == NULL)
@@ -105,7 +105,7 @@ void removeDuplicates(node* head) {
             // If the current node has duplicate data
             if (prev != NULL) {
                 prev->next = curr->next;
-                delete curr;
+                delete curr; 
                 curr = prev->next;  // Move curr to the next node after deletion
             } 
             // else {
