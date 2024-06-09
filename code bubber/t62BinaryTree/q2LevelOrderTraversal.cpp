@@ -33,8 +33,8 @@ node *bulidTree(node *root)
     root->left = bulidTree(root->left);
     cout << "Enter the data for right node " << d << endl;
     root->right = bulidTree(root->right);
-
     return root;
+    
 }
 
 void levelordertrev(node *root)
@@ -59,19 +59,31 @@ void levelordertrev(node *root)
 
         else
         {
-            cout << temp->data<<" ";
+            cout << temp->data << " ";
             if (temp->left)
             {
                 q.push(temp->left);
             }
             if (temp->right)
-            { 
+            {
                 q.push(temp->right);
             }
         }
     }
 }
+int height(node *root)
+{
+    if (root == NULL)
+    {
+        return 0;
+    }
 
+    int left=height(root->left);
+    int right=height(root->right);
+
+    int ans=max(left,right)+1;
+    return ans;
+}
 int main()
 {
     node *root = NULL;
@@ -79,9 +91,9 @@ int main()
     root = bulidTree(root);
     // 1 3 7 -1 -1 11 -1 -1 5 17 -1 -1 -1
     levelordertrev(root);
+    cout<<height(root)<<endl;
 
     return 0;
 }
-
 
 // Reverse level order traversal

@@ -1,48 +1,55 @@
 #include <bits/stdc++.h>
 using namespace std;
-struct Node {
+struct Node
+{
     int data;
-    struct Node* left;
-    struct Node* right;
+    struct Node *left;
+    struct Node *right;
 };
-Node* newNode(int val) {
-    Node* temp = new Node;
+Node *newNode(int val)
+{
+    Node *temp = new Node;
     temp->data = val;
     temp->left = NULL;
     temp->right = NULL;
     return temp;
 }
-Node* buildTree(string str) {
+Node *buildTree(string str)
+{
     // Corner Case
-    if (str.length() == 0 || str[0] == 'N') return NULL;
+    if (str.length() == 0 || str[0] == 'N')
+        return NULL;
 
     // Creating vector of strings from input
     // string after spliting by space
     vector<string> ip;
 
     istringstream iss(str);
-    for (string str; iss >> str;) ip.push_back(str);
+    for (string str; iss >> str;)
+        ip.push_back(str);
 
     // Create the root of the tree
-    Node* root = newNode(stoi(ip[0]));
+    Node *root = newNode(stoi(ip[0]));
 
     // Push the root to the queue
-    queue<Node*> queue;
+    queue<Node *> queue;
     queue.push(root);
 
     // Starting from the second element
     int i = 1;
-    while (!queue.empty() && i < ip.size()) {
+    while (!queue.empty() && i < ip.size())
+    {
 
         // Get and remove the front of the queue
-        Node* currNode = queue.front();
+        Node *currNode = queue.front();
         queue.pop();
 
         // Get the current node's value from the string
         string currVal = ip[i];
 
         // If the left child is not null
-        if (currVal != "N") {
+        if (currVal != "N")
+        {
 
             // Create the left child for the current node
             currNode->left = newNode(stoi(currVal));
@@ -53,11 +60,13 @@ Node* buildTree(string str) {
 
         // For the right child
         i++;
-        if (i >= ip.size()) break;
+        if (i >= ip.size())
+            break;
         currVal = ip[i];
 
         // If the right child is not null
-        if (currVal != "N") {
+        if (currVal != "N")
+        {
 
             // Create the right child for the current node
             currNode->right = newNode(stoi(currVal));
@@ -72,72 +81,85 @@ Node* buildTree(string str) {
 }
 
 // first approch
-// class Solution {
-//     public:
-//     //Function to find the height of a binary tree.
-//     int height(struct Node* node){
-//         // code here 
-        
-//         if (node == NULL){
-//             return 0;
-//         }
-        
-//         int left=height(node->left);
-//         int right=height(node->right);
-        
-//         int ans=max(left,right)+1;
-//         return ans;
-//     }
-//   public:
-//     // Function to return the diameter of a Binary Tree.
-//     int diameter(Node* root) {
-//         // Your code here
-        
-//         if(root == NULL){
-//             return 0;
-//         }
-        
-//         int op1= diameter(root->left);
-//         int op2=diameter(root->right);
-//         int op3=height(root->left) + height(root->right) +1;
-//         int ans=max(op1 , max(op2,op3));
-//         return ans;
-//     }
-// };
+class Solution
+{
+public:
+    // Function to find the height of a binary tree.
+    int height(struct Node *node)
+    {
+        // code here
 
-// Second Approach
-class Solution {
-    public:
-    //Function to find the height of a binary tree.
-    pair<int,int> diameters(Node* root){
-       if(root == NULL){
-           pair<int,int> p=make_pair(0,0);
-           return p;
+        if (node == NULL)
+        {
+            return 0;
         }
-        pair<int,int> left = diameters(root->left);
-        pair<int,int> right = diameters(root->right);
-        int op1=left.first;
-        int op2=right.first;
-        int op3= left.second + right.second + 1;
-        pair<int,int> ans;
-        ans.first=max(op1 , max(op2,op3));
-        ans.second=max(left.second ,right.second)+1;
+
+        int left = height(node->left);
+        int right = height(node->right);
+
+        int ans = max(left, right) + 1;
         return ans;
     }
-    public:
+
+public:
     // Function to return the diameter of a Binary Tree.
-    int diameter(Node* root) {
+    int diameter(Node *root)
+    {
         // Your code here
-        return diameters(root).first;
+
+        if (root == NULL)
+        {
+            return 0;
+        }
+
+        int op1 = diameter(root->left);
+        int op2 = diameter(root->right);
+        int op3 = height(root->left) + height(root->right) + 1;
+        int ans = max(op1, max(op2, op3));
+        return ans;
     }
 };
-int main() {
+
+// Second Approach
+// class Solution
+// {
+// public:
+//     // Function to find the height of a binary tree.
+//     pair<int, int> diameters(Node *root)
+//     {
+//         if (root == NULL)
+//         {
+//             pair<int, int> p = make_pair(0, 0);
+//             return p;
+//         }
+//         pair<int, int> left = diameters(root->left);
+//         pair<int, int> right = diameters(root->right);
+//         int op1 = left.first;
+//         int op2 = right.first;
+//         int op3 = left.second + right.second + 1;
+//         pair<int, int> ans;
+//         ans.first = max(op1, max(op2, op3));
+//         ans.second = max(left.second, right.second) + 1;
+//         return ans;
+//     }
+
+// public:
+//     // Function to return the diameter of a Binary Tree.
+//     int diameter(Node *root)
+//     {
+//         // Your code here
+//         return diameters(root).first;
+//     }
+// };
+int main()
+{
     int t;
     scanf("%d\n", &t);
-    while (t--) {
+    while (t--)
+    {
         string s;
         getline(cin, s);
-        Node* root = buildTree(s);
+        Node *root = buildTree(s);
         Solution ob;
         cout << ob.diameter(root) << endl;
     }

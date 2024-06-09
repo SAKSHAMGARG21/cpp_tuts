@@ -40,13 +40,15 @@ Node *insertinput(Node *&root, int data)
 
 void takeInput(Node *&root)
 {
-    int data;
+    int n,data;
+    // cin>>n;
     cin >> data;
-
-    while (data != -1)
+    // int i=0;
+    while (data!=-1)
     {
         insertinput(root, data);
         cin >> data;
+        // i++;
     }
 }
 

@@ -46,11 +46,15 @@ bool isValidParenthesis(string expression)
 
 int main()
 {
-    string expression1 = "{[()]}"; // Balanced parentheses
-    string expression2 = "{[(])}"; // Unbalanced parentheses
+    // string expression1 = "{[()]}"; // Balanced parentheses
+    // string expression2 = "{[(])}"; // Unbalanced parentheses
+    // string expression2 = "])}"; // Unbalanced parentheses
 
-    cout << "Expression 1 is " << (isValidParenthesis(expression1) ? "valid" : "invalid") << endl;
-    cout << "Expression 2 is " << (isValidParenthesis(expression2) ? "valid" : "invalid") << endl;
+    string s;
+    cin>>s;
+
+    cout << "Expression 1 is " << (isValidParenthesis(s) ? "valid" : "invalid") << endl;
+    // cout << "Expression 2 is " << (isValidParenthesis(expression2) ? "valid" : "invalid") << endl;
 
     return 0;
 }

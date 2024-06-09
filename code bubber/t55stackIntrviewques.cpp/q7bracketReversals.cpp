@@ -1,4 +1,7 @@
-#include <stack>
+#include <iostream>
+#include <bits/stdc++.h>
+using namespace std;
+
 int findMinimumCost(string str)
 {
 
@@ -37,7 +40,7 @@ int findMinimumCost(string str)
         {
             b++;
         }
-        else
+        else 
         {
             a++;
         }
@@ -46,4 +49,16 @@ int findMinimumCost(string str)
 
     int ans = (a + 1) / 2 + (b + 1) / 2;
     return ans;
+}
+int main()
+{
+    string s = "{{{}";
+    string s1 = "{{}{}";
+    // cin >> s;
+
+    int ans = findMinimumCost(s);
+    int ans1 = findMinimumCost(s1);
+    cout << ans << endl;
+    cout << ans1 << endl;
+    return 0;
 }

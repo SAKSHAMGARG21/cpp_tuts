@@ -98,7 +98,7 @@ Node* buildTree(string str) {
 //         return ans;
 //     }
 //     public:
-//     //Function to check whether a binary tree is balanced or not.
+//     // Function to check whether a binary tree is balanced or not.
 //     bool isBalanced(Node *root)
 //     {
 //         //  Your Code here
@@ -113,7 +113,7 @@ Node* buildTree(string str) {
         
 //         if (left && right && diff){
 //             return 1;
-//         }
+//         } 
 //         else{
 //             return false;
 //         }

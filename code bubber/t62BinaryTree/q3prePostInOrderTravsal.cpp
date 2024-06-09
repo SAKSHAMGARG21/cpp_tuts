@@ -83,6 +83,7 @@ void inordertrav(node *root)
     cout << root->data << " ";
     inordertrav(root->right);
 }
+
 void preordertrav(node *root)
 {
     if (root == NULL)
@@ -94,6 +95,7 @@ void preordertrav(node *root)
     preordertrav(root->left);
     preordertrav(root->right);
 }
+
 void postordertrav(node *root)
 {
     if (root == NULL)
@@ -105,6 +107,7 @@ void postordertrav(node *root)
     postordertrav(root->right);
     cout << root->data << " ";
 }
+
 int main()
 {
     node *root = NULL;

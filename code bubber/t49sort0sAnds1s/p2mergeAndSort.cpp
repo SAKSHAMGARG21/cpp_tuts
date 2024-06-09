@@ -95,6 +95,7 @@ node<int> *solve(node<int> *first, node<int> *second)
     }
     return first;
 }
+
 node<int> *sortTwoLists(node<int> *first, node<int> *second)
 {
     // Write your code here.

@@ -33,7 +33,6 @@ node *bulidTree(node *root)
     root->left = bulidTree(root->left);
     cout << "Enter the data for right node " << d << endl;
     root->right = bulidTree(root->right);
-
     return root;
 }
 

@@ -37,6 +37,9 @@ public:
         {
             top2--;
             arr[top2] = num;
+        }else {
+            cout<<"Stack is Full can't add value"<<endl;
+
         }
     }
 
@@ -52,37 +55,6 @@ public:
         top1--;
         return var;
     }
-
-    // .....
-    // .   .
-    // .   .
-    // .   .
-    // .   .
-    // .   .
-    // .   .
-    // .   .
-    // .   .
-    // .   .
-    // .   .
-    // .   .
-    // .   .
-    // .   .
-    // .   .
-    // .   .
-    // .   .
-    // .   .
-    // .   .
-    // .   .
-    // .   .
-    // .   .
-    // .   .
-    // .   .
-    // .   .
-    // .   .
-    // .   .
-    // .   .
-    // .   . 
-    // .....
     
     // Pop from stack 2 and return popped element.
     int pop2()
@@ -103,9 +75,11 @@ int main()
     // Example usage
     TwoStack ts(5);
     ts.push1(10);
-    ts.push2(20);
+    ts.push2(50);
     ts.push1(30);
     ts.push2(40);
+    ts.push2(80);
+    // ts.push2(20);
 
     cout << "Popped from stack 1: " << ts.pop1() << endl;
     cout << "Popped from stack 2: " << ts.pop2() << endl;

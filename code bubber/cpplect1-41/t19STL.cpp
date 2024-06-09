@@ -194,40 +194,40 @@
 // }
 
 // heap
-// #include<iostream>
-// #include<queue>
-// using namespace std;
-// int main(int argc, char const *argv[])
-// {
-//     // max - heap
-//     priority_queue<int> maxi;
+#include<iostream>
+#include<queue>
+using namespace std;
+int main(int argc, char const *argv[])
+{
+    // max - heap
+    priority_queue<int> maxi;
 
-//     // min- heap
-//     priority_queue<int ,vector<int>,greater<int>> mini;
+    // min- heap
+    priority_queue<int ,vector<int>,greater<int>> mini;
 
-//     maxi.push(1);
-//     maxi.push(2);
-//     maxi.push(3);
-//     maxi.push(0);
+    maxi.push(1);
+    maxi.push(2);
+    maxi.push(3);
+    maxi.push(0);
 
-//     int n=maxi.size();
-//     for (int i=0;i<n;i++){
-//         cout<<maxi.top()<<" ";
-//         maxi.pop();
-//     }cout<<endl;
+    int n=maxi.size();
+    for (int i=0;i<n;i++){
+        cout<<maxi.top()<<" ";
+        maxi.pop();
+    }cout<<endl;
 
-//     mini.push(1);
-//     mini.push(2);
-//     mini.push(3);
-//     mini.push(0);
+    mini.push(1);
+    mini.push(2);
+    mini.push(3);
+    mini.push(0);
 
-//     for (int i=0;i<n;i++){
-//         cout<<mini.top()<<" ";
-//         mini.pop();
-//     }cout<<endl;
+    for (int i=0;i<n;i++){
+        cout<<mini.top()<<" ";
+        mini.pop();
+    }cout<<endl;
 
-//     return 0;
-// }
+    return 0;
+}
 
 // // set
 // #include <iostream>
@@ -324,46 +324,46 @@
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-// Algorithms
-#include<iostream>
-#include<vector>
-#include<algorithm>
-using namespace std;
-int main(int argc, char const *argv[])
-{
-    vector<int> m;
+// // Algorithms
+// #include<iostream>
+// #include<vector>
+// #include<algorithm>
+// using namespace std;
+// int main(int argc, char const *argv[])
+// {
+//     vector<int> m;
 
-    m.push_back(1);
-    m.push_back(3);
-    m.push_back(6);
-    m.push_back(7);
+//     m.push_back(1);
+//     m.push_back(3);
+//     m.push_back(6);
+//     m.push_back(7);
 
-    cout<<"binary search :"<<binary_search(m.begin(),m.end(),6)<<endl;
+//     cout<<"binary search :"<<binary_search(m.begin(),m.end(),6)<<endl;
 
-    cout<<"lower bound:"<<lower_bound(m.begin(),m.end(),6)-m.begin()<<endl;
-    cout<<"upper bound:"<<upper_bound(m.begin(),m.end(),6)-m.begin()<<endl;
+//     cout<<"lower bound:"<<lower_bound(m.begin(),m.end(),6)-m.begin()<<endl;
+//     cout<<"upper bound:"<<upper_bound(m.begin(),m.end(),6)-m.begin()<<endl;
 
-    int a=3;
-    int b=5;
+//     int a=3;
+//     int b=5;
 
-    swap(a,b);
-    cout<<"swap A:"<<a<<endl;
-    cout<<"swap B:"<<b<<endl;
+//     swap(a,b);
+//     cout<<"swap A:"<<a<<endl;
+//     cout<<"swap B:"<<b<<endl;
 
-    string rev="abcd";
-    reverse(rev.begin(),rev.end());
-    cout<<rev<<endl;
+//     string rev="abcd";
+//     reverse(rev.begin(),rev.end());
+//     cout<<rev<<endl;
 
-    rotate(m.begin(),m.begin()+2,m.end());
-    cout<<"after rotation:"<<endl;
-    for (int i:m){
-        cout<<i<<" ";
-    }
-    cout<<endl;
-    cout<<"after sorting:"<<endl;
-    sort(m.begin(),m.end());
-    for (int i:m){
-        cout<<i<<" ";
-    }
-    return 0;
-}
+//     rotate(m.begin(),m.begin()+2,m.end());
+//     cout<<"after rotation:"<<endl;
+//     for (int i:m){
+//         cout<<i<<" ";
+//     }
+//     cout<<endl;
+//     cout<<"after sorting:"<<endl;
+//     sort(m.begin(),m.end());
+//     for (int i:m){
+//         cout<<i<<" ";
+//     }
+//     return 0;
+// }

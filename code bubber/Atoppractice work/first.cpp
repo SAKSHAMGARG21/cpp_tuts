@@ -1,110 +1,107 @@
 // -----------------------------------------------------------------------------------------------------------------
-// c
 #include <iostream>
-#include <bits/stdc++.h>
+#include <vector>
+#include <list>
+#include <unordered_map>
+#include <queue>
 using namespace std;
-class node{
-    public:
-    int data;
-    node* left;
-    node* right;
 
-    node(int data){
-        this->data=data;
-        this->left=NULL;
-        this->right=NULL;
+template <typename T>
+class graphmp
+{
+public:
+    unordered_map<T, list<T>> adj;
+
+    void edge(T u, T v, int dic)
+    {
+        adj[u].push_back(v);
+        if (dic == 0)
+        {
+            adj[v].push_back(u);
+        }
+    }
+
+    void print()
+    {
+        for (auto i : adj)
+        {
+            cout << i.first << "->";
+            for (auto j : i.second)
+            {
+                cout << j << ",";
+            }
+            cout << endl;
+        }
     }
 };
 
-node* buildtree(node* root){
+void bfsfun(vector<vector<int>> &edges, vector<int> &visited, vector<int> &ans)
+{
+    queue<int> q;
+    q.push(0);
+    visited[0] = 1; // Using boolean value to represent visited status
 
-    int n;
-    cout<<"Enter the data :"<<endl;
-    cin>>n;
-    root=new node(n);
-
-    if (n == -1){
-        return NULL;
-    }
-
-    cout<<"Enter the data for left node "<<n<<endl;
-    root->left=buildtree(root->left);
-    cout<<"Enter the data for right node "<<n<<endl;
-    root->right=buildtree(root->right);
-
-    return root;
-}
-
-int heighoftree(node* root){
-
-    if (root==NULL){
-        return 0;
-    }
-
-    int left=heighoftree(root->left);
-    int right=heighoftree(root->right);
-
-    int ans=max(left,right)+1;
-    return ans;
-}
-void levelordertrav(node* root){
-
-    queue<node*> q;
-    q.push(root);
-    q.push(NULL);
-
-    while(!q.empty()){
-
-        node* temp=q.front();
+    while (!q.empty())
+    {
+        int frontnode = q.front();
         q.pop();
 
-        if (temp==NULL){
-            cout<<endl;
-            if (!q.empty()){
-                q.push(NULL);
-            }
-        }
-        else{
+        // store the ans
+        ans.push_back(frontnode);
 
-            cout<<temp->data<<" ";
-            if (temp->left){
-                q.push(temp->left);
-            }
-            if (temp->right){
-                q.push(temp->right);
+        // traverse all the neighbours of Nodes
+        for (auto i : edges[frontnode])
+        {
+            if (!visited[i])
+            {
+                visited[i] = 1; // Mark the neighbor as visited
+                q.push(i);
             }
         }
     }
 }
 
+vector<int> bfsTraversal(int n, vector<vector<int>> &edges)
+{
+    vector<int> ans;
+    vector<int> visited(n, 0);
 
-void inorder(node *root, int &count) {
-    if (root == nullptr) {
-        return;
-    }
+    bfsfun(edges, visited, ans);
 
-    inorder(root->left, count);
-
-    // Leaf node
-    if (root->left == nullptr && root->right == nullptr) {
-        count++;
-    }
-
-    inorder(root->right, count);
+    return ans;
 }
 
-int noOfLeafNodes(node *root) {
-    int cnt = 0;
-    inorder(root, cnt);
-    return cnt;
-}
 int main()
 {
-    node* root=NULL;
-    root=buildtree(root);
-    int ans=heighoftree(root);
-    cout<<ans<<endl;
-    levelordertrav(root);
-    cout<<noOfLeafNodes(root)<<endl;
+    int n, m;
+    cin >> n >> m;
+
+    graphmp<int> G;
+    int u, v;
+    for (int i = 0; i < m; i++)
+    {
+        cin >> u >> v;
+        G.edge(u, v, 0);
+    }
+
+    G.print();
+
+    vector<vector<int>> edges(n); // Initialize an empty vector of vectors
+    for (auto i : G.adj)
+    {
+        for (auto j : i.second)
+        {
+            edges[i.first].push_back(j);
+        }
+    }
+
+    vector<int> traversal = bfsTraversal(n, edges);
+    cout << "BFS Traversal: ";
+    for (int node : traversal)
+    {
+        cout << node << " ";
+    }
+    cout << endl;
+
     return 0;
 }
