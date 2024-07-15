@@ -67,11 +67,12 @@
 //             for (int j = 2 * i; j < n; j = j + i)
 //             {
 //                 prime[j] = 0;
-//             }
+//             }                                                                                                                                  
 //         }
 //     }
 //     return c;
 // }
+
 // int main()
 // {
 //     int n;
@@ -114,7 +115,7 @@
 //         maxno=maxno-hcf;
 //     }
 
-//     cout<<hcf<<endl;
+//     cout<<maxno<<endl;
 
 //     return 0;
 // }
@@ -135,7 +136,6 @@
 
 //     return lcm;
 // }
-
 // int main() {
 //     int num1, num2;
 
@@ -151,6 +151,63 @@
 
 //     return 0;
 // }
+
+// #include <iostream>
+// using namespace std;
+// // LCM of 15 and 20 is 60
+
+// int main() {
+//     int a = 15, b = 20, max_num, flag = 1;
+//     max_num = (a > b) ? a : b; // Use ternary operator to get the larger number
+
+//     while (flag) {
+//         if (max_num % a == 0 && max_num % b == 0) {
+//             cout << "LCM of " << a << " and " << b << " is " << max_num;
+//             break;
+//         }
+//         ++max_num;
+//     }
+
+
+//     return 0;
+// }
+
+
+// #include <iostream>
+// #include <numeric>
+// #include<bits/stdc++.h>
+// //  Note that this function is available since C++17.
+// using namespace std;
+
+// int main() {
+//     cout << "LCM(10, 20) = " << lcm(10, 20) << endl;
+//     return 0;
+// }
+
+// #include <iostream>
+// using namespace std;
+
+// int main() {
+//     int x = 50;
+//     int y = 100;
+//     int temp, hcf;
+
+//     if (x > y) {
+//         temp = x;
+//         x = y;
+//         y = temp;
+//     }
+
+//     for (int i = 1; i < (x + 1); i++) {
+//         if (x % i == 0 && y % i == 0)
+//             hcf = i;
+//     }
+
+//     cout << "HCF of " << x << " and " << y << " is: " << hcf;
+//     return 0;
+// }
+
+
 
 // by using euclid's algo
 

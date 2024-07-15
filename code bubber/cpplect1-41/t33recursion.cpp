@@ -44,15 +44,12 @@
 // using namespace std;
 // int sumarr(int *arr, int n)
 // {
-//     int sum = 0;
 //     if (n == 1)
 //     {
 //        return arr[0];
 //     }
 //     else
 //     {
-//         // sum += arr[0];
-
 //         int ans=arr[0]+sumarr(arr + 1, n - 1);
 //         return ans;
 //     }

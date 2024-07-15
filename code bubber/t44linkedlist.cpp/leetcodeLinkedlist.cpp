@@ -13,13 +13,13 @@ public:
         head = nullptr;
     }
 
-    int get(int index) {
-        Node* curr = head;
-        for (int i = 0; i < index && curr; ++i) {
-            curr = curr->next; 
-        }
-        return curr ? curr->val : -1;
+int get(int index) {
+    Node* curr = head;
+    for (int i = 0; i < index && curr; ++i) {
+        curr = curr->next; 
     }
+    return curr ? curr->val : -1;
+}
 
     void addAtHead(int val) {
         Node* newNode = new Node(val);

@@ -1,3 +1,81 @@
+// // -----------------------------------------------------------------------------------------------------------------
+// // c
+// #include <iostream>
+// #include <bits/stdc++.h>
+// using namespace std;
+// class node
+// {
+// public:
+//     int data;
+//     node *next;
+//     node(int data)
+//     {
+//         this->data = data;
+//         this->next = NULL;
+//     }
+// };
+
+// void itotail(node *&tail, int ele, int d)
+// {
+//     node *temp = new node(d);
+//     if (tail == NULL)
+//     {
+//         temp->next = temp;
+//         tail = temp;
+//     }
+//     else
+//     {
+//         node *curr = tail;
+
+//         while (curr->data != ele)
+//         {
+//             curr = curr->next;
+//         }
+
+//         temp->next = curr->next;
+//         curr->next = temp;
+//         return;
+//     }
+// }
+
+// void printll(node *tail)
+// {
+//     if (tail == NULL)
+//     {
+//         cout << "List is empty" << endl;
+//         return;
+//     }
+
+//     node *temp =tail ;
+//     do{
+//         cout<<tail->data<<" ";
+//         tail=tail->next;
+//     }while (temp != tail);
+//     cout << endl;
+// }
+
+// int main()
+// {
+//     node *tail = NULL;
+
+//     int n;
+//     cin >> n;
+//     int arr[n] = {-1};
+//     for (int i = 0; i < n; i++)
+//     {
+//         cin >> arr[i];
+//     }
+
+//     for (int i = -1; i < n - 1; i++)
+//     {
+//         itotail(tail, arr[i], arr[i + 1]);
+//     }
+
+//     printll(tail);
+
+//     return 0;
+// }
+
 // -----------------------------------------------------------------------------------------------------------------
 // c
 #include <iostream>

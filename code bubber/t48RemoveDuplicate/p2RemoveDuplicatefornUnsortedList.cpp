@@ -158,9 +158,9 @@ int main()
     node *head = NULL;
     node *tail = NULL;
     insertattail(head, tail, 1);
-    insertattail(head, tail, 1);
     insertattail(head, tail, 5);
     insertattail(head, tail, 4);
+    insertattail(head, tail, 1);
     insertattail(head, tail, 2);
     insertattail(head, tail, 5);
     print(head);

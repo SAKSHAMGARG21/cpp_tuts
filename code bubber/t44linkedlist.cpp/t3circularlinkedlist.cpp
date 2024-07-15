@@ -121,8 +121,8 @@ int main()
     insertnode(tail,3,5);
     print(tail);
 
-    // deletnode(tail,3);
-    // print(tail);
+    deletnode(tail,3);
+    print(tail);
     return 0;
 }
 

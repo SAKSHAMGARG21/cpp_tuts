@@ -1,4 +1,7 @@
-#include<stack>
+// -----------------------------------------------------------------------------------------------------------------
+#include<iostream>
+#include<bits/stdc++.h>
+using namespace std;
 vector<int> nextSmallerElement(vector<int> &arr, int n)
 {
     stack<int> s;
@@ -16,4 +19,12 @@ vector<int> nextSmallerElement(vector<int> &arr, int n)
         s.push(curr);
     }
     return ans;
+}
+int main(){
+    vector<int> arr = {4, 5, 2, 10, 8};
+    int n = arr.size();
+    vector<int> result = nextSmallerElement(arr, n);
+    for(int i=0; i<n; i++)
+        cout << result[i] << " ";
+    return 0;
 }

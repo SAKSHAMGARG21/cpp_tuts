@@ -42,19 +42,19 @@ int main()
 
     // cout << *p << endl;
 
-    /*
-    int i = 5;
 
-    int *q = &i;
-    cout << q << endl;
-    cout << *q << endl;
+    // int i = 5;
 
-    int *p = 0;
-    p = &i;
+    // int *q = &i;
+    // cout << q << endl;
+    // cout << *q << endl;
 
-    cout << p << endl;
-    cout << *p << endl;
-    */
+    // int *p = 0;
+    // p = &i;
+
+    // cout << p << endl;
+    // cout << *p << endl;
+    
 
     int num = 5;
     int a = num;
@@ -79,9 +79,9 @@ int main()
     // cout <<  (*t)++ << endl;
     *t = *t + 1;
     cout << *t << endl;
-    cout << " before t " << t << endl;
+    cout << " before t -> " << t << endl;
     t = t + 1;
-    cout << " after t " << t << endl;
+    cout << " after t -> " << t << endl;
 
     return 0;
 }

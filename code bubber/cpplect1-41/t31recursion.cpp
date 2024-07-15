@@ -3,11 +3,11 @@
 // #include <iostream>
 // #include <bits/stdc++.h>
 // using namespace std;
-// int factorial(int n ){
+// int sum(int n ){
 //     if (n==0){
 //         return 0;
 //     }
-//     int smallpbl=factorial(n-1);
+//     int smallpbl=sum(n-1);
 //     int bigpbl=n+smallpbl;
 //     return bigpbl;
 // }
@@ -15,7 +15,7 @@
 // {
 //     int n;
 //     cin >> n;
-//     int ans=factorial(n);
+//     int ans=sum(n);
 //     cout<<ans<<endl;
 //     return 0;
 // }

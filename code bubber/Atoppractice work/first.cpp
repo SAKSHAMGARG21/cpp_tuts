@@ -1,107 +1,113 @@
 // -----------------------------------------------------------------------------------------------------------------
+// c
 #include <iostream>
-#include <vector>
-#include <list>
-#include <unordered_map>
-#include <queue>
+#include <bits/stdc++.h>
 using namespace std;
-
-template <typename T>
-class graphmp
+void solvedm(stack<int> &st, int cnt, int s)
 {
-public:
-    unordered_map<T, list<T>> adj;
 
-    void edge(T u, T v, int dic)
+    if (cnt == s / 2)
     {
-        adj[u].push_back(v);
-        if (dic == 0)
-        {
-            adj[v].push_back(u);
-        }
+        st.pop();
+        return;
     }
 
-    void print()
-    {
-        for (auto i : adj)
-        {
-            cout << i.first << "->";
-            for (auto j : i.second)
-            {
-                cout << j << ",";
-            }
-            cout << endl;
-        }
-    }
-};
+    int num = st.top();
+    st.pop();
+    solvedm(st, cnt + 1, s);
 
-void bfsfun(vector<vector<int>> &edges, vector<int> &visited, vector<int> &ans)
+    st.push(num);
+}
+void deletemiddle(stack<int> &st)
 {
-    queue<int> q;
-    q.push(0);
-    visited[0] = 1; // Using boolean value to represent visited status
-
-    while (!q.empty())
+    int s = st.size();
+    int cnt = 0;
+    // solve(st,cnt,s);
+    vector<int> arr;
+    while (!st.empty())
     {
-        int frontnode = q.front();
-        q.pop();
-
-        // store the ans
-        ans.push_back(frontnode);
-
-        // traverse all the neighbours of Nodes
-        for (auto i : edges[frontnode])
+        if (cnt != s / 2)
         {
-            if (!visited[i])
-            {
-                visited[i] = 1; // Mark the neighbor as visited
-                q.push(i);
-            }
+            arr.push_back(st.top());
         }
+        cnt++;
+        st.pop();
+    }
+
+    for (auto i : arr)
+    {
+        st.push(i);
     }
 }
 
-vector<int> bfsTraversal(int n, vector<vector<int>> &edges)
+bool isredundent(string s)
 {
-    vector<int> ans;
-    vector<int> visited(n, 0);
 
-    bfsfun(edges, visited, ans);
+    int ss = s.size();
 
-    return ans;
+    stack<char> st;
+
+    for (int i = 0; i < ss; i++)
+    {
+        char ch = s[i];
+        if (ch == '(' || ch == '+' || ch == '-' || ch == '*' || ch == '/')
+        {
+            st.push(ch);
+        }
+        else
+        {
+            bool isred = true;
+            char top = st.top();
+            while (top != '(')
+            {
+                if (top == '*' || top == '+' || top == '/' || top == '-')
+                {
+                    isred = false;
+                }
+                st.pop();
+            }
+            if (isred == true)
+            {
+                return true;
+            }
+            st.pop();
+        }
+    }
+    return false;
 }
-
 int main()
 {
-    int n, m;
-    cin >> n >> m;
+    // string s;
+    // getline(cin, s);
 
-    graphmp<int> G;
-    int u, v;
-    for (int i = 0; i < m; i++)
-    {
-        cin >> u >> v;
-        G.edge(u, v, 0);
-    }
+    // stringstream str(s);
 
-    G.print();
+    // int a;
+    // vector<int> arr;
+    // stack<int> st;
+    // while (str >> a)
+    // {
+    //     st.push(a);
+    // }
 
-    vector<vector<int>> edges(n); // Initialize an empty vector of vectors
-    for (auto i : G.adj)
-    {
-        for (auto j : i.second)
-        {
-            edges[i.first].push_back(j);
-        }
-    }
+    // while(!st.empty()){
+    //     cout<<st.top()<<" ";
+    //     st.pop();
+    // }
 
-    vector<int> traversal = bfsTraversal(n, edges);
-    cout << "BFS Traversal: ";
-    for (int node : traversal)
-    {
-        cout << node << " ";
-    }
-    cout << endl;
+    // deletemiddle(st);
+
+    // while (!st.empty())
+    // {
+    //     cout << st.top() << " ";
+    //     st.pop();
+    // }
+
+    string s;
+    cin >> s;
+
+    bool isred = isredundent(s);
+    cout << (isred ? "true" : "false") << endl;
 
     return 0;
 }

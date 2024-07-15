@@ -53,43 +53,45 @@
 
 // dynamic array
 
-// #include<iostream>
-// using namespace std;
+#include<iostream>
+using namespace std;
 
-// int getSum(int *arr, int n) {
-//     int sum = 0;
-//     for(int i=0; i<n; i++) {
-//         sum += arr[i];
-//     } 
-//     return sum;
-// }
+int getSum(int *arr, int n) {
+    int sum = 0;
+    for(int i=0; i<n; i++) {
+        sum += arr[i];
+    } 
+    return sum;
+}
 
-// int main() {
+int main() {
 
-//     int n;
-//     cin >> n;
+    // int n;
+    // cin >> n;
     
-//     //variable size array
-//     int* arr = new int[n];
+    // //variable size array
+    // int* arr = new int[n];
 
-//     //takign inputn in aray
-//     for(int i=0; i<n; i++) {
-//         cin >> arr[i];
-//     }
+    // //takign inputn in aray
+    // for(int i=0; i<n; i++) {
+    //     cin >> arr[i];
 
-//     int ans = getSum(arr, n);
+    // }
 
-//     cout << "answer is "<< ans << endl;
+    // int ans = getSum(arr, n);
 
-// //case 1
-//     // while(true) {
-//     //     int i = 5;
-//     // }
+    // cout << "answer is "<< ans << endl;
+
+//case 1
+    while(true) {
+        int i = 5;
+        cout<<i<<" ";
+    }
     
-// //case 2
-//     while(true) {
-//         int* ptr = new int;
-//     }
+//case 2
+    // while(true) {
+    //     int* ptr = new int;
+    // }
 
-//     return 0;
-// }
+    return 0;
+}

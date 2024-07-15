@@ -7,22 +7,22 @@ using namespace std;
 
 // correct code
 // bing ai code
-// vector<string> letterCombinations(string digits) {
-//     if(digits.empty()) return {};
-//     vector<string> res{""};k
-//     vector<string> mapping{"0", "1", "abc", "def", "ghi", "jkl", "mno", "pqrs", "tuv", "wxyz"};
-//     for(char digit : digits) {
-//         vector<string> temp;
-//         string chars = mapping[digit - '0'];
-//         for(char c : chars) {
-//             for(string str : res) {
-//                 temp.push_back(str + c);
-//             }
-//         }
-//         res.swap(temp);
-//     }
-//     return ;
-// }
+vector<string> letterCombinations(string digits) {
+    if(digits.empty()) return {};
+    vector<string> res{""};
+    vector<string> mapping{"0", "1", "abc", "def", "ghi", "jkl", "mno", "pqrs", "tuv", "wxyz"};
+    for(char digit : digits) {
+        vector<string> temp;
+        string chars = mapping[digit - '0'];
+        for(char c : chars) {
+            for(string str : res) {
+                temp.push_back(str + c);
+            }
+        }
+        res.swap(temp);
+    }
+    return res;
+}
 
 // vector<string> letterCombinations(string digits)
 // {
@@ -73,7 +73,6 @@ using namespace std;
 //             output = ""; // Clear the output string for the next iteration
 //         }
 //     }
-
 //     return ans;
 // }
 
@@ -105,53 +104,51 @@ using namespace std;
 //         // Expand the result with the new letters
 //         for (int j = 0; j < currentSize; j++) {
 //             string current = result[j];
-//             // cout<<current;
 //             for (int k = 1; k < m; k++) {
 //                 result.push_back(current + letters[k]);
-//                 // cout<<currentSize<<" ";
 //             }
 //             result[j] += letters[0]; // Append the first letter to the current strings
 //         }
 //     }
 
-//     // return result;
+//     return result;
 // }
 
 // code bubber using recursion
-void solve(string digits, string oput, int idx, vector<string> &ans, string map[])
-{
+// void solve(string digits, string oput, int idx, vector<string> &ans, string map[])
+// {
 
-    if (idx >= digits.length())
-    {
-        ans.push_back(oput);
-        return;
-    }
+//     if (idx >= digits.length())
+//     {
+//         ans.push_back(oput);
+//         return;
+//     }
 
-    int d = digits[idx] - '0';
-    string str = map[d];
+//     int d = digits[idx] - '0';
+//     string str = map[d];
 
-    for (int i = 0; i < str.length(); i++)
-    {
-        oput.push_back(str[i]);
-        solve(digits, oput, idx + 1, ans, map);
-        oput.pop_back();
-    }
-}
+//     for (int i = 0; i < str.length(); i++)
+//     {
+//         oput.push_back(str[i]);
+//         solve(digits, oput, idx + 1, ans, map);
+//         oput.pop_back();
+//     }
+// }
 
-vector<string> letterCombinations(string digits)
-{
-    vector<string> ans;
-    string oput;
-    if (digits.length() == 0)
-    {
-        return ans;
-    }
-    int idx = 0;
-    string map[10] = {"", "", "abc", "def", "ghi", "jkl", "mno", "pqrs", "tuv", "wxyz"};
+// vector<string> letterCombinations(string digits)
+// {
+//     vector<string> ans;
+//     string oput;
+//     if (digits.length() == 0)
+//     {
+//         return ans;
+//     }
+//     int idx = 0;
+//     string map[10] = {"", "", "abc", "def", "ghi", "jkl", "mno", "pqrs", "tuv", "wxyz"};
 
-    solve(digits, oput, idx, ans, map);
-    return ans;
-}
+//     solve(digits, oput, idx, ans, map);
+//     return ans;
+// }
 int main()
 {
     string s;

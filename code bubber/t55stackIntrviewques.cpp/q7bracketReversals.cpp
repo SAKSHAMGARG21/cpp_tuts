@@ -11,6 +11,7 @@ int findMinimumCost(string str)
         return -1;
     }
 
+    // removing valid part 
     stack<char> s;
     for (int i = 0; i < str.length(); i++)
     {
@@ -52,7 +53,7 @@ int findMinimumCost(string str)
 }
 int main()
 {
-    string s = "{{{}";
+    string s = "{{{}{{";
     string s1 = "{{}{}";
     // cin >> s;
 

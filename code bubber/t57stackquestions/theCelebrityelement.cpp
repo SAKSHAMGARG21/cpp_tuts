@@ -4,12 +4,12 @@ class Solution
 {
 public:
     // Function to find if there is a celebrity in the party or not.
-    int ans = -1;
-    int flag2;
     int celebrity(vector<vector<int>> &M, int n)
     {
         // code here
         // Bs
+        // int ans = -1;
+        // int flag2;
         // for (int i=0;i<n;i++){
         //     int flag=1;
         //     for (int j=0;j<n;j++){

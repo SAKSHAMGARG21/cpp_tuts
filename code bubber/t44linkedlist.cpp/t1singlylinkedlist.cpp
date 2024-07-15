@@ -38,7 +38,6 @@ void insertathead(node *&head, int d)
     temp->next = head;
     head = temp;
 }
-
 void insertattail(node *&tail, int d)
 {
     // new node create
@@ -47,7 +46,7 @@ void insertattail(node *&tail, int d)
     // tail = tail->next;
     tail = temp;
 }
-
+ 
 void print(node *&head)
 {
     node *temp = head;
@@ -78,6 +77,7 @@ void insertatpost(node *&tail, node *&head, int pos, int d)
         cnt++;
     }
 
+
     // inserting at end
     if (temp->next == NULL)
     {
@@ -103,7 +103,7 @@ void deletenode(node *&head, node *&tail, int pos)
     }
     else
     {
-        // deleting any niddle node or last node
+        // deleting any Middle node or last node
         node *curr = head;
         node *prev = NULL;
 

@@ -13,7 +13,7 @@
 //         cin >> arr[i];
 //     }
 //     cout << "{}" << ",";
-        
+
 //     if (n == 0)
 //     {
 //         cout << "{0}";
@@ -44,6 +44,39 @@
 //         cout << arr[n - 1] << "}";
 //     }
 //     return 0;
+// }
+
+// -----------------------------------------------------------------------------------------------------------------
+// c
+// #include <iostream>
+// #include <bits/stdc++.h>
+// using namespace std;
+// int main()
+// {
+// 	int n;
+// 	cin >> n;
+// 	int arr[n];
+// 	for (int i = 0; i < n; i++)
+// 	{
+// 		cin >> arr[i];
+// 	}
+
+// 	// vector<vector<int>> 
+// 	for (int i = 0; i < n; i++)
+// 	{
+// 		for (int j = 0; j <= i; j++)
+// 		{
+// 			cout<<"{";
+// 			for (int l = 0; l < j; l++)
+// 			{
+// 				cout<<arr[j]<<",";	
+// 			}
+// 			cout<<endl;
+// 		}
+// 		cout << endl;
+// 	}
+
+// 	return 0;
 // }
 
 // -----------------------------------------------------------------------------------------------------------------
@@ -152,46 +185,46 @@
 // code stdio
 // -----------------------------------------------------------------------------------------------------------------
 // c1
-#include <iostream>
-#include <bits/stdc++.h>
-using namespace std;
-void solve(string str,string output,int idx,vector<string> &ans){
-	if (idx>=str.length()){
-		if (output.length() > 0 ){
-			ans.push_back(output);
-		}
-		return ;
-	}
+// #include <iostream>
+// #include <bits/stdc++.h>
+// using namespace std;
+// void solve(string str,string output,int idx,vector<string> &ans){
+// 	if (idx>=str.length()){
+// 		if (output.length() > 0 ){
+// 			ans.push_back(output);
+// 		}
+// 		return ;
+// 	}
 
-	// excude 
-	solve(str,output,idx+1,ans);
+// 	// excude
+// 	solve(str,output,idx+1,ans);
 
-	// include
-	char elemnt=str[idx];
-	output.push_back(elemnt);
-	solve(str,output,idx+1,ans);
+// 	// include
+// 	char elemnt=str[idx];
+// 	output.push_back(elemnt);
+// 	solve(str,output,idx+1,ans);
 
-} 
-vector<string> subsequences(string str){
-	
-	// Write your code here
-	vector<string> ans;
-	string output="";
-	int idx=0;
-	solve(str,output,idx,ans);
-	return ans;
-	
-}
-int main()
-{
-    string s;
-    cin >> s;
+// }
+// vector<string> subsequences(string str){
 
-    vector<string>  ans=subsequences(s);
+// 	// Write your code here
+// 	vector<string> ans;
+// 	string output="";
+// 	int idx=0;
+// 	solve(str,output,idx,ans);
+// 	return ans;
 
-    for (auto i:ans){
-        cout<<i<<" ";
-    }
+// }
+// int main()
+// {
+//     string s;
+//     cin >> s;
 
-    return 0;
-}
+//     vector<string>  ans=subsequences(s);
+
+//     for (auto i:ans){
+//         cout<<i<<" ";
+//     }
+
+//     return 0;
+// }

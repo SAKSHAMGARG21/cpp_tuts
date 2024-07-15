@@ -1,3 +1,9 @@
+// ----------------------------------------------------------------------------------------------------------------
+// -----------------------------------------------------------------------------------------------------------------
+// c
+#include <iostream>
+#include <bits/stdc++.h>
+using namespace std;
 class Solution
 {
 public:
@@ -24,7 +30,6 @@ public:
 class Solution
 {
 public:
-
     // check if the array is rotated or not
     bool check(vector<int> &nums)
     {
@@ -107,4 +112,10 @@ vector<int> findArraySum(vector<int> &a, int n, vector<int> &b, int m)
 
     // print(ans);
     return reverse(ans);
+}
+
+int main()
+{
+
+    return 0;
 }

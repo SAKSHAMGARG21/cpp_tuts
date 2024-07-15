@@ -86,92 +86,92 @@
 
 // C++ Program to implement Jagged array
 // 2nd way: Dynamic 2D array
-// #include <iostream>
-// using namespace std;
+#include <iostream>
+using namespace std;
 
-// int main()
-// {
-// 	// system("cls");
+int main()
+{
+	// system("cls");
 
-// 	int row, col;
-// 	row = 3;
+	int row, col;
+	row = 3;
 
-// 	// Create Row Array- dynamic array of pointers
-// 	int** arr = new int*[row];
-// 	// int sizes[] = { 4, 2, 3 };
-// 	int *sizes= new int[row];
-// 	// if taking row as input
+	// Create Row Array- dynamic array of pointers
+	int** arr = new int*[row];
+	// int sizes[] = { 4, 2, 3 };
+	int *sizes= new int[row];
+	// if taking row as input
 
-// 	// no of columns for each row as input from user
-// 	for (int i = 0; i < row; i++) {
+	// no of columns for each row as input from user
+	for (int i = 0; i < row; i++) {
 
-// 		cin>>col;	 //if col is taken as input
-// 		sizes[i]=col;
-// 		// store each col number in size ( if row and col
-// 		// are taken as input)
+		cin>>col;	 //if col is taken as input
+		sizes[i]=col;
+		// store each col number in size ( if row and col
+		// are taken as input)
 
-// 		*(arr + i) = new int[sizes[i]];
-// 		// creating column of sizes[i] for each row
-// 	}
+		*(arr + i) = new int[sizes[i]];
+		// creating column of sizes[i] for each row
+	}
 
-// 	// input from user
-// 	int num = 1;
-// 	for (int i = 0; i < row; i++) {
-// 		for (int j = 0; j < sizes[i]; j++) {
-// 			// cin>>arr[i][j]; //if user want to input
-// 			arr[i][j] = num++;
-// 		}
-// 	}
+	// input from user
+	int num = 1;
+	for (int i = 0; i < row; i++) {
+		for (int j = 0; j < sizes[i]; j++) {
+			// cin>>arr[i][j]; //if user want to input
+			arr[i][j] = num++;
+		}
+	}
 
-// 	cout << "elements in matrix form as follow" << endl;
-// 	for (int i = 0; i < row; i++) {
-// 		for (int j = 0; j < sizes[i]; j++) {
-// 			cout << arr[i][j] << " ";
-// 		}
-// 		cout << endl;
-// 	}
+	cout << "elements in matrix form as follow" << endl;
+	for (int i = 0; i < row; i++) {
+		for (int j = 0; j < sizes[i]; j++) {
+			cout << arr[i][j] << " ";
+		}
+		cout << endl;
+	}
 
-// 	return 0;
-// }
+	return 0;
+}
 
 // -----------------------------------------------------------------------------------------------------------------
 // c
-// #include <iostream>
-// #include <bits/stdc++.h>
-// using namespace std;
-// int main()
-// {
-// 	int r, c;
-// 	cin >> r;
+#include <iostream>
+#include <bits/stdc++.h>
+using namespace std;
+int main()
+{
+	int r, c;
+	cin >> r;
 
-// 	int **arr = new int *[r];
-// 	int *s = new int[r];
+	int **arr = new int *[r];
+	int *s = new int[r];
 
-// 	for (int i = 0; i < r; i++)
-// 	{
+	for (int i = 0; i < r; i++)
+	{
 
-// 		cin >> c;
-// 		s[i] = c;
-// 		*(arr + i) = new int[s[i]];
-// 	}
+		cin >> c;
+		s[i] = c;
+		*(arr + i) = new int[s[i]];
+	}
 
-// 	int num = 1;
-// 	for (int i = 0; i < r; i++)
-// 	{
-// 		for (int j = 0; j < s[i]; j++)
-// 		{
-// 			arr[i][j] = num++;
-// 		}
-// 	}
+	int num = 1;
+	for (int i = 0; i < r; i++)
+	{
+		for (int j = 0; j < s[i]; j++)
+		{
+			arr[i][j] = num++;
+		}
+	}
 
-// 	for (int i = 0; i < r; i++)
-// 	{
-// 		for (int j = 0; j < s[i]; j++)
-// 		{
-// 			cout << arr[i][j]<<" ";
-// 		}
-// 		cout << endl;
-// 	}
+	for (int i = 0; i < r; i++)
+	{
+		for (int j = 0; j < s[i]; j++)
+		{
+			cout << arr[i][j]<<" ";
+		}
+		cout << endl;
+	}
 
-// 	return 0;
-// }
+	return 0;
+}

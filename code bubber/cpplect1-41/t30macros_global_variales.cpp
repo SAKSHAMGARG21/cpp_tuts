@@ -18,29 +18,27 @@
 // }
 
 // C++ program to illustrate macros
-#include <iostream>
-using namespace std;
+// #include <iostream>
+// using namespace std;
 
-// Macro definition
-#define AREA(l, b) (l * b)
+// // Macro definition
+// #define AREA(l, b) (l * b)
 
-// Driver Code
-int main()
-{
-	// Given lengths l1 and l2
-	int l1 = 10, l2 = 5, area;
+// // Driver Code
+// int main()
+// {
+// 	// Given lengths l1 and l2
+// 	int l1 = 10, l2 = 5, area;
 
-	// Find the area using macros
-	area = AREA(l1, l2);
+// 	// Find the area using macros
+// 	area = AREA(l1, l2);
 
-	// Print the area
-	cout << "Area of rectangle"
-		<< " is: "<<
-		area;
+// 	// Print the area
+// 	cout << "Area of rectangle"
+// 		 << " is: " << area;
 
-	return 0;
-}
-
+// 	return 0;
+// }
 
 // object like macros
 // C++ program to illustrate macros
@@ -60,7 +58,6 @@ int main()
 
 // 	return 0;
 // }
-
 
 // C++ program to illustrate macros
 // #include <iostream>
@@ -104,7 +101,7 @@ int main()
 // 	int b = 76;
 
 // 	cout << "Minimum value between"
-// 		<< a << " and " << b 
+// 		<< a << " and " << b
 // 		<< " is: " << min(a, b);
 
 // 	return 0;
@@ -116,9 +113,9 @@ int main()
 // #define AREA(r) (PI*(r)*(r))
 
 // int main() {
-	
+
 // 	float r = 7; // radius of circle
-	
+
 // 	cout<<"Area of Circle with radius " << r <<": "<< AREA(r);
 
 // 	return 0;
@@ -126,11 +123,10 @@ int main()
 
 // This code is contributed by balbiriitbombay3602
 
-
 // _____________________________________________love bubber_____________________________________________________
 
-// counting 
-// #include<iostream> 
+// counting
+// #include<iostream>
 // using namespace std;
 
 // void print(int n) {
@@ -151,7 +147,6 @@ int main()
 //     cin >> n;
 //     cout << endl;
 //     print(n);
-
 
 //     return 0;
 // }
@@ -178,17 +173,15 @@ int main()
 //     cout << endl;
 //     print(arr, size, 2);
 
-
 //     return 0;
 // }
 
-//global variable 
+// global variable
 
 // #include<iostream>
 // using namespace std;
 
 // int score = 15;
-
 
 // void a(int& i) {
 
@@ -223,7 +216,7 @@ int main()
 // int main() {
 
 //     int a = 1, b = 2;
-//     int ans = 0; 
+//     int ans = 0;
 
 //     ans = getMax(a,b);
 //     cout << ans << endl;
@@ -239,7 +232,7 @@ int main()
 
 // macros
 
-// #include<iostream> 
+// #include<iostream>
 // using namespace std;
 
 // #define PI 3.14
