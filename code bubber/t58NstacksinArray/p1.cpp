@@ -64,3 +64,15 @@ public:
         return arr[index];
     }
 };
+
+int main(int argc, char const *argv[])
+{
+    NStack* s = new NStack(3, 5);
+    s->push(15, 2);
+    s->push(20, 1);
+    cout << s->pop(2) << endl; // Output: 20
+    cout << s->pop(1) << endl; // Output: 15
+    cout << s->pop(2) << endl; // Output: -1
+    cout << s->pop(1) << endl; // Output: -1
+    return 0;
+}

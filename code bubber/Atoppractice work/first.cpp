@@ -3,111 +3,84 @@
 #include <iostream>
 #include <bits/stdc++.h>
 using namespace std;
-void solvedm(stack<int> &st, int cnt, int s)
+class Queue
 {
+    int *arr;
+    int size;
+    int front;
+    int rear;
 
-    if (cnt == s / 2)
+public:
+    Queue()
     {
-        st.pop();
-        return;
+        size = 1000;
+        arr = new int[size];
+        front = 0;
+        rear = 0;
     }
-
-    int num = st.top();
-    st.pop();
-    solvedm(st, cnt + 1, s);
-
-    st.push(num);
-}
-void deletemiddle(stack<int> &st)
-{
-    int s = st.size();
-    int cnt = 0;
-    // solve(st,cnt,s);
-    vector<int> arr;
-    while (!st.empty())
+    bool isEmpty()
     {
-        if (cnt != s / 2)
+        if (front == rear)
+            return true;
+        else
+            return false;
+    }
+    void enqueue(int d)
+    {
+        if (front == size)
         {
-            arr.push_back(st.top());
-        }
-        cnt++;
-        st.pop();
-    }
-
-    for (auto i : arr)
-    {
-        st.push(i);
-    }
-}
-
-bool isredundent(string s)
-{
-
-    int ss = s.size();
-
-    stack<char> st;
-
-    for (int i = 0; i < ss; i++)
-    {
-        char ch = s[i];
-        if (ch == '(' || ch == '+' || ch == '-' || ch == '*' || ch == '/')
-        {
-            st.push(ch);
+            cout << "queue is full";
+            // return;
         }
         else
         {
-            bool isred = true;
-            char top = st.top();
-            while (top != '(')
-            {
-                if (top == '*' || top == '+' || top == '/' || top == '-')
-                {
-                    isred = false;
-                }
-                st.pop();
-            }
-            if (isred == true)
-            {
-                return true;
-            }
-            st.pop();
+            arr[rear] = d;
+            rear++;
         }
     }
-    return false;
-}
+    void dequeue()
+    {
+        if (front == rear)
+        {
+            // return -1;
+            cout<<"ed";
+        }
+        else
+        {
+
+            int ans = arr[front];
+            arr[front] = -1;
+            front++;
+            if (front == rear)
+            {
+                front = 0;
+                rear = 0;
+            }
+            // return ans;
+        }
+    }
+
+    int qfront()
+    {
+        if (front == rear)
+        {
+            return -1;
+        }
+        return arr[front];
+    }
+};
 int main()
 {
-    // string s;
-    // getline(cin, s);
+    Queue q;
+    q.enqueue(43);
+    q.enqueue(24);
+    q.enqueue(64);
+    q.enqueue(74);
 
-    // stringstream str(s);
-
-    // int a;
-    // vector<int> arr;
-    // stack<int> st;
-    // while (str >> a)
-    // {
-    //     st.push(a);
-    // }
-
-    // while(!st.empty()){
-    //     cout<<st.top()<<" ";
-    //     st.pop();
-    // }
-
-    // deletemiddle(st);
-
-    // while (!st.empty())
-    // {
-    //     cout << st.top() << " ";
-    //     st.pop();
-    // }
-
-    string s;
-    cin >> s;
-
-    bool isred = isredundent(s);
-    cout << (isred ? "true" : "false") << endl;
-
+    while (!q.isEmpty())
+    {
+        cout << q.qfront() << " ";
+        q.dequeue();
+    }
     return 0;
 }

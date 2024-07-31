@@ -41,7 +41,7 @@ public:
         // Implement the enqueue() function
         if (back == size)
         {
-            cout << "stack is full";
+            cout << "queue is full";
         }
         else
         {
@@ -85,5 +85,15 @@ public:
 
 int main()
 {
+    Queue q;
+    q.enqueue(43);
+    q.enqueue(24);
+    q.enqueue(64);
+    q.enqueue(74);
+
+    while(!q.isEmpty()){
+        cout << q.front() << " ";
+        q.dequeue();
+    }
     return 0;
 }

@@ -37,7 +37,8 @@ public:
             rear = 0; // to maintain cyclic nature
         }
         else
-        { // normal flow
+        {
+            // normal flow
             rear++;
         }
         // push inside the queue
@@ -76,5 +77,16 @@ public:
 };
 int main()
 {
+    CircularQueue q;
+    q.enqueue(43);
+    q.enqueue(24);
+    q.enqueue(64);
+    q.enqueue(74);
+
+    // while (!q.isEmpty())
+    // {
+    //     cout << q.front() << " ";
+    //     q.dequeue();
+    // }
     return 0;
 }

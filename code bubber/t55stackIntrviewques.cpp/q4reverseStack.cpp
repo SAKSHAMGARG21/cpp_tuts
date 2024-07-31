@@ -38,6 +38,7 @@ void reverseStack(stack<int> &stack)
 
     insertAtBottom(stack, num);
 }
+
 int main()
 {
     stack<int> myStack;

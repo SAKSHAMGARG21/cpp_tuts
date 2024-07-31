@@ -28,7 +28,7 @@ int main()
         cout << "queue is not empty " << endl;
     }
 
-    /*
+    
     //create a queue
     queue<int> q;
 
@@ -54,7 +54,6 @@ int main()
     else{
         cout << "queue is not empty " << endl;
     }
-    */
 
     return 0;
 }

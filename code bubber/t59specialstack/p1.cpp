@@ -77,5 +77,13 @@ class SpecialStack {
 };
 int main()
 {
+    SpecialStack s;
+    s.push(3);
+    s.push(5);
+    s.push(2);
+    cout << "Minimum element is " << s.getMin() << endl;
+    s.pop();
+    cout << "Top element is " << s.top() << endl;
+    cout << "Minimum element is " << s.getMin() << endl;
     return 0;
 }
